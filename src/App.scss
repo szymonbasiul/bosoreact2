@@ -1,11 +1,31 @@
 /* VARIABLES */
   $info-color:#275fcf;
-  $bar-color:#b84ca6;
+  $bar-color:linear-gradient(
+    45deg
+    , #134bfa, #b2c4e400 );
 
 /* OBJECTS */
-%person-content{
+@mixin person-content($personCounter){
   width: 45%;
-  height: 70%;
+  height: fit-content;
+  @if $personCounter == two {
+    z-index: 1;
+  }
+  .personal-bar{
+    position: absolute;
+    @if $personCounter == one {
+      left: 0;
+      z-index: 0;
+    } @else if $personCounter = two {
+      z-index: 1;
+    }
+        background-image: $bar-color; 
+      font-weight: bold;
+    align-self: flex-end;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    }
   .photo{
   .person-img{
   width: 100%;
@@ -19,14 +39,7 @@
   width: 40em;
   height: auto;
   }
-  .personal-bar{
-  position: absolute;
-  align-self: flex-end;
-  flex-direction: row;
-  background-color: $bar-color;
-  width: 100em;
-  height: 5%;
-  }
+  
 }
 
 %person-one{
@@ -35,7 +48,7 @@
   display: flex;
   margin: 0 0 10% 0;
   flex-direction: row-reverse;
-  @extend %person-content;
+  @include person-content(one);
 }
 }
 
@@ -44,7 +57,7 @@
   display: flex;
   margin: 10% 0 0 0;
   background-color: #394f7a;
-  @extend %person-content;
+  @include person-content(two);
 }
 }
 
@@ -79,15 +92,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /* *************** MAIN ******************* */
