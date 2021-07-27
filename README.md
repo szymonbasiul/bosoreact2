@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts jestem na 22
+## Available Scripts jestem na śmiesznielop
 
 
 In the project directory, you can run:
