@@ -1,32 +1,41 @@
 /* VARIABLES */
   $info-color:#275fcf;
-  $bar-color:linear-gradient(
+  $bar-color-two:linear-gradient(
     45deg
+    , #134bfa, #b2c4e400 );
+    $bar-color-one:linear-gradient(
+    225deg
     , #134bfa, #b2c4e400 );
 
 /* OBJECTS */
 @mixin person-content($personCounter){
   width: 45%;
   height: fit-content;
+  position: relative;
   @if $personCounter == two {
     z-index: 1;
   }
   .personal-bar{
+    bottom: -1.3em;
     position: absolute;
     @if $personCounter == one {
       left: 0;
       z-index: 0;
+      background-image:  $bar-color-one; 
+
     } @else if $personCounter = two {
       z-index: 1;
+      background-image: $bar-color-two; 
     }
-        background-image: $bar-color; 
-      font-weight: bold;
+    font-weight: bold;
     align-self: flex-end;
     flex-direction: row;
     width: 100%;
     height: auto;
     }
   .photo{
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   .person-img{
   width: 100%;
   }
@@ -78,7 +87,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/*
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -89,7 +98,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+*/
 .App-link {
   color: #61dafb;
 }
@@ -98,8 +107,9 @@
 main {
   justify-content: center;
   max-width: 100%;
-  max-height: 100%;
+  height: 100em;
   margin: 0 5em 0 5em;
+  background-color: #ffffff;
 
   /* PERSONAL JESUS */
 
@@ -109,7 +119,6 @@ main {
     flex-direction: row;
     height: 100%;
     width: 100%;
-    background-color: #61dafb;
     @extend %person-one;
     @extend %person-two;
     .logotype{
