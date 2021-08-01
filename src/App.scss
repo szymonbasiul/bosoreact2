@@ -1,52 +1,47 @@
 /* VARIABLES */
-  $info-color:#275fcf;
+  $info-color:#8ca5d6;
   $bar-color:linear-gradient(
     45deg
-    , #134bfa, #b2c4e400 );
+    , #7690e6, #c5cedd00 );
 
 /* OBJECTS */
 @mixin person-content($personCounter){
-  width: 45%;
+  flex: 1;
+  padding: 6px;
   height: fit-content;
   @if $personCounter == two {
     z-index: 1;
   }
-  .personal-bar{
-    position: absolute;
-    @if $personCounter == one {
-      left: 0;
-      z-index: 0;
-    } @else if $personCounter = two {
-      z-index: 1;
-    }
-        background-image: $bar-color; 
-      font-weight: bold;
-    align-self: flex-end;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    }
+
   .photo{
   .person-img{
   width: 100%;
-  }
-  background-color: #384155;
-  width: 20em;
   height: 100%;
   }
+  width: 40%;
+  /* CHANGIN OTHER ELEMENT ON HOVER */
+  &:hover ~ .personal-bar{
+    background-image: $bar-color;
+    font-size: large;
+    font-weight: bolder;
+    text-shadow: 1px 1px;
+  }
+  }
   .personal-info{
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
   background-color: $info-color;
   width: 40em;
-  height: auto;
+  height: 100%;
   }
-  
 }
 
 %person-one{
   .person-one{
   background-color: #1b2b4b;
   display: flex;
-  margin: 0 0 10% 0;
+  // margin: 0 0 10% 0;
   flex-direction: row-reverse;
   @include person-content(one);
 }
@@ -55,11 +50,31 @@
 %person-two{
   .person-two{
   display: flex;
-  margin: 10% 0 0 0;
+  // margin: 10% 0 0 0;
   background-color: #394f7a;
   @include person-content(two);
 }
 }
+
+@mixin personal-bar($personCounter) {
+
+  @if $personCounter == one {
+    margin: 0 0 10% 0;
+    background-color: red;
+  } @else if $personCounter == two {
+    margin: 10% 0 0 0;
+    background-color: #1f5cd6;
+  }
+  .personal-bar{
+  font-weight: bold;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+
+  }
+}
+
+
 
 
 /* ************************************* */
@@ -96,6 +111,7 @@
 
 /* *************** MAIN ******************* */
 main {
+  border-style: dotted;
   justify-content: center;
   max-width: 100%;
   max-height: 100%;
@@ -104,18 +120,25 @@ main {
   /* PERSONAL JESUS */
 
   .personal-container{
-    margin-top: 50px;
+    .people{
+      background-color: rgb(105, 143, 105);
+    }
     display: flex;
-    flex-direction: row;
+    border-style: dotted;
+    flex: 1;
+    box-sizing: border-box;
+    margin-top: 50px;
     height: 100%;
     width: 100%;
-    background-color: #61dafb;
+    background-color: #ffffff;
     @extend %person-one;
+    @include personal-bar(one);
+    @include personal-bar(two);
     @extend %person-two;
+    
     .logotype{
       width: 10%;
       display: flex;
-      background-color: pink;
       justify-self: center;
       justify-content: center;
       align-self: center;
@@ -123,6 +146,16 @@ main {
     }
 
   }
+  /* FITTIN' TO MOBILES */
+  @media screen and (max-width: 768px){
+    .personal-container{
+      flex-direction: column;
+    }
+  }
+
+
+
+
 
   /* FOOTER */
 
