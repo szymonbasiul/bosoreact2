@@ -1,6 +1,10 @@
 body {
+<<<<<<< HEAD
   height: 100em;
   background-image: radial-gradient(#8b2d2d, #00000000);
+=======
+  background-color: black;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;

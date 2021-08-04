@@ -1,15 +1,23 @@
 /* VARIABLES */
 /* OBJECTS */
 main .personal-container .person-one {
+<<<<<<< HEAD
   background-color: #1b2b4b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 10% 0;
+=======
+  background-color: rgba(212, 157, 62, 0.637);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+<<<<<<< HEAD
   width: 45%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -41,22 +49,48 @@ main .personal-container .person-one .photo {
   background-color: #384155;
   width: 20em;
   height: 100%;
+=======
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 6px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+main .personal-container .person-one .photo {
+  width: 40%;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .person-one .photo .person-img {
   width: 100%;
+<<<<<<< HEAD
 }
 
 main .personal-container .person-one .personal-info {
   background-color: #275fcf;
   width: 40em;
   height: auto;
+=======
+  height: 100%;
+}
+
+main .personal-container .person-one .personal-info {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .person-two {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   margin: 10% 0 0 0;
   background-color: #394f7a;
   width: 45%;
@@ -90,10 +124,26 @@ main .personal-container .person-two .photo {
   background-color: #384155;
   width: 20em;
   height: 100%;
+=======
+  background-color: rgba(212, 157, 62, 0.637);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 6px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 1;
+}
+
+main .personal-container .person-two .photo {
+  width: 40%;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .person-two .photo .person-img {
   width: 100%;
+<<<<<<< HEAD
 }
 
 main .personal-container .person-two .personal-info {
@@ -133,14 +183,36 @@ main .personal-container .person-two .personal-info {
 */
 .App-link {
   color: #61dafb;
+=======
+  height: 100%;
+}
+
+main .personal-container .person-two .personal-info {
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 /* *************** MAIN ******************* */
 main {
+<<<<<<< HEAD
+=======
+  background-color: #ffffff;
+  border-width: 3px;
+  border-color: rgba(235, 160, 32, 0.911);
+  border-radius: 5px;
+  border-style: solid;
+  -webkit-box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
+          box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 100%;
+<<<<<<< HEAD
   height: 100em;
   margin: 0 5em 0 5em;
   background-color: #ffffff;
@@ -153,12 +225,59 @@ main .personal-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+=======
+  height: 740px;
+  margin: 0 5em 0 5em;
+  /* PERSONAL JESUS */
+  /* FOOTER */
+  /* FITTIN' TO MOBILES */
+}
+
+main .personal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 50px;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 0 10% 0;
+  margin: 10% 0 0 0;
+}
+
+main .personal-container .people {
+  width: 45%;
+  background-color: rgba(214, 163, 80, 0.747);
+}
+
+main .personal-container .personal-bar {
+  font-weight: bold;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+main .personal-container .personal-bar {
+  font-weight: bold;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+<<<<<<< HEAD
   height: 100%;
   width: 100%;
+=======
+  width: 100%;
+  height: auto;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .logotype {
@@ -166,7 +285,10 @@ main .personal-container .logotype {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   background-color: pink;
+=======
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   justify-self: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -179,7 +301,27 @@ main .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   border-style: solid;
   border-color: #1f5cd6;
+=======
+  position: fixed;
+  width: 100%;
+  border-style: groove;
+  border-color: rgba(236, 156, 16, 0.986);
+  bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  main .personal-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .personal-container .people {
+    width: 100%;
+  }
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,4 +1,5 @@
 /* VARIABLES */
+<<<<<<< HEAD
   $info-color:#275fcf;
   $bar-color-two:linear-gradient(
     45deg
@@ -6,15 +7,23 @@
     $bar-color-one:linear-gradient(
     225deg
     , #134bfa, #b2c4e400 );
+=======
+  $info-color:#ffffff;
+  $bar-color:linear-gradient(
+    45deg
+    , #7690e6, #ffffff00 );
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 
 /* OBJECTS */
 @mixin person-content($personCounter){
-  width: 45%;
+  flex: 1;
+  padding: 6px;
   height: fit-content;
   position: relative;
   @if $personCounter == two {
     z-index: 1;
   }
+<<<<<<< HEAD
   .personal-bar{
     bottom: -1.3em;
     position: absolute;
@@ -33,29 +42,33 @@
     width: 100%;
     height: auto;
     }
+=======
+
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   .photo{
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   .person-img{
   width: 100%;
-  }
-  background-color: #384155;
-  width: 20em;
   height: 100%;
   }
-  .personal-info{
-  background-color: $info-color;
-  width: 40em;
-  height: auto;
+  width: 40%;
+
   }
-  
+  .personal-info{
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
+  }
 }
 
 %person-one{
   .person-one{
-  background-color: #1b2b4b;
+  background-color: rgba(212, 157, 62, 0.637);
   display: flex;
-  margin: 0 0 10% 0;
+  // margin: 0 0 10% 0;
   flex-direction: row-reverse;
   @include person-content(one);
 }
@@ -64,29 +77,27 @@
 %person-two{
   .person-two{
   display: flex;
-  margin: 10% 0 0 0;
-  background-color: #394f7a;
+  // margin: 10% 0 0 0;
+  background-color: rgba(212, 157, 62, 0.637);
   @include person-content(two);
 }
 }
 
+@mixin personal-bar($personCounter) {
 
-/* ************************************* */
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  @if $personCounter == one {
+    margin: 0 0 10% 0;
+  } @else if $personCounter == two {
+    margin: 10% 0 0 0;
+  }
+  .personal-bar{
+  font-weight: bold;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
   }
 }
+<<<<<<< HEAD
 /*
 .App-header {
   background-color: #282c34;
@@ -102,49 +113,82 @@
 .App-link {
   color: #61dafb;
 }
+=======
+
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 
 /* *************** MAIN ******************* */
 main {
+  background-color: #ffffff;
+  border-width: 3px;
+  border-color: rgba(235, 160, 32, 0.911);
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
   justify-content: center;
   max-width: 100%;
+<<<<<<< HEAD
   height: 100em;
+=======
+  height: 740px;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   margin: 0 5em 0 5em;
   background-color: #ffffff;
 
   /* PERSONAL JESUS */
 
   .personal-container{
-    margin-top: 50px;
+    .people{
+      width: 45%;
+      background-color: rgba(214, 163, 80, 0.747);
+    }
     display: flex;
+<<<<<<< HEAD
     flex-direction: row;
     height: 100%;
     width: 100%;
+=======
+    flex: 1;
+    box-sizing: border-box;
+    margin-top: 50px;
+    max-height: 100%;
+    max-width: 100%;
+>>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
     @extend %person-one;
+    @include personal-bar(one);
+    @include personal-bar(two);
     @extend %person-two;
     .logotype{
       width: 10%;
       display: flex;
-      background-color: pink;
       justify-self: center;
       justify-content: center;
       align-self: center;
-
     }
 
   }
 
-  /* FOOTER */
+/* FOOTER */
 
   .footer{
     display: flex;
-    border-style: solid;
-    border-color: #1f5cd6;
+    position: fixed;
+    width: 100%;
+    border-style: groove;
+    border-color: rgba(236, 156, 16, 0.986);
+    bottom: 10px;
   }
 
 
-
-
-
-
+  /* FITTIN' TO MOBILES */
+  @media screen and (max-width: 768px){
+    .personal-container{
+      flex-direction: column;
+      .people{
+        width: 100%;
+      }
+    }
+  }
 }
+
 

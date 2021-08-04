@@ -1,109 +1,113 @@
 /* VARIABLES */
 /* OBJECTS */
-main .personal-container .person-two, main .personal-container .person-one {
-  width: 45%;
-  height: 70%;
+main .personal-container .person-one {
+  background-color: rgba(212, 157, 62, 0.637);
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1;
+  padding: 6px;
+  height: fit-content;
 }
-main .personal-container .person-two .photo, main .personal-container .person-one .photo {
-  background-color: #384155;
-  width: 20em;
+main .personal-container .person-one .photo {
+  width: 40%;
+}
+main .personal-container .person-one .photo .person-img {
+  width: 100%;
   height: 100%;
 }
-main .personal-container .person-two .photo .person-img, main .personal-container .person-one .photo .person-img {
-  width: 100%;
-}
-main .personal-container .person-two .personal-info, main .personal-container .person-one .personal-info {
-  background-color: #275fcf;
+main .personal-container .person-one .personal-info {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 5px;
   width: 40em;
-  height: auto;
-}
-main .personal-container .person-two .personal-bar, main .personal-container .person-one .personal-bar {
-  position: absolute;
-  align-self: flex-end;
-  flex-direction: row;
-  background-color: #b84ca6;
-  width: 100em;
-  height: 5%;
-}
-
-main .personal-container .person-one {
-  background-color: #1b2b4b;
-  display: flex;
-  margin: 0 0 10% 0;
-  flex-direction: row-reverse;
+  height: 100%;
 }
 
 main .personal-container .person-two {
   display: flex;
-  margin: 10% 0 0 0;
-  background-color: #394f7a;
+  background-color: rgba(212, 157, 62, 0.637);
+  flex: 1;
+  padding: 6px;
+  height: fit-content;
+  z-index: 1;
+}
+main .personal-container .person-two .photo {
+  width: 40%;
+}
+main .personal-container .person-two .photo .person-img {
+  width: 100%;
+  height: 100%;
+}
+main .personal-container .person-two .personal-info {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
 }
 
-/* ************************************* */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 /* *************** MAIN ******************* */
 main {
+  background-color: #ffffff;
+  border-width: 3px;
+  border-color: rgba(235, 160, 32, 0.911);
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
   justify-content: center;
   max-width: 100%;
-  max-height: 100%;
+  height: 740px;
   margin: 0 5em 0 5em;
   /* PERSONAL JESUS */
   /* FOOTER */
+  /* FITTIN' TO MOBILES */
 }
 main .personal-container {
-  margin-top: 50px;
   display: flex;
+  flex: 1;
+  box-sizing: border-box;
+  margin-top: 50px;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 0 10% 0;
+  margin: 10% 0 0 0;
+}
+main .personal-container .people {
+  width: 45%;
+  background-color: rgba(214, 163, 80, 0.747);
+}
+main .personal-container .personal-bar {
+  font-weight: bold;
   flex-direction: row;
-  height: 100%;
   width: 100%;
-  background-color: #61dafb;
+  height: auto;
+}
+main .personal-container .personal-bar {
+  font-weight: bold;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
 }
 main .personal-container .logotype {
   width: 10%;
   display: flex;
-  background-color: pink;
   justify-self: center;
   justify-content: center;
   align-self: center;
 }
 main .footer {
   display: flex;
-  border-style: solid;
-  border-color: #1f5cd6;
+  position: fixed;
+  width: 100%;
+  border-style: groove;
+  border-color: rgba(236, 156, 16, 0.986);
+  bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  main .personal-container {
+    flex-direction: column;
+  }
+  main .personal-container .people {
+    width: 100%;
+  }
 }
