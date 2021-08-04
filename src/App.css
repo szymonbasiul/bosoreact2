@@ -16,9 +16,13 @@ main .personal-container .person-one {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
 }
 
 main .personal-container .person-one .photo {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   width: 40%;
 }
 
@@ -47,10 +51,14 @@ main .personal-container .person-two {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
   z-index: 1;
 }
 
 main .personal-container .person-two .photo {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   width: 40%;
 }
 
@@ -82,6 +90,7 @@ main {
   max-width: 100%;
   height: 740px;
   margin: 0 5em 0 5em;
+  background-color: #ffffff;
   /* PERSONAL JESUS */
   /* FOOTER */
   /* FITTIN' TO MOBILES */
