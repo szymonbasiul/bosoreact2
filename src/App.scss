@@ -127,11 +127,7 @@ main {
   box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
   justify-content: center;
   max-width: 100%;
-<<<<<<< HEAD
-  height: 100em;
-=======
   height: 740px;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   margin: 0 5em 0 5em;
   background-color: #ffffff;
 
@@ -143,17 +139,11 @@ main {
       background-color: rgba(214, 163, 80, 0.747);
     }
     display: flex;
-<<<<<<< HEAD
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-=======
     flex: 1;
     box-sizing: border-box;
     margin-top: 50px;
     max-height: 100%;
     max-width: 100%;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
     @extend %person-one;
     @include personal-bar(one);
     @include personal-bar(two);

@@ -1,55 +1,14 @@
 /* VARIABLES */
 /* OBJECTS */
 main .personal-container .person-one {
-<<<<<<< HEAD
-  background-color: #1b2b4b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 10% 0;
-=======
   background-color: rgba(212, 157, 62, 0.637);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-<<<<<<< HEAD
-  width: 45%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-}
-
-main .personal-container .person-one .personal-bar {
-  bottom: -1.3em;
-  position: absolute;
-  left: 0;
-  z-index: 0;
-  background-image: linear-gradient(225deg, #134bfa, #b2c4e400);
-  font-weight: bold;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: auto;
-}
-
-main .personal-container .person-one .photo {
-  mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-  background-color: #384155;
-  width: 20em;
-  height: 100%;
-=======
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -57,23 +16,18 @@ main .personal-container .person-one .photo {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
 }
 
 main .personal-container .person-one .photo {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   width: 40%;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .person-one .photo .person-img {
   width: 100%;
-<<<<<<< HEAD
-}
-
-main .personal-container .person-one .personal-info {
-  background-color: #275fcf;
-  width: 40em;
-  height: auto;
-=======
   height: 100%;
 }
 
@@ -83,48 +37,12 @@ main .personal-container .person-one .personal-info {
   padding: 5px;
   width: 40em;
   height: 100%;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .person-two {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  margin: 10% 0 0 0;
-  background-color: #394f7a;
-  width: 45%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
-  z-index: 1;
-}
-
-main .personal-container .person-two .personal-bar {
-  bottom: -1.3em;
-  position: absolute;
-  z-index: 1;
-  background-image: linear-gradient(45deg, #134bfa, #b2c4e400);
-  font-weight: bold;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: auto;
-}
-
-main .personal-container .person-two .photo {
-  mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-  background-color: #384155;
-  width: 20em;
-  height: 100%;
-=======
   background-color: rgba(212, 157, 62, 0.637);
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -133,57 +51,19 @@ main .personal-container .person-two .photo {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  position: relative;
   z-index: 1;
 }
 
 main .personal-container .person-two .photo {
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   width: 40%;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .person-two .photo .person-img {
   width: 100%;
-<<<<<<< HEAD
-}
-
-main .personal-container .person-two .personal-info {
-  background-color: #275fcf;
-  width: 40em;
-  height: auto;
-}
-
-/* ************************************* */
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-/*
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-*/
-.App-link {
-  color: #61dafb;
-=======
   height: 100%;
 }
 
@@ -193,13 +73,10 @@ main .personal-container .person-two .personal-info {
   padding: 5px;
   width: 40em;
   height: 100%;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 /* *************** MAIN ******************* */
 main {
-<<<<<<< HEAD
-=======
   background-color: #ffffff;
   border-width: 3px;
   border-color: rgba(235, 160, 32, 0.911);
@@ -207,27 +84,13 @@ main {
   border-style: solid;
   -webkit-box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
           box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 100%;
-<<<<<<< HEAD
-  height: 100em;
-  margin: 0 5em 0 5em;
-  background-color: #ffffff;
-  /* PERSONAL JESUS */
-  /* FOOTER */
-}
-
-main .personal-container {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-=======
   height: 740px;
   margin: 0 5em 0 5em;
+  background-color: #ffffff;
   /* PERSONAL JESUS */
   /* FOOTER */
   /* FITTIN' TO MOBILES */
@@ -266,18 +129,12 @@ main .personal-container .personal-bar {
 
 main .personal-container .personal-bar {
   font-weight: bold;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-<<<<<<< HEAD
-  height: 100%;
-  width: 100%;
-=======
   width: 100%;
   height: auto;
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 
 main .personal-container .logotype {
@@ -285,10 +142,6 @@ main .personal-container .logotype {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  background-color: pink;
-=======
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
   justify-self: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -301,10 +154,6 @@ main .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  border-style: solid;
-  border-color: #1f5cd6;
-=======
   position: fixed;
   width: 100%;
   border-style: groove;
@@ -322,6 +171,5 @@ main .footer {
   main .personal-container .people {
     width: 100%;
   }
->>>>>>> ea0cca1590e0a3716274a13ae63f59695ce9bf12
 }
 /*# sourceMappingURL=App.css.map */
