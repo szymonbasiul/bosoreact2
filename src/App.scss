@@ -1,8 +1,8 @@
 /* VARIABLES */
-  $info-color:#8ca5d6;
+  $info-color:#ffffff;
   $bar-color:linear-gradient(
     45deg
-    , #7690e6, #c5cedd00 );
+    , #7690e6, #ffffff00 );
 
 /* OBJECTS */
 @mixin person-content($personCounter){
@@ -19,19 +19,12 @@
   height: 100%;
   }
   width: 40%;
-  /* CHANGIN OTHER ELEMENT ON HOVER */
-  &:hover ~ .personal-bar{
-    background-image: $bar-color;
-    font-size: large;
-    font-weight: bolder;
-    text-shadow: 1px 1px;
-  }
+
   }
   .personal-info{
   font-size: 16px;
   font-family: 'Times New Roman', Times, serif;
   padding: 5px;
-  background-color: $info-color;
   width: 40em;
   height: 100%;
   }
@@ -39,7 +32,7 @@
 
 %person-one{
   .person-one{
-  background-color: #1b2b4b;
+  background-color: rgba(212, 157, 62, 0.637);
   display: flex;
   // margin: 0 0 10% 0;
   flex-direction: row-reverse;
@@ -51,7 +44,7 @@
   .person-two{
   display: flex;
   // margin: 10% 0 0 0;
-  background-color: #394f7a;
+  background-color: rgba(212, 157, 62, 0.637);
   @include person-content(two);
 }
 }
@@ -60,115 +53,79 @@
 
   @if $personCounter == one {
     margin: 0 0 10% 0;
-    background-color: red;
   } @else if $personCounter == two {
     margin: 10% 0 0 0;
-    background-color: #1f5cd6;
   }
   .personal-bar{
   font-weight: bold;
   flex-direction: row;
   width: 100%;
   height: auto;
-
   }
 }
 
-
-
-
-/* ************************************* */
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 /* *************** MAIN ******************* */
 main {
-  border-style: dotted;
+  background-color: #ffffff;
+  border-width: 3px;
+  border-color: rgba(235, 160, 32, 0.911);
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
   justify-content: center;
   max-width: 100%;
-  max-height: 100%;
+  height: 740px;
   margin: 0 5em 0 5em;
 
   /* PERSONAL JESUS */
 
   .personal-container{
     .people{
-      background-color: rgb(105, 143, 105);
+      width: 45%;
+      background-color: rgba(214, 163, 80, 0.747);
     }
     display: flex;
-    border-style: dotted;
     flex: 1;
     box-sizing: border-box;
     margin-top: 50px;
-    height: 100%;
-    width: 100%;
-    background-color: #ffffff;
+    max-height: 100%;
+    max-width: 100%;
     @extend %person-one;
     @include personal-bar(one);
     @include personal-bar(two);
     @extend %person-two;
-    
     .logotype{
       width: 10%;
       display: flex;
       justify-self: center;
       justify-content: center;
       align-self: center;
-
     }
 
   }
+
+/* FOOTER */
+
+  .footer{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    border-style: groove;
+    border-color: rgba(236, 156, 16, 0.986);
+    bottom: 10px;
+  }
+
+
   /* FITTIN' TO MOBILES */
   @media screen and (max-width: 768px){
     .personal-container{
       flex-direction: column;
+      .people{
+        width: 100%;
+      }
     }
   }
-
-
-
-
-
-  /* FOOTER */
-
-  .footer{
-    display: flex;
-    border-style: solid;
-    border-color: #1f5cd6;
-  }
-
-
-
-
-
-
 }
+
 
