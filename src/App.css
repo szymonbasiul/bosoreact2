@@ -77,6 +77,7 @@ main .personal-container .person-two .personal-info {
 
 /* *************** MAIN ******************* */
 main {
+  position: relative;
   background-color: #ffffff;
   border-width: 3px;
   border-color: rgba(235, 160, 32, 0.911);
@@ -108,8 +109,6 @@ main .personal-container {
   margin-top: 50px;
   max-height: 100%;
   max-width: 100%;
-  margin: 0 0 10% 0;
-  margin: 10% 0 0 0;
 }
 
 main .personal-container .people {
@@ -117,7 +116,7 @@ main .personal-container .people {
   background-color: rgba(214, 163, 80, 0.747);
 }
 
-main .personal-container .personal-bar {
+main .personal-container .personal-bar-one, main .personal-container .personal-bar-two {
   font-weight: bold;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -127,7 +126,13 @@ main .personal-container .personal-bar {
   height: auto;
 }
 
-main .personal-container .personal-bar {
+main .personal-container .personal-bar-one {
+  margin: 0 0 1% 0;
+  color: blue;
+  text-align: end;
+}
+
+main .personal-container .personal-bar-one, main .personal-container .personal-bar-two {
   font-weight: bold;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -135,6 +140,10 @@ main .personal-container .personal-bar {
           flex-direction: row;
   width: 100%;
   height: auto;
+}
+
+main .personal-container .personal-bar-two {
+  margin: 1% 0 0 0;
 }
 
 main .personal-container .logotype {
@@ -151,10 +160,7 @@ main .personal-container .logotype {
 }
 
 main .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
+  position: absolute;
   width: 100%;
   border-style: groove;
   border-color: rgba(236, 156, 16, 0.986);

@@ -12,44 +12,43 @@ function App() {
   const logo = require("./img/bosoreactprojectlogo.png").default;
 
   return (
-    
+
 
     <main>
       <div className="personal-container">
         <div className="people">
-        <div className="person-one">
-          <div className="photo">
-            <img className="person-img" src={user_face} alt="user_face"/>
+          <div className="person-one">
+            <div className="photo">
+              <img className="person-img" src={user_face} alt="user_face" />
+            </div>
+            <div className="personal-info">
+              {default_text}
+            </div>
           </div>
-          <div className="personal-info">
-            {default_text}
+          <div className="personal-bar-one">
+            {designer1}
           </div>
-        </div>
-        <div className="personal-bar">
-          {designer1}
-        </div>
         </div>
         <img className="logotype" src={logo} alt="logo">
-            
         </img>
         <div className="people">
-        <div className="personal-bar">
+          <div className="personal-bar-two">
             {designer2}
           </div>
-        <div className="person-two">
-          <div className="photo">
-            <img className="person-img" src={user_face2} alt="user_face2"/>
+          <div className="person-two">
+            <div className="photo">
+              <img className="person-img" src={user_face2} alt="user_face2" />
+            </div>
+            <div className="personal-info">
+              {default_text}
+            </div>
           </div>
-          <div className="personal-info">
-            {default_text}
-          </div>
         </div>
-        </div>
-        </div>
+      </div>
       <div className="footer">
         logo/contact us/ yt-fb-tweeter
       </div>
-      </main>)
-  }
+    </main>)
+}
 
 export default App;
