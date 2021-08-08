@@ -83,27 +83,25 @@ main {
   max-width: 100%;
   height: 740px;
   margin: 0 5em 0 5em;
+  /* COLOR MODE */
   /* PERSONAL JESUS */
   /* FOOTER */
   /* FITTIN' TO MOBILES */
 }
 
 main .personal-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -ms-grid-columns: 45% 45%;
+      grid-template-columns: 45% 45%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   max-height: 100%;
-  max-width: 100%;
-}
-
-main .personal-container .people {
-  margin-top: 50px;
-  width: 45%;
+  width: 100%;
 }
 
 main .personal-container .personal-bar-one, main .personal-container .personal-bar-two {
@@ -136,17 +134,22 @@ main .personal-container .personal-bar-two {
   margin: 1% 0 0 0;
 }
 
-main .personal-container .logotype {
-  width: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
+main .personal-container .person-one-container {
+  background-color: #7690e6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin-top: 50px;
+  width: 100%;
+}
+
+main .personal-container .person-two-container {
+  background-color: #7690e6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  margin-top: 50px;
+  width: 100%;
 }
 
 main .footer {
@@ -162,7 +165,7 @@ main .footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .personal-container .people {
+  main .personal-container .person {
     width: 100%;
   }
 }

@@ -61,15 +61,11 @@ main {
   /* FITTIN' TO MOBILES */
 }
 main .personal-container {
-  display: flex;
-  flex: 1;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: auto;
   max-height: 100%;
   max-width: 100%;
-}
-main .personal-container .people {
-  margin-top: 50px;
-  width: 45%;
 }
 main .personal-container .personal-bar-two, main .personal-container .personal-bar-one {
   font-weight: bold;
@@ -91,12 +87,9 @@ main .personal-container .personal-bar-two, main .personal-container .personal-b
 main .personal-container .personal-bar-two {
   margin: 1% 0 0 0;
 }
-main .personal-container .logotype {
-  width: 10%;
-  display: flex;
-  justify-self: center;
-  justify-content: center;
-  align-self: center;
+main .personal-container .people {
+  margin-top: 50px;
+  width: 45%;
 }
 main .footer {
   position: absolute;
