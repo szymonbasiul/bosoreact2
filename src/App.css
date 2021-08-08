@@ -1,7 +1,6 @@
 /* VARIABLES */
 /* OBJECTS */
 main .personal-container .person-one {
-  background-color: rgba(212, 157, 62, 0.637);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +22,10 @@ main .personal-container .person-one .photo {
 }
 
 main .personal-container .person-one .photo .person-img {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+          mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
   width: 100%;
   height: 100%;
 }
@@ -39,7 +42,6 @@ main .personal-container .person-two {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(212, 157, 62, 0.637);
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -55,6 +57,10 @@ main .personal-container .person-two .photo {
 }
 
 main .personal-container .person-two .photo .person-img {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+          mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
   width: 100%;
   height: 100%;
 }
@@ -69,13 +75,8 @@ main .personal-container .person-two .personal-info {
 
 /* *************** MAIN ******************* */
 main {
-  background-color: #ffffff;
-  border-width: 3px;
-  border-color: rgba(235, 160, 32, 0.911);
-  border-radius: 5px;
-  border-style: solid;
-  -webkit-box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
-          box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
+  position: relative;
+  background-color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -96,19 +97,16 @@ main .personal-container {
           flex: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-top: 50px;
   max-height: 100%;
   max-width: 100%;
-  margin: 0 0 10% 0;
-  margin: 10% 0 0 0;
 }
 
 main .personal-container .people {
+  margin-top: 50px;
   width: 45%;
-  background-color: rgba(214, 163, 80, 0.747);
 }
 
-main .personal-container .personal-bar {
+main .personal-container .personal-bar-one, main .personal-container .personal-bar-two {
   font-weight: bold;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -118,7 +116,13 @@ main .personal-container .personal-bar {
   height: auto;
 }
 
-main .personal-container .personal-bar {
+main .personal-container .personal-bar-one {
+  margin: 0 0 1% 0;
+  color: blue;
+  text-align: end;
+}
+
+main .personal-container .personal-bar-one, main .personal-container .personal-bar-two {
   font-weight: bold;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -126,6 +130,10 @@ main .personal-container .personal-bar {
           flex-direction: row;
   width: 100%;
   height: auto;
+}
+
+main .personal-container .personal-bar-two {
+  margin: 1% 0 0 0;
 }
 
 main .personal-container .logotype {
@@ -142,13 +150,8 @@ main .personal-container .logotype {
 }
 
 main .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  border-style: groove;
-  border-color: rgba(236, 156, 16, 0.986);
   bottom: 10px;
 }
 

@@ -12,9 +12,11 @@
   @if $personCounter == two {
     z-index: 1;
   }
-
   .photo{
   .person-img{
+    -webkit-mask-image:
+    -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
   width: 100%;
   height: 100%;
   }
@@ -32,7 +34,7 @@
 
 %person-one{
   .person-one{
-  background-color: rgba(212, 157, 62, 0.637);
+  // background-color: rgba(212, 157, 62, 0.637);
   display: flex;
   // margin: 0 0 10% 0;
   flex-direction: row-reverse;
@@ -44,35 +46,45 @@
   .person-two{
   display: flex;
   // margin: 10% 0 0 0;
-  background-color: rgba(212, 157, 62, 0.637);
+  // background-color: rgba(212, 157, 62, 0.637);
   @include person-content(two);
 }
 }
 
 @mixin personal-bar($personCounter) {
-
+  %personal-bar{
+    font-weight: bold;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    }
   @if $personCounter == one {
-    margin: 0 0 10% 0;
+    .personal-bar-one{
+      @extend %personal-bar;
+      margin: 0 0 1% 0;
+      color: blue;
+      text-align: end;
+    }
+    
   } @else if $personCounter == two {
-    margin: 10% 0 0 0;
+    .personal-bar-two{
+      @extend %personal-bar;
+      margin: 1% 0 0 0;
+    }
+    
   }
-  .personal-bar{
-  font-weight: bold;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-  }
+  
 }
-
 
 /* *************** MAIN ******************* */
 main {
-  background-color: #ffffff;
-  border-width: 3px;
-  border-color: rgba(235, 160, 32, 0.911);
-  border-radius: 5px;
-  border-style: solid;
-  box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
+  position: relative;
+  background-color: white;
+  // border-width: 3px;
+  // border-color: rgba(235, 160, 32, 0.911);
+  // border-radius: 5px;
+  // border-style: solid;
+  // box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
   justify-content: center;
   max-width: 100%;
   height: 740px;
@@ -81,14 +93,16 @@ main {
   /* PERSONAL JESUS */
 
   .personal-container{
+
     .people{
+      margin-top: 50px;
       width: 45%;
-      background-color: rgba(214, 163, 80, 0.747);
+      // background-color: rgba(214, 163, 80, 0.747);
     }
     display: flex;
     flex: 1;
     box-sizing: border-box;
-    margin-top: 50px;
+    // margin-top: 50px;
     max-height: 100%;
     max-width: 100%;
     @extend %person-one;
@@ -108,11 +122,10 @@ main {
 /* FOOTER */
 
   .footer{
-    display: flex;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    border-style: groove;
-    border-color: rgba(236, 156, 16, 0.986);
+    // border-style: groove;
+    // border-color: rgba(236, 156, 16, 0.986);
     bottom: 10px;
   }
 
