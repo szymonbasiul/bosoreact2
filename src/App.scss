@@ -29,6 +29,10 @@
   padding: 5px;
   width: 40em;
   height: 100%;
+  img{
+    max-width: 16px;
+    max-height: 16px;
+  }
   }
 }
 
@@ -76,10 +80,14 @@
   
 }
 
+
+
+
+
 /* *************** MAIN ******************* */
 main {
   position: relative;
-  background-color: white;
+  background-color: rgb(252, 252, 252);
   // border-width: 3px;
   // border-color: rgba(235, 160, 32, 0.911);
   // border-radius: 5px;
@@ -94,10 +102,17 @@ main {
     
   }
 
+  .logoContainer{
+    display: flex;
+    justify-content: center;
+    background-color: #5e2f10b7;
+    
+  }
   /* PERSONAL JESUS */
 
   .personal-container{
     display: grid;
+    // border-radius: 3px 3px;
     align-content: space-around;
     grid-template-columns: 45% 45%;
     grid-template-rows: auto;
@@ -108,23 +123,21 @@ main {
     @include personal-bar(one);
     @include personal-bar(two);
     @extend %person-two;
-    // .logotype{
-    //   width: 10%;
-    //   display: flex;
-    //   justify-self: center;
-    //   justify-content: center;
-    //   align-self: center;
-    // }
+    
     .person-one-container{
-      background-color: #7690e6;
+      background-color: white;
+      border-style: solid;
+      border-color: #5e2f10b7;
+      border-radius: 5px;
+      box-shadow: 3px;
       grid-column: 1/2;
       margin-top: 50px;
       width: 100%;
       // background-color: rgba(214, 163, 80, 0.747);
     }
     .person-two-container{
-      background-color: #7690e6;
-      
+      background-color: #5e2f10b7;
+      border-radius: 5px;
       grid-column: 2/3;
       margin-top: 50px;
       width: 100%;

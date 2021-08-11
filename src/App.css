@@ -38,6 +38,11 @@ main .personal-container .person-one .personal-info {
   height: 100%;
 }
 
+main .personal-container .person-one .personal-info img {
+  max-width: 16px;
+  max-height: 16px;
+}
+
 main .personal-container .person-two {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,10 +78,15 @@ main .personal-container .person-two .personal-info {
   height: 100%;
 }
 
+main .personal-container .person-two .personal-info img {
+  max-width: 16px;
+  max-height: 16px;
+}
+
 /* *************** MAIN ******************* */
 main {
   position: relative;
-  background-color: white;
+  background-color: #fcfcfc;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -87,6 +97,16 @@ main {
   /* PERSONAL JESUS */
   /* FOOTER */
   /* FITTIN' TO MOBILES */
+}
+
+main .logoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #5e2f10b7;
 }
 
 main .personal-container {
@@ -135,7 +155,12 @@ main .personal-container .personal-bar-two {
 }
 
 main .personal-container .person-one-container {
-  background-color: #7690e6;
+  background-color: white;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -144,7 +169,8 @@ main .personal-container .person-one-container {
 }
 
 main .personal-container .person-two-container {
-  background-color: #7690e6;
+  background-color: #5e2f10b7;
+  border-radius: 5px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
