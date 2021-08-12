@@ -40,17 +40,17 @@ function App() {
   }
 
   const starVariable = (<><img src={imgPicker("star_skill")} alt="star" />
-    <img src={imgPicker("star_skill")} alt="star" />
-    <img src={imgPicker("star_skill")} alt="star" />
-    <img src={imgPicker("star_skill")} alt="star" />
-    <img src={imgPicker("star_skill")} alt="star" /></>)
+    <img src={imgPicker("png_star")} alt="star" />
+    <img src={imgPicker("png_star")} alt="star" />
+    <img src={imgPicker("png_star")} alt="star" />
+    <img src={imgPicker("png_star")} alt="star" /></>)
 
   return (
 
     <main ref={mainRef}>
       <button className="color-mode" onClick={() => { colorChanger() }}>Color Mode</button>
       <div className="logoContainer">
-        <img className="logotype" src={imgPicker("default_user")} alt="logo">
+        <img className="logotype" src={imgPicker("bosoreactprojectlogo")} alt="logo">
         </img>
       </div>
       <div className="personal-container">
@@ -80,7 +80,7 @@ function App() {
               {/* {default_text} */}
               <ul>
                 <ol>
-                  SCSS/CSS {starVariable}
+                  <div className="stars">SCSS/CSS {starVariable}</div>
                 </ol>
                 <ol> Canvas {starVariable}
                 </ol>

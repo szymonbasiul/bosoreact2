@@ -26,8 +26,9 @@ main .personal-container .person-one .photo .person-img {
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
           mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
           mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  min-width: 120px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 main .personal-container .person-one .personal-info {
@@ -38,9 +39,34 @@ main .personal-container .person-one .personal-info {
   height: 100%;
 }
 
+main .personal-container .person-one .personal-info ul {
+  width: 50%;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+main .personal-container .person-one .personal-info ul ol {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 main .personal-container .person-one .personal-info img {
   max-width: 16px;
   max-height: 16px;
+}
+
+main .personal-container .person-one .personal-info .stars {
+  background-color: #fcfcfc;
 }
 
 main .personal-container .person-two {
@@ -66,8 +92,9 @@ main .personal-container .person-two .photo .person-img {
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
           mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
           mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  min-width: 120px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 main .personal-container .person-two .personal-info {
@@ -78,9 +105,34 @@ main .personal-container .person-two .personal-info {
   height: 100%;
 }
 
+main .personal-container .person-two .personal-info ul {
+  width: 50%;
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
+main .personal-container .person-two .personal-info ul ol {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 main .personal-container .person-two .personal-info img {
   max-width: 16px;
   max-height: 16px;
+}
+
+main .personal-container .person-two .personal-info .stars {
+  background-color: #fcfcfc;
 }
 
 /* *************** MAIN ******************* */
@@ -91,7 +143,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 100%;
-  height: 740px;
+  min-height: 50rem;
   margin: 0 5em 0 5em;
   /* COLOR MODE */
   /* PERSONAL JESUS */
