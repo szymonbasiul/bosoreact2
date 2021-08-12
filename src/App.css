@@ -26,8 +26,7 @@ main .personal-container .person-one .photo .person-img {
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
           mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
           mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-  min-width: 120px;
-  width: 100%;
+  width: 100px;
   height: auto;
 }
 
@@ -40,7 +39,7 @@ main .personal-container .person-one .personal-info {
 }
 
 main .personal-container .person-one .personal-info ul {
-  width: 50%;
+  width: 100%;
   -webkit-margin-before: 0px;
           margin-block-start: 0px;
   -webkit-margin-after: 0px;
@@ -92,8 +91,7 @@ main .personal-container .person-two .photo .person-img {
   -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
           mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
           mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
-  min-width: 120px;
-  width: 100%;
+  width: 100px;
   height: auto;
 }
 
@@ -106,7 +104,7 @@ main .personal-container .person-two .personal-info {
 }
 
 main .personal-container .person-two .personal-info ul {
-  width: 50%;
+  width: 100%;
   -webkit-margin-before: 0px;
           margin-block-start: 0px;
   -webkit-margin-after: 0px;
