@@ -6,6 +6,10 @@ import { useRef } from 'react';
 export interface testProps {
   event: React.MouseEvent<HTMLButtonElement>;
 }
+interface starGeneratorTypes {
+  text: string[];
+}
+
 
 
 
@@ -20,7 +24,9 @@ function App() {
   }
 
   const colorChanger = () => {
-    mainRef.current.style.backgroundColor === "white" ? mainRef.current.style.backgroundColor = "black" : mainRef.current.style.backgroundColor = "white";
+    mainRef.current.style.backgroundColor === "white"
+      ? mainRef.current.style.backgroundColor = "black"
+      : mainRef.current.style.backgroundColor = "white";
   }
 
 
@@ -33,12 +39,27 @@ function App() {
   const backgroundColor2 = "white"
 
 
-  const default_text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, minima ullam? Tempora minima, dolorem eligendi maiores expedita rem quod dignissimos natus! Nisi sed, molestiae voluptatum in minima accusamus autem fugit."
+  const default_text = ("Lorem ipsum dolor sit amet consectetur adipisicing elit" +
+    "Dignissimos, minima ullam? Tempora minima, dolorem eligendi maiores expedita" +
+    "rem quod dignissimos natus! Nisi sed, molestiae voluptatum in minima accusamus autem fugit.")
 
   const imgPicker = (imgName: string) => {
     return require("./img/" + imgName + ".png").default;
   }
+  const starGenerator = (count: number) => {
+    let starContainer: Array<React.HTMLProps<(imgName: string) => {}> | null | string> = [];
+    for (let i = count; i > 0; i--) {
+      starContainer = [...starContainer, <img key={`${i}star_skill`}
+        src={imgPicker("star_skill")} alt="star" />]
+    }
+    for (let i = 5 - count; i > 0; i--) {
+      starContainer = [...starContainer, <img key={`${i}png_skill`}
+        src={imgPicker("png_star")} alt="star" />]
+    }
+    return starContainer
+  }
 
+  ///starGenerator(3);
   const starVariable = (<><img src={imgPicker("star_skill")} alt="star" />
     <img src={imgPicker("png_star")} alt="star" />
     <img src={imgPicker("png_star")} alt="star" />
@@ -80,7 +101,7 @@ function App() {
               {/* {default_text} */}
               <ul>
                 <ol>
-                  <div className="stars">SCSS/CSS {starVariable}</div>
+                  <div className="stars">SCSS/CSS {starGenerator(2)}</div>
                 </ol>
                 <ol> Canvas {starVariable}
                 </ol>
