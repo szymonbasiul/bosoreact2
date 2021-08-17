@@ -2,49 +2,12 @@ import React, { FC } from 'react';
 import { useState } from 'react';
 import './App.css';
 import { useRef } from 'react';
+import { Star } from './Star';
+import { StarsContainerComponent } from './StarContainer';
 
 // export interface testProps {
 //   event: React.MouseEvent<HTMLButtonElement>;
 // }
-
-interface StarInterface {
-  filled: boolean;
-}
-
-const Star: FC<StarInterface> = ({ filled }) => {
-  return <div>{filled ? "x" : "o"}</div>
-};
-
-interface StarsContainer {
-  skill: string;
-  numberOfStars: number;
-  numberOfFilledStars: number;
-}
-
-const StarsContainerComponent: FC<StarsContainer> = ({ skill, numberOfStars, numberOfFilledStars }) => {
-  if (numberOfStars < numberOfFilledStars) {
-    throw new Error("You cannot defined more filled stars than number of stars. See ya!");
-  }
-  if (numberOfFilledStars < 1) {
-    throw new Error("You cannot defined less filled stars than 1! Wake up BRO!")
-  }
-
-  let stars: Array<any> = [];
-  for (let i = 0; i < numberOfStars; i++){
-    stars.push(<Star filled={
-      numberOfFilledStars<=i ? false : true
-    }/>)
-  }
-  
-  return <div>
-    {skill}
-    {stars}
-    {numberOfFilledStars}/{numberOfStars}
-
-</div>
-}
-
-
 
 
 
