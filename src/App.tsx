@@ -1,14 +1,49 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 import { useState } from 'react';
 import './App.css';
 import { useRef } from 'react';
 
-export interface testProps {
-  event: React.MouseEvent<HTMLButtonElement>;
+// export interface testProps {
+//   event: React.MouseEvent<HTMLButtonElement>;
+// }
+
+interface StarInterface {
+  filled: boolean;
 }
-interface starGeneratorTypes {
-  text: string[];
+
+const Star: FC<StarInterface> = ({ filled }) => {
+  return <div>{filled ? "x" : "o"}</div>
+};
+
+interface StarsContainer {
+  skill: string;
+  numberOfStars: number;
+  numberOfFilledStars: number;
 }
+
+const StarsContainerComponent: FC<StarsContainer> = ({ skill, numberOfStars, numberOfFilledStars }) => {
+  if (numberOfStars < numberOfFilledStars) {
+    throw new Error("You cannot defined more filled stars than number of stars. See ya!");
+  }
+  if (numberOfFilledStars < 1) {
+    throw new Error("You cannot defined less filled stars than 1! Wake up BRO!")
+  }
+
+  let stars: Array<any> = [];
+  for (let i = 0; i < numberOfStars; i++){
+    stars.push(<Star filled={
+      numberOfFilledStars<=i ? false : true
+    }/>)
+  }
+  
+  return <div>
+    {skill}
+    {stars}
+    {numberOfFilledStars}/{numberOfStars}
+
+</div>
+}
+
 
 
 
@@ -46,6 +81,7 @@ function App() {
   const imgPicker = (imgName: string) => {
     return require("./img/" + imgName + ".png").default;
   }
+
   const starGenerator = (count: number) => {
     let starContainer: Array<React.HTMLProps<(imgName: string) => {}> | null | string> = [];
     for (let i = count; i > 0; i--) {
@@ -117,6 +153,11 @@ function App() {
         </div>
       </div>
       <div className="footer">
+      {/* <div>
+        <StarsContainerComponent skill={"CSS"} numberOfStars={5} numberOfFilledStars={1}/>
+        <StarsContainerComponent skill={"TypeScript"} numberOfStars={5} numberOfFilledStars={3}/>
+        <StarsContainerComponent skill={"ZamknijTaga"} numberOfStars={5} numberOfFilledStars={2}/>
+      </div> */}
         logo/contact us/ yt-fb-tweeter
       </div>
     </main>)
