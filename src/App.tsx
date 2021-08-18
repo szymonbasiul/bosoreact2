@@ -1,15 +1,13 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 import { useState } from 'react';
 import './App.css';
 import { useRef } from 'react';
+import { Star } from './Star';
+import { StarsContainerComponent } from './StarContainer';
 
-export interface testProps {
-  event: React.MouseEvent<HTMLButtonElement>;
-}
-interface starGeneratorTypes {
-  text: string[];
-}
-
+// export interface testProps {
+//   event: React.MouseEvent<HTMLButtonElement>;
+// }
 
 
 
@@ -46,6 +44,7 @@ function App() {
   const imgPicker = (imgName: string) => {
     return require("./img/" + imgName + ".png").default;
   }
+
   const starGenerator = (count: number) => {
     let starContainer: Array<React.HTMLProps<(imgName: string) => {}> | null | string> = [];
     for (let i = count; i > 0; i--) {
@@ -115,6 +114,11 @@ function App() {
         </div>
       </div>
       <div className="footer">
+      {/* <div>
+        <StarsContainerComponent skill={"CSS"} numberOfStars={5} numberOfFilledStars={1}/>
+        <StarsContainerComponent skill={"TypeScript"} numberOfStars={5} numberOfFilledStars={3}/>
+        <StarsContainerComponent skill={"ZamknijTaga"} numberOfStars={5} numberOfFilledStars={2}/>
+      </div> */}
         logo/contact us/ yt-fb-tweeter
       </div>
     </main>)
