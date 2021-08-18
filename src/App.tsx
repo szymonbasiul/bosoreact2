@@ -49,17 +49,15 @@ function App() {
   const starGenerator = (count: number) => {
     let starContainer: Array<React.HTMLProps<(imgName: string) => {}> | null | string> = [];
     for (let i = count; i > 0; i--) {
-      starContainer = [...starContainer, <img key={`${i}star_skill`}
-        src={imgPicker("star_skill")} alt="star" />]
+      starContainer = [...starContainer, <img src={imgPicker("star_skill")} alt="star" />]
     }
     for (let i = 5 - count; i > 0; i--) {
-      starContainer = [...starContainer, <img key={`${i}png_skill`}
-        src={imgPicker("png_star")} alt="star" />]
+      starContainer = [...starContainer, <img src={imgPicker("png_star")} alt="star" />]
     }
-    return starContainer
+    return starContainer;
   }
 
-  ///starGenerator(3);
+
   const starVariable = (<><img src={imgPicker("star_skill")} alt="star" />
     <img src={imgPicker("png_star")} alt="star" />
     <img src={imgPicker("png_star")} alt="star" />
@@ -101,11 +99,11 @@ function App() {
               {/* {default_text} */}
               <ul>
                 <ol>
-                  <div className="stars">SCSS/CSS {starGenerator(2)}</div>
+                  <div className="stars">SCSS/CSS {starGenerator(5)}</div>
                 </ol>
-                <ol> Canvas {starVariable}
+                <ol> Canvas {starGenerator(5)}
                 </ol>
-                <ol> React/Typescript {starVariable}
+                <ol> React/Typescript {starGenerator(3)}
                 </ol>
                 <ol> Node/Express {starVariable}
                 </ol>
