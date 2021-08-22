@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import ImgPicker from './reusable_functions/ImgPicker';
 import './App.css';
 import { useRef } from 'react';
+import PersonalObject from './appDivComponents/PersonalObject';
 import { StarsContainerComponent } from './score_star/StarsContainerComponent';
 
 
@@ -31,6 +32,7 @@ function App() {
     "Dignissimos, minima ullam? Tempora minima, dolorem eligendi maiores expedita" +
     "rem quod dignissimos natus! Nisi sed, molestiae voluptatum in minima accusamus autem fugit.")
 
+
   return (
 
     <main ref={mainRef}>
@@ -40,19 +42,8 @@ function App() {
         </img>
       </div>
       <div className="personal-container">
-        <div className="person-one-container">
-          <div className="person-one">
-            <div className="photo">
-              <img className="person-img" src={ImgPicker("default_user")} alt="user_face" />
-            </div>
-            <div className="personal-info">
-              {/* {default_text} */}
-            </div>
-          </div>
-          <div className="personal-bar-one">
-            {designer1}
-          </div>
-        </div>
+        {PersonalObject(ImgPicker("default_user"), 'one', designer1)}
+
 
         <div className="person-two-container">
           <div className="personal-bar-two">
@@ -78,7 +69,7 @@ function App() {
                 <ol><StarsContainerComponent skillName={'Node/Express'}
                   numberOfStars={5} numberOfFilledStars={2} />
                 </ol>
-                <ol> MySQL <StarsContainerComponent skillName={'Node/Express'}
+                <ol><StarsContainerComponent skillName={'MySQL'}
                   numberOfStars={5} numberOfFilledStars={2} />
                 </ol>
               </ul>

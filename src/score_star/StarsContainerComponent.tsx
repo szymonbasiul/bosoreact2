@@ -22,11 +22,9 @@ export const StarsContainerComponent: FC<StarsContainer> = ({ skillName, numberO
       numberOfFilledStars <= i ? false : true
     } />)
   }
-
   return <>
     {skillName}
     {stars}
   </>
 }
 
-//   let starContainer: Array<React.HTMLProps<(imgName: string) => {}> | null> = [];
