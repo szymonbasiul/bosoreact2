@@ -18,7 +18,7 @@ export const StarsContainerComponent: FC<StarsContainer> = ({ skillName, numberO
 
   let stars: Array<React.HTMLProps<() => {}>> = [];
   for (let i = 0; i < numberOfStars; i++) {
-    stars.push(<Star filled={
+    stars.push(<Star key={i} filled={
       numberOfFilledStars <= i ? false : true
     } />)
   }

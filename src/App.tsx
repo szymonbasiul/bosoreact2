@@ -3,11 +3,10 @@ import ImgPicker from './reusable_functions/ImgPicker';
 import './App.css';
 import { useRef } from 'react';
 import PersonalObject from './appDivComponents/PersonalObject';
-import { StarsContainerComponent } from './score_star/StarsContainerComponent';
+
 
 
 function App() {
-  console.log("Zlo!")
 
   const mainRef = useRef() as React.MutableRefObject<HTMLDivElement>
   const test = () => {
@@ -19,10 +18,6 @@ function App() {
       ? mainRef.current.style.backgroundColor = "black"
       : mainRef.current.style.backgroundColor = "white";
   }
-
-  // const intro = "BoSo Company"
-  const designer1 = "Bogdan T."
-  const designer2 = "Szymon B."
 
   const backgroundColor1 = "black"
   const backgroundColor2 = "white"
@@ -42,40 +37,9 @@ function App() {
         </img>
       </div>
       <div className="personal-container">
-        {PersonalObject(ImgPicker("default_user"), 'one', designer1)}
+        <PersonalObject personalPhoto={ImgPicker("default_user")} writtenClassNumber={"one"} designer={"Bogdan T."}/>
+        <PersonalObject personalPhoto={ImgPicker("default_user")} writtenClassNumber={"two"} designer={"Szymon B."}/>
 
-
-        <div className="person-two-container">
-          <div className="personal-bar-two">
-            {designer2}
-          </div>
-          <div className="person-two">
-            <div className="photo">
-              <img className="person-img" src={ImgPicker("default_user")} alt="user_face2" />
-            </div>
-            <div className="personal-info">
-              {/* {default_text} */}
-              <ul>
-                <ol>
-                  <StarsContainerComponent skillName={'SCSS/CSS '}
-                    numberOfStars={5} numberOfFilledStars={2} />
-                </ol>
-                <ol><StarsContainerComponent skillName={'CSS/Sass'}
-                  numberOfStars={5} numberOfFilledStars={3} />
-                </ol>
-                <ol><StarsContainerComponent skillName={'React/Typescript'}
-                  numberOfStars={5} numberOfFilledStars={2} />
-                </ol>
-                <ol><StarsContainerComponent skillName={'Node/Express'}
-                  numberOfStars={5} numberOfFilledStars={2} />
-                </ol>
-                <ol><StarsContainerComponent skillName={'MySQL'}
-                  numberOfStars={5} numberOfFilledStars={2} />
-                </ol>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
       <div className="footer">
         logo/contact us/ yt-fb-tweeter

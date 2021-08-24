@@ -1,9 +1,16 @@
 //import ImgPicker from "../reusable_functions/ImgPicker";
 import { FC } from 'react'
+import PersonalInfo from './PersonalInfo';
 
-const PersonalObject = (personalPhoto: string
-    , writtenClassNumber: string
-    , designer: string) => {
+
+
+interface PersonDetails {
+    personalPhoto: string;
+    writtenClassNumber: string;
+    designer: string;
+}
+
+const PersonalObject: FC<PersonDetails> = ({personalPhoto, writtenClassNumber, designer}) => {
     return (
         <div className={`person-${writtenClassNumber}-container`}>
             <div className={`person-${writtenClassNumber}`}>
@@ -12,6 +19,8 @@ const PersonalObject = (personalPhoto: string
                 </div>
                 <div className="personal-info">
                     {/* {default_text} */}
+                    <PersonalInfo />
+
                 </div>
             </div>
             <div className={`personal-bar-${writtenClassNumber}`}>
