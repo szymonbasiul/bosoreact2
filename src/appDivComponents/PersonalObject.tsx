@@ -19,7 +19,7 @@ const PersonalObject: FC<PersonDetails> = ({personalPhoto, writtenClassNumber, d
                 </div>
                 <div className="personal-info">
                     {/* {default_text} */}
-                    <PersonalInfo />
+                    <PersonalInfo designer={designer}/>
 
                 </div>
             </div>

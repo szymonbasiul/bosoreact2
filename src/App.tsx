@@ -39,7 +39,6 @@ function App() {
       <div className="personal-container">
         <PersonalObject personalPhoto={ImgPicker("default_user")} writtenClassNumber={"one"} designer={"Bogdan T."}/>
         <PersonalObject personalPhoto={ImgPicker("default_user")} writtenClassNumber={"two"} designer={"Szymon B."}/>
-
       </div>
       <div className="footer">
         logo/contact us/ yt-fb-tweeter
