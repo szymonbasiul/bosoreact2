@@ -1,34 +1,43 @@
 import { FC } from "react"
 import { StarsContainerComponent } from "../score_star/StarsContainerComponent"
 
+interface DSOitem {
+    [name: string]: number
+}
+interface DSOitems {
+    [key: string]: DSOitem
+}
+
 interface PITypes {
     designer: string
 }
 
-
-const designersSkillLevel = {
-    "Szymon B.":
-    {"scss/css": 2, "css/sass": 3, "react/typescript": 1, "node/express": 4, "mysql": 5 },
-    "Bogdan T.":
-    {"scss/css": 1, "css/sass": 1, "react/typescript": 1, "node/express": 2, "mysql": 1 }
-
-}
-
 const PersonalInfo: FC<PITypes> = ({ designer }) => {
-    const test = "Szymon B.";
-    const skillList = ["scss/css", "css/sass", "react/typescript", "node/express", "mysql"];
+
+    const designerSkillObject: DSOitems = {
+        "Szymon B.": {
+            "css/sass": 2, 'react/typescript': 1, "node/express": 4
+        },
+        "Bogdan T.": {
+            "css/sass": 1, "react/typescript": 1, "node/express": 2
+        }
+    }
+
+    console.log(designerSkillObject[designer]["css/sass"])
+    const skillList = ["css/sass", "react/typescript", "node/express"] as const
     const skillMap = skillList.map(x => {
-        return(
-    <ol key={x}>
+        return (
+            <ol key={x}>
                 <StarsContainerComponent skillName={x}
-                    numberOfStars={5} numberOfFilledStars={3} />
-                
+                    numberOfStars={5} numberOfFilledStars={designerSkillObject[designer][x]} />
+                {designerSkillObject[designer][x]}
+
             </ol>
         )
     });
     return (
         <>
-    {/* {default_text} */}
+            {/* {default_text} */}
             <ul>
                 {skillMap}
             </ul>
