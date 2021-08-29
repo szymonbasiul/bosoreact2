@@ -5,20 +5,13 @@ interface DSOitem {
 }
 
 interface DSOitems {
-    "Szymon B.": DSOitem;
-    "Bogdan T.": DSOitem;
-    SkillList: string[]
+    [key: string]: DSOitem
+
 }
+export let skillList = ["css/sass", "react/typescript", "node/express"]
 
-
-const designerSkillObject: DSOitems = {
-    "Szymon B.": {
-        "css/sass": 2, 'react/typescript': 1, "node/express": 4
-    },
-    "Bogdan T.": {
-        "css/sass": 1, "react/typescript": 1, "node/express": 2
-    },
-    SkillList:["css/sass", "react/typescript", "node/express"]
+export const designerSkillObject: DSOitems = {
+    "Szymon B.": { "css/sass": 3, "react/typescript": 2, "node/express": 1 }
+    ,
+    "Bogdan T.": { "css/sass": 2, "react/typescript": 1, "node/express": 1 },
 }
-
-export default designerSkillObject;

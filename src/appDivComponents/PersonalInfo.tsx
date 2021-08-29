@@ -1,29 +1,14 @@
 import { FC } from "react"
-import designerSkillObject from "../config/DesignerObject";
+import { designerSkillObject, skillList } from "../config/DesignerObject";
 import { StarsContainerComponent } from "../score_star/StarsContainerComponent"
-interface DSOitem {
-    [name: string]: number
-}
-interface DSOitems {
-    [key: string]: DSOitem
-}
+
+
 
 interface PITypes {
     designer: string
 }
 
 const PersonalInfo: FC<PITypes> = ({ designer }) => {
-
-    const designerSkillObject: DSOitems = {
-        "Szymon B.": {
-            "css/sass": 2, 'react/typescript': 1, "node/express": 4
-        },
-        "Bogdan T.": {
-            "css/sass": 1, "react/typescript": 1, "node/express": 2
-        }
-    }
-
-    const skillList = ["css/sass", "react/typescript", "node/express"] as const
     const skillMap = skillList.map(x => {
         return (
             <ol key={x}>
