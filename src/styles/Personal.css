@@ -138,10 +138,13 @@
       align-content: space-around;
   -ms-grid-columns: 45% 45%;
       grid-template-columns: 45% 45%;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  justify-items: center;
   max-height: 100%;
   width: 100%;
 }
@@ -187,16 +190,21 @@
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   margin-top: 50px;
-  width: 100%;
+  width: 420px;
 }
 
 .personal-container .person-two-container {
   background-color: #5e2f10b7;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
   border-radius: 5px;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   margin-top: 50px;
-  width: 100%;
+  width: 420px;
 }
 /*# sourceMappingURL=Personal.css.map */

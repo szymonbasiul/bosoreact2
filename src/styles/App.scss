@@ -1,15 +1,18 @@
 main {
+
   position: relative;
-  background-color: rgb(252, 252, 252);
+  // background-color: rgb(255, 255, 255);
   // border-width: 3px;
   // border-color: rgba(235, 160, 32, 0.911);
   // border-radius: 5px;
   // border-style: solid;
   // box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
   justify-content: center;
+  width: 960px;
   max-width: 100%;
   min-height: 50rem;
-  margin: 0 5em 0 5em;
+  margin: 0 auto;
+
 
   .logoContainer{
     display: flex;
@@ -26,6 +29,14 @@ main {
       }
     }
   }
+
+
 }
 
+.mainBlack{
+  background-color: rgb(0, 0, 0);
+}
+.mainWhite{
+  background-color: rgb(255, 255, 255);
+}
 

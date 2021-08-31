@@ -1,10 +1,14 @@
 import React from 'react';
 import '../styles/Footer.css';
 
+
 function Footer() {
     return (
+        
         <div className="footer">
-            logo/contact us/ yt-fb-tweeter
+            <div className="tweeter"/>
+            <div className="facebook"/>
+            <div className="linkedin"/>
         </div>
 
     );

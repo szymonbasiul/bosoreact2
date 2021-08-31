@@ -1,7 +1,18 @@
+
+.footer img{
+  // width: 50px;
+  // height: 50px;
+}
 .footer{
+    background-color: rgba(255, 255, 255, 0);
     position: absolute;
+    // height: 50px;
+
+
     width: 100%;
-    // border-style: groove;
-    // border-color: rgba(236, 156, 16, 0.986);
-    bottom: 10px;
+    bottom: 8px;
+    .tweeter{
+      display: flex;
+      background-image: url("https://about.twitter.com/content/dam/about-twitter/en/brand-toolkit/brand-download-img-1.jpg.twimg.1920.jpg");
+    }
   }

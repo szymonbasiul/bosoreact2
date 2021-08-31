@@ -97,8 +97,10 @@
     // border-radius: 3px 3px;
     align-content: space-around;
     grid-template-columns: 45% 45%;
+    column-gap: 20px;
     grid-template-rows: auto;
     justify-content: space-around;
+    justify-items: center;
     max-height: 100%;
     width: 100%;
     @extend %person-one;
@@ -114,15 +116,19 @@
       box-shadow: 3px;
       grid-column: 1/2;
       margin-top: 50px;
-      width: 100%;
+      width: 420px;
       // background-color: rgba(214, 163, 80, 0.747);
     }
     .person-two-container{
       background-color: #5e2f10b7;
+      border-style: solid;
+      border-color: #5e2f10b7;
+      border-radius: 5px;
+      box-shadow: 3px;
       border-radius: 5px;
       grid-column: 2/3;
       margin-top: 50px;
-      width: 100%;
+      width: 420px;
       // background-color: rgba(214, 163, 80, 0.747);
     }
 

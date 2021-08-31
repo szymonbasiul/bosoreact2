@@ -1,12 +1,12 @@
 main {
   position: relative;
-  background-color: #fcfcfc;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 960px;
   max-width: 100%;
   min-height: 50rem;
-  margin: 0 5em 0 5em;
+  margin: 0 auto;
   /* FITTIN' TO MOBILES */
 }
 
@@ -30,5 +30,13 @@ main .logoContainer {
   main .personal-container .person {
     width: 100%;
   }
+}
+
+.mainBlack {
+  background-color: black;
+}
+
+.mainWhite {
+  background-color: white;
 }
 /*# sourceMappingURL=App.css.map */
