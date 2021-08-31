@@ -1,10 +1,11 @@
-[{
-    "designer1":
-    "scss/css"
-    "css/sass"
-    "react/typescript"
-    "node/express"
-    "mysql"
-}
-
+[
+    {
+        "designer1": {
+            "scss/css",
+            "css/sass",
+            "react/typescript",
+            "node/express",
+            "mysql"
+        }
+    }
 ]
