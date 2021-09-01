@@ -3,6 +3,7 @@ import './styles/App.css';
 import { useRef, useState } from 'react';
 import PersonalContainer from './appDivComponents/PersonalContainer';
 import Footer from './appDivComponents/Footer';
+import ProjectContainer from './appDivComponents/ProjectContainer';
 
 function App() {
   const mainRef = useRef() as React.MutableRefObject<HTMLDivElement>
@@ -30,6 +31,7 @@ function App() {
         </img>
       </div>
       <PersonalContainer />
+      <ProjectContainer />
       <Footer />
     </main>)
 }
