@@ -1,0 +1,14 @@
+.calculatorMainCanvas {
+  background-color: white;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin-top: 50px;
+  width: 420px;
+}
+/*# sourceMappingURL=Calculator.css.map */

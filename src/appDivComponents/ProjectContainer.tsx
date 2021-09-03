@@ -1,5 +1,5 @@
 import { FC } from "react";
-import Calculator from "./projects/Calculator";
+import Calculator from "./projects/calculatorProject/Calculator";
 
 
 const ProjectContainer: FC = () => {

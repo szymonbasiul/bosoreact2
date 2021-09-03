@@ -1,13 +1,10 @@
 import React, { useState, useEffect, FC } from 'react';
+import './Calculator.css'
 
 const Calculator: FC = () => {
     return (
         <div className="calculatorMainCanvas">
-            <div className="calculatorContainer">
-                <div className="calculatorButton">
-
-                </div>
-            </div>
+            
         </div>
     )
 
