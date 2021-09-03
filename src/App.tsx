@@ -33,7 +33,6 @@ function App() {
       </div>
       <PersonalContainer />
       <ProjectContainer />
-      <Calculator />
       <Footer />
     </main>)
 }
