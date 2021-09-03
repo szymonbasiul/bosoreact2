@@ -1,4 +1,5 @@
 import { ButtonsObject } from "./ButtonsObject";
+import './Calculator_gui_logic.css'
 
 function Calculator_gui_logic() {
 
@@ -8,10 +9,10 @@ function Calculator_gui_logic() {
             return <div className='common-button'>{x}</div>
         })
     return (
-        <div>
+        <div className='calculatorShape'>
             <div className='input-field'>pole z wynikiem</div>
-            <div className='common-button'>button</div>
-            {commonButtonMaped}
+            <div className='common-button'>{commonButtonMaped}</div>
+            
             <div className='enter-button'>enter button</div>
         </div>
     );
