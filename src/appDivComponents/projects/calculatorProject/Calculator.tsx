@@ -6,9 +6,6 @@ const Calculator: FC = () => {
         <div className="calculatorMainCanvas">
             <div className="calculatorContainer">
                 <Calculator_gui_logic />
-                <div className="calculatorButton">
-
-                </div>
             </div>
         </div>
     )
