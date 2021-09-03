@@ -1,0 +1,133 @@
+/* VARIABLES */
+  $info-color:#ffffff;
+  $bar-color:linear-gradient(
+    45deg
+    , #7690e6, #ffffff00 );
+
+/* OBJECTS */
+@mixin person-content($personCounter){
+  flex: 1;
+  padding: 6px;
+  height: fit-content;
+  position: relative;
+  @if $personCounter == two {
+    z-index: 1;
+  }
+  .photo{
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  .person-img{
+  width: 100%;
+  height: 100%;
+  }
+  width: 40%;
+
+  }
+  .personal-info{
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
+  }
+}
+
+%person-one{
+  .person-one{
+  background-color: rgba(212, 157, 62, 0.637);
+  display: flex;
+  // margin: 0 0 10% 0;
+  flex-direction: row-reverse;
+  @include person-content(one);
+}
+}
+
+%person-two{
+  .person-two{
+  display: flex;
+  // margin: 10% 0 0 0;
+  background-color: rgba(212, 157, 62, 0.637);
+  @include person-content(two);
+}
+}
+
+@mixin personal-bar($personCounter) {
+
+  @if $personCounter == one {
+    margin: 0 0 10% 0;
+  } @else if $personCounter == two {
+    margin: 10% 0 0 0;
+  }
+  .personal-bar{
+  font-weight: bold;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  }
+}
+
+/* *************** MAIN ******************* */
+main {
+  background-color: #ffffff;
+  border-width: 3px;
+  border-color: rgba(235, 160, 32, 0.911);
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
+  justify-content: center;
+  max-width: 100%;
+  height: 740px;
+  margin: 0 5em 0 5em;
+  background-color: #ffffff;
+
+  /* PERSONAL JESUS */
+
+  .personal-container{
+    .people{
+      width: 45%;
+      background-color: rgba(214, 163, 80, 0.747);
+    }
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    margin-top: 50px;
+    max-height: 100%;
+    max-width: 100%;
+    @extend %person-one;
+    @include personal-bar(one);
+    @include personal-bar(two);
+    @extend %person-two;
+    .logotype{
+      width: 10%;
+      display: flex;
+      justify-self: center;
+      justify-content: center;
+      align-self: center;
+    }
+
+  }
+
+/* FOOTER */
+
+  .footer{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    border-style: groove;
+    border-color: rgba(236, 156, 16, 0.986);
+    bottom: 10px;
+  }
+
+
+  /* FITTIN' TO MOBILES */
+  @media screen and (max-width: 768px){
+    .personal-container{
+      flex-direction: column;
+      .people{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
