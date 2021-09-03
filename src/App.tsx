@@ -23,7 +23,7 @@ function App() {
     "Dignissimos, minima ullam? Tempora minima, dolorem eligendi maiores expedita" +
     "rem quod dignissimos natus! Nisi sed, molestiae voluptatum in minima accusamus autem fugit.")
 
-  
+
   return (
     <main className={mainClassColor} ref={mainRef}>
       <button className="color-mode" onClick={colorChanger}>Color Mode</button>
@@ -33,7 +33,6 @@ function App() {
       </div>
       <PersonalContainer />
       <ProjectContainer />
-      <Calculator />
       <Footer />
     </main>)
 }
