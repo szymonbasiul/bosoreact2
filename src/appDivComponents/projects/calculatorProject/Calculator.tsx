@@ -1,10 +1,15 @@
 import React, { useState, useEffect, FC } from 'react';
-import './Calculator.css'
+import Calculator_gui_logic from './Calculator_gui_logic';
 
 const Calculator: FC = () => {
     return (
         <div className="calculatorMainCanvas">
-            
+            <div className="calculatorContainer">
+                <Calculator_gui_logic />
+                <div className="calculatorButton">
+
+                </div>
+            </div>
         </div>
     )
 
