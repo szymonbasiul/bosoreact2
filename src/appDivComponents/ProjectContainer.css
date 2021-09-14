@@ -1,0 +1,11 @@
+.projectContainer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+  margin: 30px;
+}
+/*# sourceMappingURL=ProjectContainer.css.map */

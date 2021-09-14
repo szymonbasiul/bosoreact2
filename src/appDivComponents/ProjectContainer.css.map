@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,iBAAiB,CAAA;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,qBAAqB,EAAE,OAAO;EAC9B,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "ProjectContainer.scss"
+    ],
+    "names": [],
+    "file": "ProjectContainer.css"
+}

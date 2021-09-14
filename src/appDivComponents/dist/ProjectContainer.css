@@ -1,0 +1,6 @@
+.projectContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 80%;
+  margin: 30px;
+}

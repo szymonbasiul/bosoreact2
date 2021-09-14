@@ -1,0 +1,136 @@
+.personal-container .person-one {
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1;
+  padding: 6px;
+  height: fit-content;
+}
+.personal-container .person-one .photo {
+  width: 40%;
+}
+.personal-container .person-one .photo .person-img {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  width: 100px;
+  height: auto;
+}
+.personal-container .person-one .personal-info {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
+}
+.personal-container .person-one .personal-info ul {
+  width: 100%;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+.personal-container .person-one .personal-info ul ol {
+  padding-inline-start: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.personal-container .person-one .personal-info img {
+  max-width: 16px;
+  max-height: 16px;
+}
+.personal-container .person-one .personal-info .stars {
+  background-color: #fcfcfc;
+}
+
+.personal-container .person-two {
+  display: flex;
+  flex: 1;
+  padding: 6px;
+  height: fit-content;
+  z-index: 1;
+}
+.personal-container .person-two .photo {
+  width: 40%;
+}
+.personal-container .person-two .photo .person-img {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  width: 100px;
+  height: auto;
+}
+.personal-container .person-two .personal-info {
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 5px;
+  width: 40em;
+  height: 100%;
+}
+.personal-container .person-two .personal-info ul {
+  width: 100%;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding-inline-start: 0px;
+}
+.personal-container .person-two .personal-info ul ol {
+  padding-inline-start: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+.personal-container .person-two .personal-info img {
+  max-width: 16px;
+  max-height: 16px;
+}
+.personal-container .person-two .personal-info .stars {
+  background-color: #fcfcfc;
+}
+
+.personal-container {
+  display: grid;
+  align-content: space-around;
+  grid-template-columns: 45% 45%;
+  column-gap: 20px;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  justify-items: center;
+  max-height: 100%;
+  width: 100%;
+}
+.personal-container .personal-bar-two, .personal-container .personal-bar-one {
+  font-weight: bold;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.personal-container .personal-bar-one {
+  margin: 0 0 1% 0;
+  color: blue;
+  text-align: end;
+}
+.personal-container .personal-bar-two, .personal-container .personal-bar-one {
+  font-weight: bold;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.personal-container .personal-bar-two {
+  margin: 1% 0 0 0;
+}
+.personal-container .person-one-container {
+  background-color: white;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  box-shadow: 3px;
+  grid-column: 1/2;
+  margin-top: 50px;
+  width: 420px;
+}
+.personal-container .person-two-container {
+  background-color: #5e2f10b7;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  box-shadow: 3px;
+  border-radius: 5px;
+  grid-column: 2/3;
+  margin-top: 50px;
+  width: 420px;
+}
