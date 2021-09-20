@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    width: 140px;
-    height: 100px;
+    width: 400px;
+    height: 300px;
     justify-content: space-around;
     background-color: white;
     border-style: solid;
@@ -13,17 +13,43 @@
     .input-field{
         display: flex;
         align-self: center;
-        width: 110px;
-        height: 30px;
+        align-items: center;
+        width: 280px;
+        height: 50px;
         background-color: grey;
         border-style: solid;
         border-color: #5e2f10b7;
         border-radius: 5px;
     }
-    .common-button{
-        width: 25px;
-        height: 25px;
-        background-color: blue;
+    .buttonFields{
+        display: flex;
+        .arithmeticButtonContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+
+        .common-button{
+        width: 40px;
+        height: 40px;
+        background-color: rgba(62, 145, 80, 0.493);
+        border-style: dashed;
+
+            }
+        }
+        .numberButtonContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .common-button{
+        width: 40px;
+        height: 40px;
+        background-color: rgba(62, 145, 80, 0.493);
+        border-style: dashed;
+
+            }
+        }
     }
     .enter-button{
         display: flex;
