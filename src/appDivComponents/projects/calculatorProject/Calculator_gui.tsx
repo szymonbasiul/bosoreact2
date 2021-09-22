@@ -1,7 +1,16 @@
 import { ButtonsObject } from "./ButtonsObject";
-import './Calculator_gui_logic.css'
+import './Calculator_gui.css'
+import { useState } from "react";
 
-function Calculator_gui_logic() {
+
+
+
+const Calculator_gui = function() {
+
+    const [actionDisplayValue, setActionDisplayValue] = useState<string>('');
+
+
+
 
 
     const arithmeticButtons
@@ -10,11 +19,11 @@ function Calculator_gui_logic() {
         })
     const numberButtons
         = ButtonsObject.displayNumbers.map(x => {
-            return <div className='common-button'>{x}</div>
+            return <div onClick={()=>(setActionDisplayValue(actionDisplayValue+x))} className='common-button'>{x}</div>
         })
     return (
         <div className='calculatorShape'>
-            <div className='input-field'>pole z wynikiem</div>
+            <div className='input-field'>{ actionDisplayValue }</div>
             <div className="buttonFields">
             <div className='numberButtonContainer'>{numberButtons}</div>
             <div className='arithmeticButtonContainer'>{arithmeticButtons}</div>
@@ -24,4 +33,4 @@ function Calculator_gui_logic() {
     );
 }
 
-export default Calculator_gui_logic;
+export default Calculator_gui;

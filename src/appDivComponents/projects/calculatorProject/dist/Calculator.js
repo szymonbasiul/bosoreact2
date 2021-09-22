@@ -1,11 +1,13 @@
 "use strict";
 exports.__esModule = true;
 var react_1 = require("react");
+var Calculator_gui_1 = require("./Calculator_gui");
 require("./Calculator.css");
 var Calculator = function () {
-    return (react_1["default"].createElement("div", { className: "calculatorMainCanvas" },
-        "Button1",
-        react_1["default"].createElement("div", { className: "calculatorContainer" })));
+    return (react_1["default"].createElement(react_1["default"].Fragment, null,
+        react_1["default"].createElement("div", { className: "calculatorButton" }, "Button1"),
+        react_1["default"].createElement("div", { className: "calculatorContainer" },
+            react_1["default"].createElement(Calculator_gui_1["default"], null))));
 };
 exports["default"] = Calculator;
 /* przyklad */

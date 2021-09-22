@@ -23,6 +23,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-box-align: center;
@@ -53,6 +56,7 @@
 }
 
 .calculatorShape .buttonFields .arithmeticButtonContainer .common-button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   background-color: rgba(62, 145, 80, 0.493);
@@ -70,6 +74,7 @@
 }
 
 .calculatorShape .buttonFields .numberButtonContainer .common-button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
   background-color: rgba(62, 145, 80, 0.493);
@@ -95,4 +100,4 @@
   margin-top: 50px;
   width: 120px;
 }
-/*# sourceMappingURL=Calculator_gui_logic.css.map */
+/*# sourceMappingURL=Calculator_gui.css.map */

@@ -1,3 +1,11 @@
+@mixin common-button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(62, 145, 80, 0.493);
+    border-style: dashed;
+}
+
 .calculatorShape{
     display: flex;
     flex-direction: column;
@@ -12,6 +20,7 @@
     box-shadow: 3px;
     .input-field{
         display: flex;
+        justify-content: end;
         align-self: center;
         align-items: center;
         width: 280px;
@@ -30,10 +39,7 @@
         
 
         .common-button{
-        width: 40px;
-        height: 40px;
-        background-color: rgba(62, 145, 80, 0.493);
-        border-style: dashed;
+        @include common-button;
 
             }
         }
@@ -43,11 +49,8 @@
         justify-content: space-around;
 
         .common-button{
-        width: 40px;
-        height: 40px;
-        background-color: rgba(62, 145, 80, 0.493);
-        border-style: dashed;
-
+        @include common-button;
+        
             }
         }
     }
