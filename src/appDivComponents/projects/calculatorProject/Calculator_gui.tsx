@@ -10,12 +10,15 @@ const Calculator_gui = function() {
     const [actionDisplayValue, setActionDisplayValue] = useState<string>('');
 
 
+    const arithmeticButtonAction = (operators: string) => {
+        setActionDisplayValue(actionDisplayValue+operators)
+    }
 
 
 
     const arithmeticButtons
         = ButtonsObject.displayString.map(x => {
-            return <div className='common-button'>{x}</div>
+            return <div onClick={()=>(arithmeticButtonAction(x))} className='common-button'>{x}</div>
         })
     const numberButtons
         = ButtonsObject.displayNumbers.map(x => {
@@ -34,3 +37,11 @@ const Calculator_gui = function() {
 }
 
 export default Calculator_gui;
+
+
+/* 
+1. Rozpoczecie dzialania po nacisnieciu guzika 
+2. Wprowadzenie drugiej liczby
+3. Pokaz wynik po kazdym dzialaniu
+4. Wymaz wynik po nacisnieciu CE
+*/

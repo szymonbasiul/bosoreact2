@@ -1,15 +1,33 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Calculator from "./projects/calculatorProject/Calculator";
 import './ProjectContainer.css';
+import Blackscreen from "./projects/default/Blackscreen";
+
+
 
 
 const ProjectContainer: FC = () => {
+    const [projectDisplay, setProjectDisplay] = useState<string>('black');
+
+    const contentSwitch = () => {
+        switch (projectDisplay) {
+            case 'CalculatoR':
+                return <Calculator />
+                break;
+            default:
+                return <Blackscreen/>;
+        }
+    }
+    
     return (
-        <div className="projectContainer">
-            
-            
-            <Calculator/>
+        <>
+            <div onClick={() => { setProjectDisplay('CalculatoR') }} className="projectButton">
+            Button1
         </div>
+            <div className="projectContainer">
+                {contentSwitch()}
+        </div>
+        </>
     )
 
 }
