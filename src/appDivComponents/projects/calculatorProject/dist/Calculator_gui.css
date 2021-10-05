@@ -1,42 +1,25 @@
 .wideButton {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  flex-grow: 2;
 }
 
 .calculatorShape {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 20px;
   width: 500px;
   height: 400px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   background-color: white;
   border-style: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;
-  -webkit-box-shadow: 3px;
-          box-shadow: 3px;
+  box-shadow: 3px;
 }
-
 .calculatorShape .input-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: end;
+  align-self: center;
+  align-items: center;
   width: 280px;
   height: 50px;
   background-color: grey;
@@ -44,25 +27,17 @@
   border-color: #5e2f10b7;
   border-radius: 5px;
 }
-
 .calculatorShape .buttonFields {
   margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .calculatorShape .buttonFields .arithmeticButtonContainer {
   width: 250px;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 6px;
 }
-
 .calculatorShape .buttonFields .arithmeticButtonContainer .common-button {
   padding: 6px;
   cursor: pointer;
@@ -72,22 +47,15 @@
   border-radius: 12px;
   border-style: solid;
   border-color: darkgreen;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
-
 .calculatorShape .buttonFields .numberButtonContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 250px;
   height: auto;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 6px;
 }
-
 .calculatorShape .buttonFields .numberButtonContainer .common-button {
   padding: 6px;
   margin: 3px;
@@ -98,28 +66,18 @@
   border-radius: 12px;
   border-style: solid;
   border-color: darkgreen;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
-
 .calculatorShape .enter-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-item-align: center;
-      align-self: center;
+  justify-content: center;
+  align-self: center;
   font-size: 16px;
   background-color: white;
   border-style: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;
-  -webkit-box-shadow: 3px;
-          box-shadow: 3px;
+  box-shadow: 3px;
   margin-top: 50px;
   width: 120px;
 }
-/*# sourceMappingURL=Calculator_gui.css.map */

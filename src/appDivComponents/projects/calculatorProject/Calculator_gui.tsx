@@ -18,11 +18,22 @@ const Calculator_gui = function() {
 
     const arithmeticButtons
         = ButtonsObject.displayString.map(x => {
-            return <div onClick={()=>(arithmeticButtonAction(x))} className='common-button'>{x}</div>
+            if (x === '=') {
+                return <div onClick={() => (setActionDisplayValue(actionDisplayValue + x))} className='common-button wideButton'>{x}</div>
+            }
+            else {
+                return <div onClick={() => (arithmeticButtonAction(x))} className='common-button'>{x}</div>
+            }
         })
     const numberButtons
         = ButtonsObject.displayNumbers.map(x => {
-            return <div onClick={()=>(setActionDisplayValue(actionDisplayValue+x))} className='common-button'>{x}</div>
+            if (x === '0') {
+                return <div onClick={() => (setActionDisplayValue(actionDisplayValue + x))} className='common-button wideButton'>{x}</div>
+            }
+            else {
+                return <div onClick={() => (setActionDisplayValue(actionDisplayValue + x))} className='common-button'>{x}</div>
+            }
+            
         })
     return (
         <div className='calculatorShape'>
