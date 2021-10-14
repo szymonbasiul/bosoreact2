@@ -27,9 +27,11 @@ function App() {
   return (
     <main className={mainClassColor} ref={mainRef}>
       <button className="color-mode" onClick={colorChanger}>Color Mode</button>
+
       <div className="logoContainer">
         <img className="logotype" src={ImgPicker("bosoreactprojectlogo")} alt="logo">
         </img>
+
       </div>
       <PersonalContainer />
       <ProjectContainer />

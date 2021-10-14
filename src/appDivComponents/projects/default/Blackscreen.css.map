@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAA;EACR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,KAAK;EACvB,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,SAAS;EACvB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,GAAG;CAElB",
+    "sources": [
+        "Blackscreen.scss"
+    ],
+    "names": [],
+    "file": "Blackscreen.css"
+}

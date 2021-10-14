@@ -4,6 +4,8 @@
     45deg
     , #7690e6, #ffffff00 );
 
+
+
 /* OBJECTS */
 @mixin person-content($personCounter){
   flex: 1;
@@ -79,6 +81,9 @@ main {
   height: 740px;
   margin: 0 5em 0 5em;
   background-color: #ffffff;
+
+  /* TOGGLE COLOR MODE */
+  
 
   /* PERSONAL JESUS */
 

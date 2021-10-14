@@ -1,0 +1,12 @@
+.blackscreen {
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: black;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
+}
+/*# sourceMappingURL=Blackscreen.css.map */

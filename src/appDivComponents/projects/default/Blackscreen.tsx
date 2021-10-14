@@ -1,10 +1,11 @@
 import React from 'react';
 import { FC } from 'react';
+import './Blackscreen.css'
 
 const Blackscreen: FC = () => {
     return (
-        <div style={{ width: '400px', height: '300px', backgroundColor: 'black'}}>
-            
+        <div className="blackscreen">
+
         </div>
     );
 }

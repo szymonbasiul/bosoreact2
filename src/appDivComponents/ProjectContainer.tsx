@@ -20,14 +20,14 @@ const ProjectContainer: FC = () => {
     }
     
     return (
-        <>
+        <div className="siteContent">
             <div onClick={() => { setProjectDisplay('CalculatoR') }} className="projectButton">
-            Button1
+            Calculator
         </div>
             <div className="projectContainer">
                 {contentSwitch()}
         </div>
-        </>
+        </div>
     )
 
 }

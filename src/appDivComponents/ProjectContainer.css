@@ -1,4 +1,10 @@
-.projectContainer {
+.siteContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.siteContent .projectContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,7 +16,7 @@
       justify-content: space-around;
 }
 
-.projectButton {
+.siteContent .projectButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +32,21 @@
   border-radius: 5px;
   -webkit-box-shadow: 3px;
           box-shadow: 3px;
+  font-weight: bold;
+  color: #5e2f10b7;
   width: 160px;
   height: 50px;
+  margin: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.6;
+  transition: 0.6;
+}
+
+.siteContent .projectButton:hover {
+  color: #5e2f10b7;
+  font-size: 22px;
+  font-weight: bolder;
+  -webkit-transition: 0.9;
+  transition: 0.9;
 }
 /*# sourceMappingURL=ProjectContainer.css.map */
