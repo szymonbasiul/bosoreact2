@@ -2,6 +2,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* NASZ EKRAN */
+  /* PANEL BUTTONOWY */
 }
 
 .siteContent .projectContainer {
@@ -16,7 +18,17 @@
       justify-content: space-around;
 }
 
-.siteContent .projectButton {
+.siteContent .buttonPanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.siteContent .buttonPanel .projectButton {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,15 +50,15 @@
   height: 50px;
   margin: 30px;
   cursor: pointer;
-  -webkit-transition: 0.6;
-  transition: 0.6;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
-.siteContent .projectButton:hover {
+.siteContent .buttonPanel .projectButton:hover {
   color: #5e2f10b7;
   font-size: 22px;
   font-weight: bolder;
-  -webkit-transition: 0.9;
-  transition: 0.9;
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
 }
 /*# sourceMappingURL=ProjectContainer.css.map */

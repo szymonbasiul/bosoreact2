@@ -21,12 +21,20 @@ const ProjectContainer: FC = () => {
     
     return (
         <div className="siteContent">
+            <div className="buttonPanel">
             <div onClick={() => { setProjectDisplay('CalculatoR') }} className="projectButton">
             Calculator
-        </div>
+            </div>
+            <div className="projectButton">
+            Project2
+            </div>
+            <div className="projectButton">
+                    Project3
+            </div>
+            </div>
             <div className="projectContainer">
                 {contentSwitch()}
-        </div>
+            </div>
         </div>
     )
 
