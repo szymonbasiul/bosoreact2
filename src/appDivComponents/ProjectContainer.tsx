@@ -30,7 +30,7 @@ const ProjectContainer: FC = () => {
                 <Link to="/calculator">Calculator</Link>
             </div>
             <div className="projectButton">
-                <Link to="/home">Blackscreen</Link>
+                <Link to="/home">Turn Off</Link>
             </div>
             <div className="projectButton">
             Project3

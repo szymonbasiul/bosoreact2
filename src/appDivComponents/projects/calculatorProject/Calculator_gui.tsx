@@ -4,15 +4,30 @@ import { useState } from "react";
 
 
 
+interface TypesOfActionDisplayValue {
+    FirstSetOfNumbersForAction: string;
+    ActiveArithmeticSign: string;
+    SecondSetOfNumbersForAction: string;
+}
+
+// interface ListOfObjects extends Array<TypesOfActionDisplayValue> { }
 
 const Calculator_gui = function () {
 
-    const [actionDisplayValue, setActionDisplayValue] = useState<string>('');
+    const [actionDisplayValue, setActionDisplayValue] = useState<TypesOfActionDisplayValue>({
+        FirstSetOfNumbersForAction: '0',
+        ActiveArithmeticSign: ' ',
+        SecondSetOfNumbersForAction: ' '
+    });
+
+    // const dodajLiczbe = () => {
+    //     setActionDisplayValue({})
+    // }
 
 
-    const arithmeticButtonAction = (operators: string) => {
-        setActionDisplayValue(actionDisplayValue + operators)
-    }
+    // const arithmeticButtonAction = (operators: string) => {
+    //     setActionDisplayValue(actionDisplayValue + operators)
+    // }
 
 
     // jezli x bedzie '+' to ma sie wyswietlic w inpucie i czekac na wprowadzenie drugiego ciagu
@@ -24,66 +39,94 @@ const Calculator_gui = function () {
     // po kliknieciu klawisza '=' program wykonuje dialania arytmetyczne na dwoch liczbach
     // rodzaj dzialan determinuje zapamietany/wpisany znak arytmetyczny i wyswietla w inpucie
 
-    const AddValueToDisplay = (value: string) => {
-        if (ActiveArithmeticSign === ' ') {
-            setActionDisplayValue(actionDisplayValue + value)
+    const addValueToDisplay = (value: string) => {
+        if (actionDisplayValue.ActiveArithmeticSign === ' ') {
+            setActionDisplayValue({ ...actionDisplayValue, ...{ FirstSetOfNumbersForAction: actionDisplayValue.FirstSetOfNumbersForAction + value } })
+        }
+        else if (actionDisplayValue.ActiveArithmeticSign === '+') {
+            setActionDisplayValue({...actionDisplayValue, ...{ FirstSetOfNumbersForAction: actionDisplayValue.FirstSetOfNumbersForAction + '+'}})
         }
         else {
-            setActionDisplayValue(value)
+            setActionDisplayValue({ ...actionDisplayValue, ...{FirstSetOfNumbersForAction: actionDisplayValue.FirstSetOfNumbersForAction = value}})
         }
     }
 
-    let ActiveArithmeticSign: string = ' ';
-    let FirstSetOfNumbersForAction: string = ' ';
+    // KOPIA ZAPASOWA - Version 1
+    // .............................
+    // const addValueToDisplay = (value: string) => {
+    //     if (actionDisplayValue.ActiveArithmeticSign === ' ') {
+    //         setActionDisplayValue(() => {
+    //         actionDisplayValue.FirstSetOfNumbersForAction += value;
+    //             console.log(actionDisplayValue);
+    //             return actionDisplayValue;
+    //         })
+    //     }
+    //     else {
+    //         setActionDisplayValue(() => {
+    //             actionDisplayValue.FirstSetOfNumbersForAction = value;
+    //             return actionDisplayValue;
+    //         })
+    //     }
+    // }
 
-    
-    
-    const ClearInputDisplay = () => {
-        setActionDisplayValue('0')
-    }
-    
-    function SaveDisplayValue(choosenSign:string) {
-        FirstSetOfNumbersForAction = actionDisplayValue;
-        ActiveArithmeticSign = choosenSign;
-    }
-    
-    
-    const ArithmeticSignAction = (choosenSign:string) => {
-        SaveDisplayValue(choosenSign);
-        AddValueToDisplay(choosenSign)
-    }
-    
-    const EqualActionDisplay = (value:string) => {
-        console.log(FirstSetOfNumbersForAction);
+    const doMathOperation = () => {
         
     }
+
+
+    // const ClearInputDisplay = () => {
+    //     setActionDisplayValue('0')
+    // }
+
+    // function saveDisplayValue(choosenSign: string) {
+    //     // FirstSetOfNumbersForAction = actionDisplayValue;
+    //     setActionDisplayValue(() => {
+    //         actionDisplayValue.FirstSetOfNumbersForAction = actionDisplayValue;
+    //         return actionDisplayValue;
+    // })
+    //     ActiveArithmeticSign = choosenSign;
+    // }
+
+
+    // const arithmeticSignAction = (choosenSign:string) => {
+    //     saveDisplayValue(choosenSign);
+    //     addValueToDisplay(choosenSign)
+    // }
+
+    // const equalActionDisplay = (value: string) => {
+    //     console.log();
+
+    // }
 
     const arithmeticButtons
         = ButtonsObject.displayString.map(x => {
             if (x === '=') {
-                return <div onClick={() => (EqualActionDisplay(x))} className='common-button wideButton'>{x}</div>
+                return <div key={x} onClick={() => { doMathOperation() }} className='common-button wideButton'>{x}</div>
+            }
+            else if (x === '+') {
+                return <div key={x} onClick={() => { addValueToDisplay(x) }} className='common-button'>{x}</div>
             }
             else {
-                return <div onClick={() => (ArithmeticSignAction(x))} className='common-button'>{x}</div>
+                return <div key={x} onClick={() => {}} className='common-button'>{x}</div>
             }
         })
-    
+
     const numberButtons
         = ButtonsObject.displayNumbers.map(x => {
             if (x === '0') {
-                return <div onClick={() => (AddValueToDisplay(x))} className='common-button wideButton'>{x}</div>
+                return <div key={x} onClick={() => { addValueToDisplay(x) }} className='common-button wideButton'>{x}</div>
             }
             else {
-                return <div onClick={() => (AddValueToDisplay(x))} className='common-button'>{x}</div>
+                return <div key={x} onClick={() => { addValueToDisplay(x) }} className='common-button'>{x}</div>
             }
-            
+
         })
     return (
         <div className='calculatorShape'>
-            <div className='input-field'>{ actionDisplayValue }</div>
+            <div className='input-field'>{ actionDisplayValue.FirstSetOfNumbersForAction }</div>
             <div className="buttonFields">
-            <div className='numberButtonContainer'>{numberButtons}</div>
-            <div className='arithmeticButtonContainer'>{arithmeticButtons}</div>
+                <div className='numberButtonContainer'>{numberButtons}</div>
+                <div className='arithmeticButtonContainer'>{arithmeticButtons}</div>
             </div>
             <div className='enter-button'>enter button</div>
         </div>
@@ -93,8 +136,8 @@ const Calculator_gui = function () {
 export default Calculator_gui;
 
 
-/* 
-1. Rozpoczecie dzialania po nacisnieciu guzika 
+/*
+1. Rozpoczecie dzialania po nacisnieciu guzika
 2. Wprowadzenie drugiej liczby
 3. Pokaz wynik po kazdym dzialaniu
 4. Wymaz wynik po nacisnieciu CE
