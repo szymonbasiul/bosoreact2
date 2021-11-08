@@ -8,7 +8,7 @@ interface TypesOfActionDisplayValue {
     firstSetOfNumbersForAction: string;
     activeArithmeticSign: string;
     secondSetOfNumbersForAction: string;
-    resultForAction: number;
+    resultForAction: number | undefined;
 }
 
 // interface ListOfObjects extends Array<TypesOfActionDisplayValue> { }
@@ -18,7 +18,7 @@ const Calculator_gui = function () {
     const [actionDisplayValue, setActionDisplayValue] = useState<TypesOfActionDisplayValue>({
         firstSetOfNumbersForAction:'0',
         activeArithmeticSign:' ',
-        secondSetOfNumbersForAction:' ',
+        secondSetOfNumbersForAction:'',
         resultForAction: 0
     });
 
@@ -42,7 +42,10 @@ const Calculator_gui = function () {
     // rodzaj dzialan determinuje zapamietany/wpisany znak arytmetyczny i wyswietla w inpucie
 
     const addValueToDisplay = (value: string) => {
-        if (actionDisplayValue.activeArithmeticSign === ' ') {
+        if (actionDisplayValue.firstSetOfNumbersForAction === '0') {
+            setActionDisplayValue({ ...actionDisplayValue, ...{firstSetOfNumbersForAction: actionDisplayValue.firstSetOfNumbersForAction=value}})
+        }
+        else if (actionDisplayValue.activeArithmeticSign === ' ' && actionDisplayValue.firstSetOfNumbersForAction !== '0') {
             setActionDisplayValue({ ...actionDisplayValue, ...{firstSetOfNumbersForAction: actionDisplayValue.firstSetOfNumbersForAction+value } })
         }
         else {
@@ -50,26 +53,42 @@ const Calculator_gui = function () {
         }
     }
 
-    const doMathOperation = (sign: string) => {
+    const asignArithmeticSignToStateValue = (sign: string) => {
         setActionDisplayValue({ ...actionDisplayValue, ...{activeArithmeticSign: actionDisplayValue.activeArithmeticSign = sign}})
     }
 
-    const resolveOperation = () => {
-        const a = actionDisplayValue.firstSetOfNumbersForAction
-        const b = actionDisplayValue.secondSetOfNumbersForAction
-        setActionDisplayValue({ ...actionDisplayValue, ...{resultForAction: parseInt(a)+parseInt(b)}})
-
-        setActionDisplayValue({ ...actionDisplayValue, ...{firstSetOfNumbersForAction: '0', secondSetOfNumbersForAction: '', activeArithmeticSign:''}})
+    const clearState = () => {
+        setActionDisplayValue({ ...actionDisplayValue, ...{firstSetOfNumbersForAction: '0', secondSetOfNumbersForAction: '', activeArithmeticSign:'=', resultForAction: 0 }})
     }
 
-    const inputFieldResult = () => {
-        if (actionDisplayValue.activeArithmeticSign === " "){
+    const doMathOperation = () => {
+        const a = parseInt(actionDisplayValue.firstSetOfNumbersForAction)
+        const b = parseInt(actionDisplayValue.secondSetOfNumbersForAction)
+        switch (actionDisplayValue.activeArithmeticSign) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+        }
+    }
+
+    const asignMathOperationToResultForActionState = () => {
+        setActionDisplayValue({ ...actionDisplayValue, ...{ resultForAction: actionDisplayValue.resultForAction = doMathOperation()}})
+        // clearState()
+    }
+
+    const putResultIntoInputField = () => {
+        if (actionDisplayValue.activeArithmeticSign === " " && actionDisplayValue.resultForAction === 0){
                return actionDisplayValue.firstSetOfNumbersForAction
             }
-        else if (actionDisplayValue.activeArithmeticSign !== "="){
+        else if (actionDisplayValue.activeArithmeticSign !== "=" && actionDisplayValue.resultForAction === 0){
                return actionDisplayValue.secondSetOfNumbersForAction
             }
-        else {
+        else if (actionDisplayValue.resultForAction !== 0){
                return actionDisplayValue.resultForAction
             }
     }
@@ -77,10 +96,13 @@ const Calculator_gui = function () {
     const arithmeticButtons
         = ButtonsObject.displayString.map(x => {
             if (x === '=') {
-                return <div key={x} onClick={() => { resolveOperation() }} className='common-button wideButton'>{x}</div>
+                return <div key={x} onClick={() => { asignMathOperationToResultForActionState() }} className='common-button wideButton'>{x}</div>
+            }
+            else if (x === 'CE') {
+                return <div key={x} onClick={() => { clearState() }} className='common-button'>{x}</div>
             }
             else {
-                return <div key={x} onClick={() => { doMathOperation(x) }} className='common-button'>{x}</div>
+                return <div key={x} onClick={() => { asignArithmeticSignToStateValue(x) }} className='common-button'>{x}</div>
             }
         })
 
@@ -96,7 +118,7 @@ const Calculator_gui = function () {
         })
     return (
         <div className='calculatorShape'>
-            <div className='input-field'>{ inputFieldResult() }</div>
+            <div className='input-field' >{ putResultIntoInputField() }</div>
             <div className="buttonFields">
                 <div className='numberButtonContainer'>{numberButtons}</div>
                 <div className='arithmeticButtonContainer'>{arithmeticButtons}</div>

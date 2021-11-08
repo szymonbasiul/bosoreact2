@@ -9,11 +9,14 @@ test('My click test', async t => {
 
 
 });
+
 test('Color Test', async t => {
     await
         t.click('.color-mode');
     await t
         .expect(Selector('main').getStyleProperty('background-color')).eql('rgb(0, 0, 0)');
 });
+
+
 
 

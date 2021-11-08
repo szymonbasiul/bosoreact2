@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npx testcafe chrome tests/Test.js",
+    "test": "npx testcafe chrome src/tests/CalculatorTests.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
