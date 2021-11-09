@@ -61,6 +61,18 @@ const Calculator_gui = function () {
         setActionDisplayValue({ ...actionDisplayValue, ...{firstSetOfNumbersForAction: '0', secondSetOfNumbersForAction: '', activeArithmeticSign:'=', resultForAction: 0 }})
     }
 
+    const undoLastAction = () => {
+        if (actionDisplayValue.activeArithmeticSign === " " && actionDisplayValue.resultForAction === 0){
+            setActionDisplayValue({ ...actionDisplayValue, ...{firstSetOfNumbersForAction: actionDisplayValue.firstSetOfNumbersForAction = actionDisplayValue.firstSetOfNumbersForAction.substring(0, actionDisplayValue.firstSetOfNumbersForAction.length-1)}})
+        }
+        else if (actionDisplayValue.activeArithmeticSign !== "=" && actionDisplayValue.resultForAction === 0){
+            setActionDisplayValue({ ...actionDisplayValue, ...{secondSetOfNumbersForAction: actionDisplayValue.secondSetOfNumbersForAction = actionDisplayValue.secondSetOfNumbersForAction.substring(0, actionDisplayValue.secondSetOfNumbersForAction.length-1)}})
+         }
+    //  else if (actionDisplayValue.resultForAction !== 0){
+    //         return actionDisplayValue.resultForAction
+    //      }
+    }
+
     const doMathOperation = () => {
         const a = parseInt(actionDisplayValue.firstSetOfNumbersForAction)
         const b = parseInt(actionDisplayValue.secondSetOfNumbersForAction)
@@ -100,6 +112,9 @@ const Calculator_gui = function () {
             }
             else if (x === 'CE') {
                 return <div key={x} onClick={() => { clearState() }} className='common-button'>{x}</div>
+            }
+            else if (x === 'C') {
+                return <div key={x} onClick={() => { undoLastAction() }} className='common-button'>{x}</div>
             }
             else {
                 return <div key={x} onClick={() => { asignArithmeticSignToStateValue(x) }} className='common-button'>{x}</div>
