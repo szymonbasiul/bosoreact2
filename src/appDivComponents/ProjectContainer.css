@@ -26,6 +26,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .siteContent .buttonPanel .projectButton {
@@ -38,7 +41,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
+  background-color: #5e2f10b7;
   border-style: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;

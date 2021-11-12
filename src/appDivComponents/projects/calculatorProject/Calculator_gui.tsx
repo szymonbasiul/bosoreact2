@@ -2,16 +2,12 @@ import { ButtonsObject } from "./ButtonsObject";
 import './Calculator_gui.css'
 import { useState } from "react";
 
-
-
 interface TypesOfActionDisplayValue {
     firstSetOfNumbersForAction: string;
     activeArithmeticSign: string;
     secondSetOfNumbersForAction: string;
     resultForAction: number | undefined;
 }
-
-// interface ListOfObjects extends Array<TypesOfActionDisplayValue> { }
 
 const Calculator_gui = function () {
 
@@ -21,25 +17,6 @@ const Calculator_gui = function () {
         secondSetOfNumbersForAction:'',
         resultForAction: 0
     });
-
-    // const dodajLiczbe = () => {
-    //     setActionDisplayValue({})
-    // }
-
-
-    // const arithmeticButtonAction = (operators: string) => {
-    //     setActionDisplayValue(actionDisplayValue + operators)
-    // }
-
-
-    // jezli x bedzie '+' to ma sie wyswietlic w inpucie i czekac na wprowadzenie drugiego ciagu
-    // po wprowadzeniu pierwszego ciagu i wcisnieciu 'plusa' ma zapisac pierwszy ciag liczb w FirstSetOfNumbers i zapamietac sign dzialania, a nastepnie przejsc do zapisywania w SecondSetOfNumbers
-    // podczas wpisywania drugiego ciagu liczb, poprzedni znika
-
-    // po wpisaniu liczb ostatni klawisz dzialania determinuje wynik
-
-    // po kliknieciu klawisza '=' program wykonuje dialania arytmetyczne na dwoch liczbach
-    // rodzaj dzialan determinuje zapamietany/wpisany znak arytmetyczny i wyswietla w inpucie
 
     const addValueToDisplay = (value: string) => {
         if (actionDisplayValue.firstSetOfNumbersForAction === '0') {
@@ -68,9 +45,6 @@ const Calculator_gui = function () {
         else if (actionDisplayValue.activeArithmeticSign !== "=" && actionDisplayValue.resultForAction === 0){
             setActionDisplayValue({ ...actionDisplayValue, ...{secondSetOfNumbersForAction: actionDisplayValue.secondSetOfNumbersForAction = actionDisplayValue.secondSetOfNumbersForAction.substring(0, actionDisplayValue.secondSetOfNumbersForAction.length-1)}})
          }
-    //  else if (actionDisplayValue.resultForAction !== 0){
-    //         return actionDisplayValue.resultForAction
-    //      }
     }
 
     const doMathOperation = () => {
@@ -90,7 +64,6 @@ const Calculator_gui = function () {
 
     const asignMathOperationToResultForActionState = () => {
         setActionDisplayValue({ ...actionDisplayValue, ...{ resultForAction: actionDisplayValue.resultForAction = doMathOperation()}})
-        // clearState()
     }
 
     const putResultIntoInputField = () => {
@@ -144,11 +117,3 @@ const Calculator_gui = function () {
 }
 
 export default Calculator_gui;
-
-
-/*
-1. Rozpoczecie dzialania po nacisnieciu guzika
-2. Wprowadzenie drugiej liczby
-3. Pokaz wynik po kazdym dzialaniu
-4. Wymaz wynik po nacisnieciu CE
-*/

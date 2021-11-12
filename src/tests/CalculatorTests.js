@@ -46,8 +46,11 @@ test('C Undo SecondNumber', async (t) => {
         .click(buttonNumber2)
         .click(undoButton)
     await t.expect(result.innerText).eql('2')
-
 });
+
+test('Do Multiple Operation', async t => {
+    await 
+})
 
 
 
