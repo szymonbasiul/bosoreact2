@@ -1,0 +1,68 @@
+.rpsShape {
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+	grid-template-rows: 30% 40% 30%;
+	width: 500px;
+	height: 400px;
+	padding: 20px;
+	background-color: #1221;
+	border-style: solid;
+	border-color: #5e2f10b7;
+	border-radius: 5px;
+	box-shadow: 3px;
+
+	.Up {
+		grid-column: 1/2;
+		grid-row: 1/2;
+		align-self: end;
+	}
+
+	.Up2 {
+		grid-column: 3/4;
+		grid-row: 1/2;
+		align-self: end;
+	}
+
+	.Mid {
+		grid-column: 1/2;
+		grid-row: 2/3;
+		align-self: center;
+	}
+
+	.Mid2 {
+		grid-column: 3/4;
+		grid-row: 2/3;
+		align-self: center;
+	}
+
+	.Down {
+		grid-column: 1/2;
+		grid-row: 3/4;
+	}
+
+	.rpsActionButton {
+		display: flex;
+		justify-content: center;
+		justify-self: center;
+		width: fit-content;
+		height: fit-content;
+		border: solid;
+		border-color: #5e2f10b7;
+		border-radius: 5px;
+		box-shadow: 3px;
+	}
+
+	.rpsActionButton > img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.scoreBoard {
+        display: flex;
+        justify-content: center;
+        font-size: 60px;
+		grid-column: 2/3;
+		grid-row: 2/3;
+		align-self: center;
+	}
+}

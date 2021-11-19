@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import Calculator from "./projects/calculatorProject/Calculator";
 import './ProjectContainer.css';
 import Blackscreen from "./projects/default/Blackscreen";
+import RPS from './projects/paperRockScissors/RPS';
 import { BrowserRouter as Router, Redirect, Link, Route, Switch } from "react-router-dom";
 
 
@@ -16,6 +17,10 @@ const ProjectContainer: FC = () => {
         {
             pathName: "/home",
             componentName: Blackscreen,
+        },
+        {
+            pathName: "/rps",
+            componentName: RPS,
         }
     ];
 
@@ -32,8 +37,8 @@ const ProjectContainer: FC = () => {
             <div className="projectButton">
                 <Link to="/home">Turn Off</Link>
             </div>
-            <div className="projectButton">
-            Project3
+            <div onClick={() => { setProjectDisplay('RpS') }}className="projectButton">
+                <Link to="/rps">RPS</Link>
             </div>
             </div>
             <div className="projectContainer">
