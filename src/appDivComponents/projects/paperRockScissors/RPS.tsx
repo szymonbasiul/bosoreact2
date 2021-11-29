@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import RPSgui from "./RPSgui";
+import { RPSgui } from "./RPSgui";
 import "./RPS.css";
 
 const RPS: FC = () => {
