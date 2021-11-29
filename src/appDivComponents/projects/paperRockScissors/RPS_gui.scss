@@ -55,19 +55,24 @@
 		border-color: #5e2f10b7;
 		border-radius: 5px;
 		box-shadow: 3px;
+		:hover {
+			border: solid red;
+			
+		}
+		
+		// :active {
+		// 	border: solid;
+		// 	border-radius: 5px;
+		// 	border-color: red;
+		// 	box-shadow: gray 3px;
+		// }
+		// :focus {
+		// 	border: solid;
+		// 	border-radius: 5px;
+		// 	border-color: red;
+		// 	box-shadow: gray 3px;
+		// }
 	}
-
-	// .rpsActionButtonClicked{
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	justify-self: center;
-	// 	width: fit-content;
-	// 	height: fit-content;
-	// 	border: solid;
-	// 	border-radius: 5px;
-	// 	border-color: red;
-	// 	box-shadow: gray 3px;
-	// }
 
 	.rpsActionButton > img {
 		width: 100px;

@@ -2,11 +2,11 @@ import { useState, FC } from "react";
 import "./RPS_gui.css";
 // import '../Calculator_gui.css'
 
-// interface TypesOfActionDisplayValue {
-// 	rock: boolean;
-// 	paper: boolean;
-// 	scissors: boolean;
-// }
+interface TypesOfActionDisplayValue {
+	rock: boolean;
+	paper: boolean;
+	scissors: boolean;
+}
 
 const RPSgui = () => {
   let rpsObject: { [key: string]: boolean } = {
@@ -14,6 +14,7 @@ const RPSgui = () => {
     paper: false,
     scissors: false,
   };
+
   const [rockPaperScissorsState, setRockPaperScissorsState] =
     useState(rpsObject);
 
@@ -80,7 +81,7 @@ const RPSgui = () => {
     }
   };
 
-  // Po kliku przycisk dostaje CZERWONĄ ramkę. Jednocześnie zapisuje sie nasz wybór w zmiennej.
+  // Po najechaniu kursorem na przycisk - dostaje CZERWONĄ ramkę, a po kliknięciu efekt wciskanego guzika. Jednocześnie zapisuje sie nasz wybór w zmiennej.
   // Po stronie CPU (w opoźnieniu 2 sekund) losuje sie jedna z 3 opcji i zapisuje w zmiennej.
   // Po sekundzie następuje sprawdzenie zmiennych wedle warunków i zaliczenie punktu zwyciezcy rundy.
   // Gra konczy sie po 3 rundach zwycieskich ktoregos z graczy.
