@@ -1,19 +1,15 @@
-import React, { useState, useEffect, FC } from 'react';
-import RPS_gui from './RPS_gui';
-import './RPS.css';
+import React, { FC } from "react";
+import RPSgui from "./RPSgui";
+import "./RPS.css";
 
 const RPS: FC = () => {
-    return (
-        <>
-        
-        <div className="rpsContainer">
-        <RPS_gui />
-        </div>
-        </>
-        
-    )
-
-
-}
+  return (
+    <>
+      <div className="rpsContainer">
+        <RPSgui />
+      </div>
+    </>
+  );
+};
 
 export default RPS;
