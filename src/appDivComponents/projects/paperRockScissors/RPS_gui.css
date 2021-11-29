@@ -73,6 +73,12 @@
   grid-row: 3/4;
 }
 
+.rpsShape .RedFrame {
+  border-color: red;
+  -webkit-box-shadow: gray 3px;
+          box-shadow: gray 3px;
+}
+
 .rpsShape .rpsActionButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,6 +119,37 @@
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.introShape {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: #1221;
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
+}
+
+.introShape .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
 }
