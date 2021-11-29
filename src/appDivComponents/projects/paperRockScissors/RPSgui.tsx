@@ -1,15 +1,15 @@
-import React, { useState, FC } from "react";
+import React, { useState } from "react";
 import "./RPS_gui.css";
 // import '../Calculator_gui.css'
-interface RPScustomTypes {
-  rpsObject: TypesOfActionDisplayValue;
-}
+// interface RPScustomTypes {
+//   rpsObject: TypesOfActionDisplayValue;
+// }
 
-interface TypesOfActionDisplayValue {
-  rock: boolean;
-  paper: boolean;
-  scissors: boolean;
-}
+// interface TypesOfActionDisplayValue {
+//   rock: boolean;
+//   paper: boolean;
+//   scissors: boolean;
+// }
 
 export const RPSgui = () => {
   let rpsObject: { [key: string]: boolean } = {
@@ -18,12 +18,11 @@ export const RPSgui = () => {
     scissors: false,
   };
 
-  const [rockPaperScissorsState, setRockPaperScissorsState] =
-    useState(rpsObject);
+  // const [rockPaperScissorsState, setRockPaperScissorsState] =
+  //   useState(rpsObject);
 
   const toggleClickedRps = (clickedElement: string) => {
     rpsObject[clickedElement] = true;
-    const test = rpsObject;
   };
   toggleClickedRps("rock");
 
