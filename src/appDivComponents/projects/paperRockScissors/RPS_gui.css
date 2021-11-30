@@ -100,8 +100,9 @@
           box-shadow: 3px;
 }
 
-.rpsShape .rpsActionButton :hover {
+.rpsShape .rpsActionButton:hover {
   border: solid red;
+  cursor: pointer;
 }
 
 .rpsShape .rpsActionButton > img {

@@ -31,17 +31,18 @@
           justify-content: center;
 }
 
-.siteContent .buttonPanel .projectButton {
+.siteContent .buttonPanel .projectButton a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #5e2f10b7;
+  background-color: #d1c2b786;
   border-style: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;
@@ -50,18 +51,41 @@
   font-weight: bold;
   color: #5e2f10b7;
   width: 160px;
-  height: 50px;
-  margin: 30px;
+  height: 60px;
+  margin: 40px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
-.siteContent .buttonPanel .projectButton:hover {
-  color: #5e2f10b7;
+.siteContent .buttonPanel .projectButton a:hover {
+  color: #ffffff;
+  background-color: #5e2f10b7;
   font-size: 22px;
   font-weight: bolder;
   -webkit-transition: 0.9s;
   transition: 0.9s;
+}
+
+.siteContent .buttonPanel .projectButton a::before {
+  content: "";
+  width: 50px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: -90px;
+  -webkit-transform: skewX(-45deg) translateX(0px);
+          transform: skewX(-45deg) translateX(0px);
+}
+
+.siteContent .buttonPanel .projectButton a:hover::before {
+  -webkit-transform: skewX(-45deg) translateX(500px);
+          transform: skewX(-45deg) translateX(500px);
+  -webkit-transition: all 1.8s;
+  transition: all 1.8s;
 }
 /*# sourceMappingURL=ProjectContainer.css.map */
