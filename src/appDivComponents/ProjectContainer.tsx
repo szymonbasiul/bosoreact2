@@ -44,10 +44,10 @@ const ProjectContainer: FC = () => {
             <Link to="/calculator">Calculator</Link>
           </div>
           <div className="projectButton">
-            <Link to="/home">Turn Off</Link>
+            <Link to="/rps">RPS</Link>
           </div>
           <div className="projectButton">
-            <Link to="/rps">RPS</Link>
+            <Link to="/home">Turn Off</Link>
           </div>
         </div>
         <div className="projectContainer">

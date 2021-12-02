@@ -33,10 +33,10 @@ main .logoContainer {
 }
 
 .mainBlack {
-  background-color: black;
+  background: url(../img/background/carbon_fibre_big.png);
 }
 
 .mainWhite {
-  background-color: white;
+  background: url(../img/background/cork-board.png);
 }
 /*# sourceMappingURL=App.css.map */

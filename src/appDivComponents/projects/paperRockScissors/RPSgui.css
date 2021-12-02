@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
 .rpsShape {
   display: -ms-grid;
   display: grid;
@@ -8,7 +9,7 @@
   width: 500px;
   height: 400px;
   padding: 20px;
-  background-color: #1221;
+  background-color: rgba(255, 255, 255, 0.623);
   border-style: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;
@@ -96,8 +97,8 @@
   border: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;
-  -webkit-box-shadow: 3px;
-          box-shadow: 3px;
+  -webkit-box-shadow: 5px;
+          box-shadow: 5px;
 }
 
 .rpsShape .rpsActionButton:hover {
@@ -131,12 +132,16 @@
 .introShape {
   display: -ms-grid;
   display: grid;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 2px 2px #635a5ab0;
+  font-size: 28px;
+  text-transform: uppercase;
   -ms-grid-rows: 50% 50%;
       grid-template-rows: 50% 50%;
   width: 500px;
   height: 400px;
   padding: 20px;
-  background-color: #1221;
+  background-color: rgba(255, 255, 255, 0.548);
   border-style: solid;
   border-color: #5e2f10b7;
   border-radius: 5px;
@@ -158,4 +163,50 @@
   -ms-flex-item-align: center;
       align-self: center;
 }
-/*# sourceMappingURL=RPS_gui.css.map */
+
+.introShape .gameStarterButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introShape .gameStarterButton button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 6px;
+  -webkit-box-shadow: 5px;
+          box-shadow: 5px;
+  font-weight: bold;
+  color: #5e2f10d3;
+  width: 100%;
+  height: 150px;
+  margin: 20px 20px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.introShape .gameStarterButton button:active {
+  background-color: #5e2f10b7;
+  -webkit-box-shadow: 0 5px rgba(102, 102, 102, 0.541);
+          box-shadow: 0 5px rgba(102, 102, 102, 0.541);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+/*# sourceMappingURL=RPSgui.css.map */

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import RPScore from "./RPScore";
-import "./RPS_gui.css";
+import "./RPSgui.css";
 
 export const RPSgui = () => {
 
@@ -8,13 +8,12 @@ export const RPSgui = () => {
   const introScreen = (
     <div className="introShape">
       <div className="intro">Witaj w Naszej grze!</div>
-      <button
-        onClick={() => {
-          setStageState("RPS");
-        }}
-      >
-        Przejdź do rozgrywki
-      </button>
+      <div className="gameStarterButton"
+        onClick={() => { setStageState("RPS"); }}>
+        <button id="enter">
+          Przejdź do rozgrywki
+        </button>
+      </div>
     </div>
   );
 
