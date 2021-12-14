@@ -111,6 +111,11 @@
   height: 100px;
 }
 
+.rpsShape .cpuAction > img {
+  width: 100px;
+  height: 100px;
+}
+
 .rpsShape .scoreBoard {
   display: -webkit-box;
   display: -ms-flexbox;
