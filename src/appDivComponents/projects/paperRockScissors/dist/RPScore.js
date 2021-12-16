@@ -25,9 +25,14 @@ var RPScore = function () {
     var showRandomComputerChoosenImage = function () { return (react_1["default"].createElement("img", { src: require("../../../img/" + randomComputerChoice + ".png")["default"] })); };
     var cpuActionImage = randomComputerChoice === "" ? (react_1["default"].createElement("img", { src: require("../../../img/cpu.png")["default"], alt: "randomChoice" })) : (showRandomComputerChoosenImage());
     react_2.useEffect(function () {
-        setTimeout(function () {
-            createRandomComputerChoice();
-        }, 500);
+        var runChoice = function () {
+            setTimeout(function () {
+                createRandomComputerChoice();
+            }, 500);
+        };
+        if (rPS.paper) {
+            runChoice();
+        }
         console.log(rPS);
     }, [rPS]);
     return (react_1["default"].createElement("div", null,

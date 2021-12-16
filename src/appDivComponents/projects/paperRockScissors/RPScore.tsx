@@ -42,9 +42,14 @@ const RPScore: FC = () => {
 		);
 
 	useEffect(() => {
-		setTimeout(() => {
-			createRandomComputerChoice();
-		}, 500);
+		const runChoice = () => {
+			setTimeout(() => {
+				createRandomComputerChoice();
+			}, 500);
+		};
+		if (rPS.paper) {
+			runChoice();
+		}
 		console.log(rPS);
 	}, [rPS]);
 
