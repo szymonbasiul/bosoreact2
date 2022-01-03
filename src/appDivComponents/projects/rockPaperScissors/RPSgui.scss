@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
 
 .rpsShape {
 	display: grid;
@@ -59,17 +59,17 @@
 		box-shadow: 5px;
 
 		&:hover {
-			border: solid red;
+			border: solid rgb(255, 0, 0);
 			cursor: pointer;
 		}
 	}
 
-	.rpsActionButton>img {
+	.rpsActionButton > img {
 		width: 100px;
 		height: 100px;
 	}
 
-	.cpuAction>img {
+	.cpuAction > img {
 		width: 100px;
 		height: 100px;
 	}
@@ -84,10 +84,9 @@
 	}
 }
 
-
 .introShape {
 	display: grid;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	text-shadow: 2px 2px #635a5ab0;
 	font-size: 28px;
 	text-transform: uppercase;
@@ -116,7 +115,7 @@
 		button {
 			display: flex;
 			align-items: center;
-			font-family: 'Montserrat', sans-serif;
+			font-family: "Montserrat", sans-serif;
 			font-size: 28px;
 			text-align: center;
 			text-transform: uppercase;
@@ -140,8 +139,4 @@
 			}
 		}
 	}
-
-				
-	
-
 }

@@ -24,7 +24,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "npx testcafe chrome src/tests/CalculatorTests.js --speed 0.5",
+		"test": "npx testcafe chrome src/tests/RPSTest.js --speed 0.5",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
