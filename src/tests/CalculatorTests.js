@@ -49,7 +49,7 @@ test('C Undo SecondNumber', async (t) => {
 });
 
 test('Do Multiple Operation', async t => {
-    await 
+    await
 })
 
 

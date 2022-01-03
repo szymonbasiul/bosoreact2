@@ -8,8 +8,14 @@ var RPScore = function () {
         paper: false,
         scissors: false
     };
+    function rpsObject() {
+        this["rock"] = false;
+        this["paper"] = false;
+        this["scissors"] = false;
+    }
     var _a = react_2.useState(rpsObject), rPS = _a[0], setRPS = _a[1];
     var createNewRPS = function (clickedElement) {
+        var rpsObject = new rpsObject();
         rpsObject[clickedElement] = true;
         return rpsObject;
     };
@@ -29,11 +35,9 @@ var RPScore = function () {
             setTimeout(function () {
                 createRandomComputerChoice();
             }, 500);
-        };
-        if (rPS.paper) {
             runChoice();
-        }
-        console.log(rPS);
+            console.log(rPS);
+        };
     }, [rPS]);
     return (react_1["default"].createElement("div", null,
         "const game = (",

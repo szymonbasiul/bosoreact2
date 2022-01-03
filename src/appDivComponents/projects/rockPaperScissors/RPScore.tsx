@@ -2,27 +2,25 @@ import React from "react";
 import { FC, useState, useEffect } from "react";
 
 const RPScore: FC = () => {
-	let rpsObject: { [key: string]: boolean } = {
-		rock: false,
-		paper: false,
-		scissors: false,
-	};
+	const [rpsCpuChoice, setRpsCpuChoice] = useState(new rpsObject());
+	const [randomComputerChoice, setRandomComputerChoice] = useState("");
+	const [rPS, setRPS] = useState(new rpsObject());
 
-	const [rPS, setRPS] = useState(rpsObject);
+	function rpsObject() {
+		this["rock"] = false;
+		this["paper"] = false;
+		this["scissors"] = false;
+	}
 
 	const createNewRPS = (clickedElement: string) => {
-		rpsObject[clickedElement] = true;
-		return rpsObject;
+		const x = new rpsObject();
+		x[clickedElement] = true;
+		return x;
 	};
-
-	const [rpsCpuChoice, setRpsCpuChoice] = useState(rpsObject);
-
-	const [randomComputerChoice, setRandomComputerChoice] = useState("");
 
 	const createRandomComputerChoice = () => {
 		const randomNumber = Math.floor(Math.random() * 3);
-		const choosenRPS = Object.keys(rpsObject)[randomNumber];
-		console.log(choosenRPS);
+		const choosenRPS = Object.keys(new rpsObject())[randomNumber];
 		setRandomComputerChoice(choosenRPS);
 		setRpsCpuChoice(createNewRPS(JSON.stringify(choosenRPS)));
 	};
@@ -30,7 +28,7 @@ const RPScore: FC = () => {
 	const showRandomComputerChoosenImage = () => (
 		<img
 			src={require(`../../../img/${randomComputerChoice}.png`).default}
-			// alt="`${randomComputerChoice}`"
+			alt="`${randomComputerChoice}`"
 		/>
 	);
 
@@ -42,20 +40,17 @@ const RPScore: FC = () => {
 		);
 
 	useEffect(() => {
-		const runChoice = () => {
+		JSON.stringify(new rpsObject()) !== JSON.stringify(rPS) &&
 			setTimeout(() => {
 				createRandomComputerChoice();
-			}, 500);
-		};
-		if (rPS.paper) {
-			runChoice();
-		}
+			}, 100);
 		console.log(rPS);
 	}, [rPS]);
+	const rpsShape = ["rock", "paper", "scissors"].map((x) => x);
+	console.log(rpsShape);
 
 	return (
 		<div>
-			const game = (
 			<div className="rpsShape">
 				<div
 					id="rps"
@@ -95,7 +90,6 @@ const RPScore: FC = () => {
 				</div>
 				<div className="scoreBoard">1:2</div>
 			</div>
-			);
 		</div>
 	);
 };
