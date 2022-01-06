@@ -42,11 +42,6 @@
 		grid-row: 3/4;
 	}
 
-	.RedFrame {
-		border-color: red;
-		box-shadow: gray 3px;
-	}
-
 	.rpsActionButton {
 		display: flex;
 		justify-content: center;
@@ -57,22 +52,44 @@
 		border-color: #5e2f10b7;
 		border-radius: 5px;
 		box-shadow: 5px;
-
 		&:hover {
 			border: solid rgb(255, 0, 0);
 			cursor: pointer;
 		}
+		&:active {
+			box-shadow: 2px 3px rgba(102, 102, 102, 0.281);
+			transform: translateY(4px);
+		}
+	}
+	// color on active elements border
+	.redFrame {
+		display: flex;
+		justify-content: center;
+		justify-self: center;
+		width: fit-content;
+		height: fit-content;
+		border: solid;
+		border-color: rgb(255, 0, 0);
+		border-radius: 5px;
+		box-shadow: 5px;
+		&:active {
+			box-shadow: 2px 3px rgba(102, 102, 102, 0.281);
+			transform: translateY(4px);
+		}
 	}
 
-	.rpsActionButton > img {
+	img {
 		width: 100px;
 		height: 100px;
 	}
-
-	.cpuAction > img {
-		width: 100px;
-		height: 100px;
-	}
+	// .rpsActionButton > img {
+	// 	width: 100px;
+	// 	height: 100px;
+	// }
+	// .cpuAction > img {
+	// 	width: 100px;
+	// 	height: 100px;
+	// }
 
 	.scoreBoard {
 		display: flex;

@@ -1,222 +1,241 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
 .rpsShape {
-	display: -ms-grid;
-	display: grid;
-	-ms-grid-columns: 30% 40% 30%;
-	grid-template-columns: 30% 40% 30%;
-	-ms-grid-rows: 30% 40% 30%;
-	grid-template-rows: 30% 40% 30%;
-	width: 500px;
-	height: 400px;
-	padding: 20px;
-	background-color: rgba(255, 255, 255, 0.623);
-	border-style: solid;
-	border-color: #5e2f10b7;
-	border-radius: 5px;
-	-webkit-box-shadow: 3px;
-	box-shadow: 3px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 40% 30%;
+      grid-template-columns: 30% 40% 30%;
+  -ms-grid-rows: 30% 40% 30%;
+      grid-template-rows: 30% 40% 30%;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
 }
 
 .rpsShape .Up {
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 1;
-	grid-column: 1/2;
-	-ms-grid-row: 1;
-	-ms-grid-row-span: 1;
-	grid-row: 1/2;
-	-ms-flex-item-align: end;
-	-ms-grid-row-align: end;
-	align-self: end;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .rpsShape .Up2 {
-	-ms-grid-column: 3;
-	-ms-grid-column-span: 1;
-	grid-column: 3/4;
-	-ms-grid-row: 1;
-	-ms-grid-row-span: 1;
-	grid-row: 1/2;
-	-ms-flex-item-align: end;
-	-ms-grid-row-align: end;
-	align-self: end;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .rpsShape .Mid {
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 1;
-	grid-column: 1/2;
-	-ms-grid-row: 2;
-	-ms-grid-row-span: 1;
-	grid-row: 2/3;
-	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
-	align-self: center;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .rpsShape .Mid2 {
-	-ms-grid-column: 3;
-	-ms-grid-column-span: 1;
-	grid-column: 3/4;
-	-ms-grid-row: 2;
-	-ms-grid-row-span: 1;
-	grid-row: 2/3;
-	-ms-flex-item-align: center;
-	-ms-grid-row-align: center;
-	align-self: center;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .rpsShape .Down {
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 1;
-	grid-column: 1/2;
-	-ms-grid-row: 3;
-	-ms-grid-row-span: 1;
-	grid-row: 3/4;
-}
-
-.rpsShape .RedFrame {
-	border-color: red;
-	-webkit-box-shadow: gray 3px;
-	box-shadow: gray 3px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
 }
 
 .rpsShape .rpsActionButton {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	justify-self: center;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
-	height: -webkit-fit-content;
-	height: -moz-fit-content;
-	height: fit-content;
-	border: solid;
-	border-color: #5e2f10b7;
-	border-radius: 5px;
-	-webkit-box-shadow: 5px;
-	box-shadow: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px;
+          box-shadow: 5px;
 }
 
 .rpsShape .rpsActionButton:hover {
-	border: solid red;
-	cursor: pointer;
+  border: solid red;
+  cursor: pointer;
 }
 
-.rpsShape .rpsActionButton > img {
-	width: 100px;
-	height: 100px;
+.rpsShape .rpsActionButton:active {
+  -webkit-box-shadow: 2px 3px rgba(102, 102, 102, 0.281);
+          box-shadow: 2px 3px rgba(102, 102, 102, 0.281);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
-.rpsShape .rpsActionButton > img:visited {
-	border: solid red;
-	cursor: pointer;
+.rpsShape .redFrame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: solid;
+  border-color: red;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px;
+          box-shadow: 5px;
 }
 
-.rpsShape .cpuAction > img {
-	width: 100px;
-	height: 100px;
+.rpsShape .redFrame:active {
+  -webkit-box-shadow: 2px 3px rgba(102, 102, 102, 0.281);
+          box-shadow: 2px 3px rgba(102, 102, 102, 0.281);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.rpsShape img {
+  width: 100px;
+  height: 100px;
 }
 
 .rpsShape .scoreBoard {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	font-size: 60px;
-	-ms-grid-column: 2;
-	-ms-grid-column-span: 1;
-	grid-column: 2/3;
-	-ms-grid-row: 2;
-	-ms-grid-row-span: 1;
-	grid-row: 2/3;
-	-ms-flex-item-align: center;
-	align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 60px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .introShape {
-	display: -ms-grid;
-	display: grid;
-	font-family: "Montserrat", sans-serif;
-	text-shadow: 2px 2px #635a5ab0;
-	font-size: 28px;
-	text-transform: uppercase;
-	-ms-grid-rows: 50% 50%;
-	grid-template-rows: 50% 50%;
-	width: 500px;
-	height: 400px;
-	padding: 20px;
-	background-color: rgba(255, 255, 255, 0.548);
-	border-style: solid;
-	border-color: #5e2f10b7;
-	border-radius: 5px;
-	-webkit-box-shadow: 3px;
-	box-shadow: 3px;
+  display: -ms-grid;
+  display: grid;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px #635a5ab0;
+  font-size: 28px;
+  text-transform: uppercase;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.548);
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
 }
 
 .introShape .intro {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	justify-self: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-ms-flex-item-align: center;
-	align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .introShape .gameStarterButton {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .introShape .gameStarterButton button {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-family: "Montserrat", sans-serif;
-	font-size: 28px;
-	text-align: center;
-	text-transform: uppercase;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	background-color: rgba(255, 255, 255, 0.623);
-	border-style: solid;
-	border-color: #5e2f10b7;
-	border-radius: 6px;
-	-webkit-box-shadow: 5px;
-	box-shadow: 5px;
-	font-weight: bold;
-	color: #5e2f10d3;
-	width: 100%;
-	height: 150px;
-	margin: 20px 20px;
-	padding: 20px;
-	cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-style: solid;
+  border-color: #5e2f10b7;
+  border-radius: 6px;
+  -webkit-box-shadow: 5px;
+          box-shadow: 5px;
+  font-weight: bold;
+  color: #5e2f10d3;
+  width: 100%;
+  height: 150px;
+  margin: 20px 20px;
+  padding: 20px;
+  cursor: pointer;
 }
 
 .introShape .gameStarterButton button:active {
-	background-color: #5e2f10b7;
-	-webkit-box-shadow: 0 5px rgba(102, 102, 102, 0.541);
-	box-shadow: 0 5px rgba(102, 102, 102, 0.541);
-	-webkit-transform: translateY(4px);
-	transform: translateY(4px);
+  background-color: #5e2f10b7;
+  -webkit-box-shadow: 0 5px rgba(102, 102, 102, 0.541);
+          box-shadow: 0 5px rgba(102, 102, 102, 0.541);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 /*# sourceMappingURL=RPSgui.css.map */

@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { FC, useState, useEffect } from "react";
 
 const RPScore: FC = () => {
 	const [rpsCpuChoice, setRpsCpuChoice] = useState(new rpsObject());
 	const [randomComputerChoice, setRandomComputerChoice] = useState("");
 	const [rPS, setRPS] = useState(new rpsObject());
+	const [borderState, setBorderState] = useState("rpsActionButton");
 
 	function rpsObject() {
 		this["rock"] = false;
@@ -46,42 +47,47 @@ const RPScore: FC = () => {
 			}, 100);
 		console.log(rPS);
 	}, [rPS]);
-	const rpsShape = ["rock", "paper", "scissors"].map((x) => x);
-	console.log(rpsShape);
+
+	const addRedFrame = (mappingElement: string) => {
+		console.log(mappingElement, rPS[mappingElement]);
+		if (rPS[mappingElement] === true) {
+			return "redFrame";
+		} else {
+			return "rpsActionButton";
+		}
+	};
+
+	const classnameCheckByRPS = (mappingElement: string) => {
+		if (mappingElement === "rock") return "Up";
+		if (mappingElement === "paper") return "Mid";
+		if (mappingElement === "scissors") return "Down";
+	};
+
+	const rpsButtonDisplay = ["rock", "paper", "scissors"].map(
+		(mappingElement) => {
+			return (
+				<button
+					id="rps"
+					onClick={() => {
+						setRPS(createNewRPS(mappingElement));
+					}}
+					className={`${addRedFrame(mappingElement)} ${classnameCheckByRPS(
+						mappingElement
+					)}`}
+				>
+					<img
+						src={require(`../../../img/${mappingElement}.png`).default}
+						alt={mappingElement}
+					/>
+				</button>
+			);
+		}
+	);
 
 	return (
 		<div>
 			<div className="rpsShape">
-				<div
-					id="rps"
-					onClick={() => {
-						setRPS(createNewRPS("rock"));
-					}}
-					className="rpsActionButton Up"
-				>
-					<img src={require("../../../img/rock.png").default} alt="rock" />
-				</div>
-				<div
-					id="rps"
-					onClick={() => {
-						setRPS(createNewRPS("paper"));
-					}}
-					className="rpsActionButton Mid"
-				>
-					<img src={require("../../../img/paper.png").default} alt="paper" />
-				</div>
-				<div
-					id="rps"
-					onClick={() => {
-						setRPS(createNewRPS("scissors"));
-					}}
-					className="rpsActionButton Down"
-				>
-					<img
-						src={require("../../../img/scissors.png").default}
-						alt="scissors"
-					/>
-				</div>
+				{rpsButtonDisplay}
 				<div className="rpsActionButton Up2">
 					<img src={require("../../../img/cpu.png").default} alt="scissors" />
 				</div>

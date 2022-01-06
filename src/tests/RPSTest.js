@@ -1,6 +1,6 @@
 import { Selector } from "testcafe";
 const gameStarter = Selector(".gameStarterButton");
-const rpsActionButton = Selector(".rpsActionButton");
+const rpsActionButton = Selector("#rps");
 const rpsCpuActionButton = Selector(".cpuAction");
 fixture`RPS`.page`http://localhost:3000/rps`;
 
