@@ -4,21 +4,49 @@
 // 3. Gra toczy sie do 3 wygranych po ktorejs ze stron i konczy sie.
 // 4. Po zakonczeniu pojawia sie opcja dodania usera do tablicy wynikow.
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function RPSscore(props) {
+	const [userScore, setUserScore] = useState(0);
+	const [cpuScore, setCpuScore] = useState(0);
+
+	const userRPS = props.userResult;
+	const cpuRPS = props.cpuResult;
+
 	// 1. Bierzemy wynik klikniecia buttonow playera i komputera - porównujemy to.
 	const crossCheckResult = () => {
-		console.log("elo");
-		if (props.cpuResult.rock === true && props.userResult.rock === true) {
-			console.log("remis!");
-		}
+		if (userRPS.rock === true) crossCheckRockResult();
+		else if (userRPS.paper === true) crossCheckPaperResult();
+		else crossCheckScissorsResult();
 	};
-	crossCheckResult();
 
-	console.log(props.cpuResult, props.userResult);
+	const crossCheckRockResult = () => {
+		if (cpuRPS.rock) console.log("draw!");
+		else if (cpuRPS.paper) setCpuScore(cpuScore + 1);
+		else if (cpuRPS.scissors) setUserScore(userScore + 1);
+	};
 
-	return <div>0:0</div>;
+	const crossCheckPaperResult = () => {
+		if (cpuRPS.paper) console.log("draw");
+		else if (cpuRPS.rock) setUserScore(userScore + 1);
+		else if (cpuRPS.scissors) setCpuScore(cpuScore + 1);
+	};
+
+	const crossCheckScissorsResult = () => {
+		if (cpuRPS.scissors) console.log("draw");
+		else if (cpuRPS.rock) setCpuScore(cpuScore + 1);
+		else if (cpuRPS.paper) setUserScore(userScore + 1);
+	};
+
+	useEffect(() => {
+		crossCheckResult();
+	}, [cpuRPS]);
+
+	return (
+		<div>
+			{userScore}:{cpuScore}
+		</div>
+	);
 }
 
 export default RPSscore;
