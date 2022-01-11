@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import { FC, useState, useEffect } from "react";
+import RPSscore from "./RPSscore";
 
 const RPScore: FC = () => {
 	const [rpsCpuChoice, setRpsCpuChoice] = useState(new rpsObject());
@@ -23,7 +24,7 @@ const RPScore: FC = () => {
 		const randomNumber = Math.floor(Math.random() * 3);
 		const choosenRPS = Object.keys(new rpsObject())[randomNumber];
 		setRandomComputerChoice(choosenRPS);
-		setRpsCpuChoice(createNewRPS(JSON.stringify(choosenRPS)));
+		setRpsCpuChoice(createNewRPS(choosenRPS));
 	};
 
 	const showRandomComputerChoosenImage = () => (
@@ -94,7 +95,9 @@ const RPScore: FC = () => {
 				<div className="rpsActionButton Mid2">
 					<div className="cpuAction">{cpuActionImage}</div>
 				</div>
-				<div className="scoreBoard">1:2</div>
+				<div className="scoreBoard">
+					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} />
+				</div>
 			</div>
 		</div>
 	);

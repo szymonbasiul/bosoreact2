@@ -38,3 +38,4 @@ test("Check if clicked RPS button stays with red border", async (t) => {
 });
 
 // after player picks RPS computer get its choice visible on separate box
+test("");
