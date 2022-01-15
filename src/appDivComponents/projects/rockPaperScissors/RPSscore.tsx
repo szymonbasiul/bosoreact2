@@ -42,11 +42,27 @@ function RPSscore(props) {
 		crossCheckResult();
 	}, [cpuRPS]);
 
-	return (
-		<div>
-			{userScore}:{cpuScore}
-		</div>
-	);
+	const sendScoreToDatabase = () => {
+		console.log("sending to database");
+	};
+
+	const showGameplayResults = () => {
+		if (userScore === 3) {
+			sendScoreToDatabase();
+			return <div>Player Won!</div>;
+		} else if (cpuScore === 3) {
+			sendScoreToDatabase();
+			return <div>You lost the Game!</div>;
+		} else {
+			return (
+				<div>
+					{userScore}:{cpuScore}
+				</div>
+			);
+		}
+	};
+
+	return <div>{showGameplayResults()}</div>;
 }
 
 export default RPSscore;
