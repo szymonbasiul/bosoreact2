@@ -42,16 +42,31 @@ function RPSscore(props) {
 		crossCheckResult();
 	}, [cpuRPS]);
 
-	const sendScoreToDatabase = () => {
-		console.log("sending to database");
+	const sendScoreToDatabase = async (data: object) => {
+		console.log("zlo");
+		await fetch("http://localhost:8000/rpsplayer", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				console.log("Success:", data);
+			})
+			.catch((error) => {
+				console.error("Error:", error);
+			});
 	};
 
 	const showGameplayResults = () => {
 		if (userScore === 3) {
-			sendScoreToDatabase();
+			sendScoreToDatabase({ playername: `${userScore}:${cpuScore}` });
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
-			sendScoreToDatabase();
+			//sendScoreToDatabase();
+
 			return <div>You lost the Game!</div>;
 		} else {
 			return (
@@ -62,7 +77,19 @@ function RPSscore(props) {
 		}
 	};
 
-	return <div>{showGameplayResults()}</div>;
+	return (
+		<div>
+			<button
+				onClick={() => {
+					setUserScore(3);
+				}}
+			>
+				smiechawka
+			</button>
+
+			{showGameplayResults()}
+		</div>
+	);
 }
 
 export default RPSscore;
