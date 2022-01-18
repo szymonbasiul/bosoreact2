@@ -1,6 +1,6 @@
 export const sendScoreToDatabase = async (data: object) => {
 	console.log("zlo");
-	await fetch("http://localhost:8000/", {
+	await fetch("http://localhost:8000/rpsplayer", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -15,5 +15,4 @@ export const sendScoreToDatabase = async (data: object) => {
 			console.error("Error:", error);
 		});
 };
-//sendScoreToDatabase({ playername: `123` });
 export default sendScoreToDatabase;

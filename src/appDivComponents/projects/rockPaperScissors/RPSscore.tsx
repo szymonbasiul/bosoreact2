@@ -5,7 +5,7 @@
 // 4. Po zakonczeniu pojawia sie opcja dodania usera do tablicy wynikow.
 
 import React, { useEffect, useState } from "react";
-//import sendScoreToDatabase from "./fetch";
+import sendScoreToDatabase from "./fetch";
 
 function RPSscore(props) {
 	const [userScore, setUserScore] = useState(0);
@@ -64,6 +64,7 @@ function RPSscore(props) {
 		<div>
 			<button
 				onClick={() => {
+					sendScoreToDatabase({player: `${userScore}`})
 					setUserScore(3);
 				}}
 			>
