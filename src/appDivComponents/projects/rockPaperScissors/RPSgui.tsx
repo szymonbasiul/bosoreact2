@@ -1,14 +1,10 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import RPScore from "./RPScore";
 import "./RPSgui.css";
 import sendScoreToDatabase from "./fetch";
 
 export const RPSgui = () => {
-	console.log("zlo");
-	const test = useMemo(() => {
-		sendScoreToDatabase({ abc: "222" });
-	}, []);
-	test();
+	
 	const [stageState, setStageState] = useState<String>("Welkomen");
 	const introScreen = (
 		<div className="introShape">
