@@ -5,6 +5,7 @@
 // 4. Po zakonczeniu pojawia sie opcja dodania usera do tablicy wynikow.
 
 import React, { useEffect, useState } from "react";
+//import sendScoreToDatabase from "./fetch";
 
 function RPSscore(props) {
 	const [userScore, setUserScore] = useState(0);
@@ -42,31 +43,13 @@ function RPSscore(props) {
 		crossCheckResult();
 	}, [cpuRPS]);
 
-	const sendScoreToDatabase = async (data: object) => {
-		console.log("zlo");
-		await fetch("http://localhost:8000/rpsplayer", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		})
-			.then((response) => response.json())
-			.then((data) => {
-				console.log("Success:", data);
-			})
-			.catch((error) => {
-				console.error("Error:", error);
-			});
-	};
-
 	const showGameplayResults = () => {
+		//console.log("raz");
 		if (userScore === 3) {
-			sendScoreToDatabase({ playername: `${userScore}:${cpuScore}` });
+			//sendScoreToDatabase({ playername: `${userScore}:${cpuScore}` });
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
 			//sendScoreToDatabase();
-
 			return <div>You lost the Game!</div>;
 		} else {
 			return (
