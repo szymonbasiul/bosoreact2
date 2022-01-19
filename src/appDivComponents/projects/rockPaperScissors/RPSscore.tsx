@@ -5,12 +5,13 @@
 // 4. Po zakonczeniu pojawia sie opcja dodania usera do tablicy wynikow.
 
 import React, { useEffect, useState } from "react";
-import sendScoreToDatabase from "./fetch";
+//import sendScoreToDatabase from "./fetch";
 
 function RPSscore(props) {
 	const [userScore, setUserScore] = useState(0);
 	const [cpuScore, setCpuScore] = useState(0);
-
+	
+	props.childState(`${userScore}`) 
 	const userRPS = props.userResult;
 	const cpuRPS = props.cpuResult;
 
@@ -46,10 +47,8 @@ function RPSscore(props) {
 	const showGameplayResults = () => {
 		//console.log("raz");
 		if (userScore === 3) {
-			//sendScoreToDatabase({ playername: `${userScore}:${cpuScore}` });
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
-			//sendScoreToDatabase();
 			return <div>You lost the Game!</div>;
 		} else {
 			return (
@@ -62,15 +61,6 @@ function RPSscore(props) {
 
 	return (
 		<div>
-			<button
-				onClick={() => {
-					sendScoreToDatabase({player: `${userScore}`})
-					setUserScore(3);
-				}}
-			>
-				smiechawka
-			</button>
-
 			{showGameplayResults()}
 		</div>
 	);

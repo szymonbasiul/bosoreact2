@@ -1,5 +1,5 @@
+
 export const sendScoreToDatabase = async (data: object) => {
-	console.log("zlo");
 	await fetch("http://localhost:8000/rpsplayer", {
 		method: "POST",
 		headers: {

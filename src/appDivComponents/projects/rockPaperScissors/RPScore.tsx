@@ -1,12 +1,12 @@
-import React, { useReducer } from "react";
+import React from "react";
 import { FC, useState, useEffect } from "react";
 import RPSscore from "./RPSscore";
-
+import sendScoreToDatabase from "./fetch";
 const RPScore: FC = () => {
 	const [rpsCpuChoice, setRpsCpuChoice] = useState(new rpsObject());
 	const [randomComputerChoice, setRandomComputerChoice] = useState("");
 	const [rPS, setRPS] = useState(new rpsObject());
-	const [borderState, setBorderState] = useState("rpsActionButton");
+	const [childscore, setChildScore] = useState('')
 
 	function rpsObject() {
 		this["rock"] = false;
@@ -30,7 +30,7 @@ const RPScore: FC = () => {
 	const showRandomComputerChoosenImage = () => (
 		<img
 			src={require(`../../../img/${randomComputerChoice}.png`).default}
-			alt="`${randomComputerChoice}`"
+			alt={`${randomComputerChoice}`}
 		/>
 	);
 
@@ -63,13 +63,15 @@ const RPScore: FC = () => {
 		if (mappingElement === "paper") return "Mid";
 		if (mappingElement === "scissors") return "Down";
 	};
-
+	
 	const rpsButtonDisplay = ["rock", "paper", "scissors"].map(
 		(mappingElement) => {
 			return (
 				<button
+				key={mappingElement}
 					id="rps"
 					onClick={() => {
+						sendScoreToDatabase({player:childscore})
 						setRPS(createNewRPS(mappingElement));
 					}}
 					className={`${addRedFrame(mappingElement)} ${classnameCheckByRPS(
@@ -84,7 +86,7 @@ const RPScore: FC = () => {
 			);
 		}
 	);
-
+		
 	return (
 		<div>
 			<div className="rpsShape">
@@ -96,7 +98,7 @@ const RPScore: FC = () => {
 					<div className="cpuAction">{cpuActionImage}</div>
 				</div>
 				<div className="scoreBoard">
-					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} />
+					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} childState={setChildScore}/>
 				</div>
 			</div>
 		</div>
