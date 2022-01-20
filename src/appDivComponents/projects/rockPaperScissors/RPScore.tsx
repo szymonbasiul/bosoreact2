@@ -1,12 +1,12 @@
 import React from "react";
 import { FC, useState, useEffect } from "react";
 import RPSscore from "./RPSscore";
-import sendScoreToDatabase from "./fetch";
+//import sendScoreToDatabase from "./fetch";
 const RPScore: FC = () => {
 	const [rpsCpuChoice, setRpsCpuChoice] = useState(new rpsObject());
 	const [randomComputerChoice, setRandomComputerChoice] = useState("");
 	const [rPS, setRPS] = useState(new rpsObject());
-	const [childscore, setChildScore] = useState('')
+	//const [childscore, setChildScore] = useState('')
 
 	function rpsObject() {
 		this["rock"] = false;
@@ -71,7 +71,7 @@ const RPScore: FC = () => {
 				key={mappingElement}
 					id="rps"
 					onClick={() => {
-						sendScoreToDatabase({player:childscore})
+						//sendScoreToDatabase({player:childscore})
 						setRPS(createNewRPS(mappingElement));
 					}}
 					className={`${addRedFrame(mappingElement)} ${classnameCheckByRPS(
@@ -98,7 +98,9 @@ const RPScore: FC = () => {
 					<div className="cpuAction">{cpuActionImage}</div>
 				</div>
 				<div className="scoreBoard">
-					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} childState={setChildScore}/>
+					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} 
+					//childState={setChildScore}
+					/>
 				</div>
 			</div>
 		</div>
