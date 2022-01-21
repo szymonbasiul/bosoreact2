@@ -4,7 +4,7 @@
 // 3. Gra toczy sie do 3 wygranych po ktorejs ze stron i konczy sie.
 // 4. Po zakonczeniu pojawia sie opcja dodania usera do tablicy wynikow.
 
-import React, { useEffect, useState,useCallback, Suspense } from "react";
+import React, { useEffect, useState } from "react";
 //import {UseFetch} from "./fetch";
 //import sendScoreToDatabase from "./fetch";
 
@@ -40,7 +40,9 @@ function RPSscore(props) {
 		else if (cpuRPS.rock) setCpuScore(cpuScore + 1);
 		else if (cpuRPS.paper) setUserScore(userScore + 1);
 	};
-	//UseFetch({player: `${userScore}`})
+	//UseFetch({player: `${userScore}`})-*+
+
+	
 	useEffect(() => {
 		crossCheckResult();
 	}, [cpuRPS]);
