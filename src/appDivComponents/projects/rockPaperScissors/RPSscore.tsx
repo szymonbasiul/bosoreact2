@@ -15,6 +15,7 @@ function RPSscore(props) {
 	//props.childState(`${userScore}`) 
 	const userRPS = props.userResult;
 	const cpuRPS = props.cpuResult;
+	props.test('123445')
 
 	// 1. Bierzemy wynik klikniecia buttonow playera i komputera - porównujemy to.
 	const crossCheckResult = () => {
@@ -42,18 +43,19 @@ function RPSscore(props) {
 	};
 	//UseFetch({player: `${userScore}`})-*+
 
-	
+
 	useEffect(() => {
 		crossCheckResult();
 	}, [cpuRPS]);
-	const test = async ()=> {
+	const test = async (data:object)=> {
+		
 		console.log('sending')
 		 		await fetch("http://localhost:8000/rpsplayer", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({player: `${userScore}`}),
+				body: JSON.stringify(data),
 			})
 	
 			.then(x => x.json())
@@ -67,7 +69,8 @@ function RPSscore(props) {
 	const showGameplayResults = () => {
 
 		if (userScore === 3) {
-			test()
+			test({player:`${userScore}`})
+			
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
 			return <div>You lost the Game!</div>;

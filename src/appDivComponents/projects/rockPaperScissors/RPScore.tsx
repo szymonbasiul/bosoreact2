@@ -19,7 +19,7 @@ const RPScore: FC = () => {
 		x[clickedElement] = true;
 		return x;
 	};
-
+	const test2 = (x:string) => console.log(x) 
 	const createRandomComputerChoice = () => {
 		const randomNumber = Math.floor(Math.random() * 3);
 		const choosenRPS = Object.keys(new rpsObject())[randomNumber];
@@ -99,6 +99,7 @@ const RPScore: FC = () => {
 				</div>
 				<div className="scoreBoard">
 					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} 
+					test={test2}
 					//childState={setChildScore}
 					/>
 				</div>
