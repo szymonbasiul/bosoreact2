@@ -11,11 +11,10 @@ import React, { useEffect, useState } from "react";
 function RPSscore(props) {
 	const [userScore, setUserScore] = useState(0);
 	const [cpuScore, setCpuScore] = useState(0);
-	
-	//props.childState(`${userScore}`) 
+
+	//props.childState(`${userScore}`)
 	const userRPS = props.userResult;
 	const cpuRPS = props.cpuResult;
-	props.test('123445')
 
 	// 1. Bierzemy wynik klikniecia buttonow playera i komputera - porównujemy to.
 	const crossCheckResult = () => {
@@ -43,52 +42,46 @@ function RPSscore(props) {
 	};
 	//UseFetch({player: `${userScore}`})-*+
 
-
 	useEffect(() => {
 		crossCheckResult();
 	}, [cpuRPS]);
-	const test = async (data:object)=> {
-		
-		console.log('sending')
-		 		await fetch("http://localhost:8000/rpsplayer", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(data),
-			})
-	
-			.then(x => x.json())
+	const test = async (data: object) => {
+		console.log("sending");
+		await fetch("http://localhost:8000/rpsplayer", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		})
+			.then((x) => x.json())
 			.then((y) => {
 				console.log("Success:", y);
 			})
-						.catch((error) => {
+			.catch((error) => {
 				console.error("Error:", error);
-			})
-	}
+			});
+	};
 	const showGameplayResults = () => {
-
 		if (userScore === 3) {
-			test({player:`${userScore}`})
-			
+			test({ player: `${userScore}` });
+
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
 			return <div>You lost the Game!</div>;
 		} else {
 			return (
 				<div>
-					<button onClick={()=>setUserScore(3)}>ohohoh</button>
+					<button onClick={() => props.passPostScoreInterface("scoreScreen")}>
+						ohohoh
+					</button>
 					{userScore}:{cpuScore}
 				</div>
 			);
 		}
 	};
 
-	return (
-		<div>
-			{showGameplayResults()}
-		</div>
-	);
+	return <div>{showGameplayResults()}</div>;
 }
 
 export default RPSscore;

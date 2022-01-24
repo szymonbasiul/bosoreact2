@@ -2,7 +2,7 @@ import React from "react";
 import { FC, useState, useEffect } from "react";
 import RPSscore from "./RPSscore";
 //import sendScoreToDatabase from "./fetch";
-const RPScore: FC = () => {
+const RPScore: FC = (props) => {
 	const [rpsCpuChoice, setRpsCpuChoice] = useState(new rpsObject());
 	const [randomComputerChoice, setRandomComputerChoice] = useState("");
 	const [rPS, setRPS] = useState(new rpsObject());
@@ -19,7 +19,7 @@ const RPScore: FC = () => {
 		x[clickedElement] = true;
 		return x;
 	};
-	const test2 = (x:string) => console.log(x) 
+	const test2 = (x: string) => console.log(x);
 	const createRandomComputerChoice = () => {
 		const randomNumber = Math.floor(Math.random() * 3);
 		const choosenRPS = Object.keys(new rpsObject())[randomNumber];
@@ -63,12 +63,12 @@ const RPScore: FC = () => {
 		if (mappingElement === "paper") return "Mid";
 		if (mappingElement === "scissors") return "Down";
 	};
-	
+
 	const rpsButtonDisplay = ["rock", "paper", "scissors"].map(
 		(mappingElement) => {
 			return (
 				<button
-				key={mappingElement}
+					key={mappingElement}
 					id="rps"
 					onClick={() => {
 						//sendScoreToDatabase({player:childscore})
@@ -86,7 +86,7 @@ const RPScore: FC = () => {
 			);
 		}
 	);
-		
+
 	return (
 		<div>
 			<div className="rpsShape">
@@ -98,9 +98,11 @@ const RPScore: FC = () => {
 					<div className="cpuAction">{cpuActionImage}</div>
 				</div>
 				<div className="scoreBoard">
-					<RPSscore cpuResult={rpsCpuChoice} userResult={rPS} 
-					test={test2}
-					//childState={setChildScore}
+					<RPSscore
+						cpuResult={rpsCpuChoice}
+						userResult={rPS}
+						passPostScoreInterface={props.postScoreInterface}
+						//childState={setChildScore}
 					/>
 				</div>
 			</div>
