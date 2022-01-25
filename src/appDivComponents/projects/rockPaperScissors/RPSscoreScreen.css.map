@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACX,OAAO,EAAE,IAAI;EACb,kBAAkB,EAAE,cAAc;EAClC,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,0BAA0B;EAC5C,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,uBAAuB;EACrC,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,GAAG;CACf",
+    "sources": [
+        "RPSscoreScreen.scss"
+    ],
+    "names": [],
+    "file": "RPSscoreScreen.css"
+}

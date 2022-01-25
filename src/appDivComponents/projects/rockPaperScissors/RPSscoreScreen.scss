@@ -1,8 +1,10 @@
-.blackscreen {
+.scoreShape {
+	display: grid;
+	grid-template-rows: auto auto auto;
 	width: 500px;
 	height: 400px;
 	padding: 20px;
-	background-color: rgb(0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.623);
 	border-style: solid;
 	border-color: rgba(94, 47, 16, 0.718);
 	border-radius: 5px;

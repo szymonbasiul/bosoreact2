@@ -1,42 +1,37 @@
 main {
+	position: relative;
+	// background-color: rgb(255, 255, 255);
+	// border-width: 3px;
+	// border-color: rgba(235, 160, 32, 0.911);
+	// border-radius: 5px;
+	// border-style: solid;
+	// box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
+	justify-content: center;
+	width: 960px;
+	max-width: 100%;
+	min-height: 50rem;
+	margin: 0 auto;
 
-  position: relative;
-  // background-color: rgb(255, 255, 255);
-  // border-width: 3px;
-  // border-color: rgba(235, 160, 32, 0.911);
-  // border-radius: 5px;
-  // border-style: solid;
-  // box-shadow: 2px 1px rgba(199, 142, 44, 0.733);
-  justify-content: center;
-  width: 960px;
-  max-width: 100%;
-  min-height: 50rem;
-  margin: 0 auto;
+	.logoContainer {
+		display: flex;
+		justify-content: center;
+		background-color: rgba(94, 47, 16, 0.718);
+	}
 
-
-  .logoContainer{
-    display: flex;
-    justify-content: center;
-    background-color: #5e2f10b7;
-  }
-
-  /* FITTIN' TO MOBILES */
-  @media screen and (max-width: 768px){
-    .personal-container{
-      flex-direction: column;
-      .person{
-        width: 100%;
-      }
-    }
-  }
-
-
+	/* FITTIN' TO MOBILES */
+	@media screen and (max-width: 768px) {
+		.personal-container {
+			flex-direction: column;
+			.person {
+				width: 100%;
+			}
+		}
+	}
 }
 
-.mainBlack{
-  background: url(../img/background/carbon_fibre_big.png);
+.mainBlack {
+	background: url(../img/background/carbon_fibre_big.png);
 }
-.mainWhite{
-  background: url(../img/background/cork-board.png);
+.mainWhite {
+	background: url(../img/background/cork-board.png);
 }
-

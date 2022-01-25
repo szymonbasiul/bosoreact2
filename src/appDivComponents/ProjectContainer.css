@@ -44,12 +44,12 @@
           justify-content: center;
   background-color: rgba(255, 255, 255, 0.623);
   border-style: solid;
-  border-color: #5e2f10b7;
+  border-color: rgba(94, 47, 16, 0.718);
   border-radius: 6px;
   -webkit-box-shadow: 5px;
           box-shadow: 5px;
   font-weight: bold;
-  color: #5e2f10d3;
+  color: rgba(94, 47, 16, 0.827);
   width: 160px;
   height: 70px;
   margin: 40px;
@@ -61,8 +61,8 @@
 }
 
 .siteContent .buttonPanel .projectButton a:hover {
-  color: #ffffff;
-  background-color: #5e2f10d7;
+  color: white;
+  background-color: rgba(94, 47, 16, 0.843);
   font-size: 22px;
   font-weight: bolder;
   -webkit-transition: 0.9s;
@@ -70,9 +70,9 @@
 }
 
 .siteContent .buttonPanel .projectButton a:active {
-  background-color: #5e2f10b7;
-  -webkit-box-shadow: 0 5px #5e2f1071;
-          box-shadow: 0 5px #5e2f1071;
+  background-color: rgba(94, 47, 16, 0.718);
+  -webkit-box-shadow: 0 5px rgba(94, 47, 16, 0.443);
+          box-shadow: 0 5px rgba(94, 47, 16, 0.443);
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
   -webkit-transition: 0.2s;

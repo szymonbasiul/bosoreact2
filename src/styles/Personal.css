@@ -30,7 +30,7 @@
 
 .personal-container .person-one .personal-info {
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   padding: 5px;
   width: 40em;
   height: 100%;
@@ -95,7 +95,7 @@
 
 .personal-container .person-two .personal-info {
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   padding: 5px;
   width: 40em;
   height: 100%;
@@ -180,9 +180,9 @@
 }
 
 .personal-container .person-one-container {
-  background-color: #5e2f10b7;
+  background-color: rgba(94, 47, 16, 0.718);
   border-style: solid;
-  border-color: #5e2f10b7;
+  border-color: rgba(94, 47, 16, 0.718);
   border-radius: 5px;
   -webkit-box-shadow: 3px;
           box-shadow: 3px;
@@ -194,9 +194,9 @@
 }
 
 .personal-container .person-two-container {
-  background-color: #5e2f10b7;
+  background-color: rgba(94, 47, 16, 0.718);
   border-style: solid;
-  border-color: #5e2f10b7;
+  border-color: rgba(94, 47, 16, 0.718);
   border-radius: 5px;
   -webkit-box-shadow: 3px;
           box-shadow: 3px;

@@ -17,7 +17,7 @@ main .logoContainer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #5e2f10b7;
+  background-color: rgba(94, 47, 16, 0.718);
 }
 
 @media screen and (max-width: 768px) {

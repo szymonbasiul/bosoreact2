@@ -33,7 +33,7 @@ main .personal-container .person-one .photo .person-img {
 
 main .personal-container .person-one .personal-info {
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   padding: 5px;
   width: 40em;
   height: 100%;
@@ -69,7 +69,7 @@ main .personal-container .person-two .photo .person-img {
 
 main .personal-container .person-two .personal-info {
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   padding: 5px;
   width: 40em;
   height: 100%;

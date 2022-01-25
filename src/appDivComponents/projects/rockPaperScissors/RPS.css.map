@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,OAAO,EAAE,IAAI;CAChB",
+    "mappings": "AAYA,AAAA,aAAa,CAAC;EACb,OAAO,EAAE,IAAI;CACb",
     "sources": [
         "RPS.scss"
     ],

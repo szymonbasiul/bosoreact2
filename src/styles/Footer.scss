@@ -1,59 +1,55 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0);
+	height: 60px;
+	width: 100%;
+	bottom: 8px;
 
+	.social-media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 300px;
+		background-color: rgba(255, 255, 255, 0.623);
+		border-style: solid;
+		border-color: rgba(94, 47, 16, 0.718);
+		border-radius: 5px;
+		box-shadow: 3px;
+		position: relative;
+		overflow: hidden;
+		transition: 0.6s;
+		&:hover {
+			color: rgb(255, 255, 255);
+			background-color: rgba(94, 47, 16, 0.843);
+			font-size: 22px;
+			font-weight: bolder;
+			transition: 0.9s;
+		}
+		&::before {
+			content: "";
+			width: 50px;
+			height: 100%;
+			display: block;
+			position: absolute;
+			background-color: rgba(255, 255, 255, 0.5);
+			top: 0;
+			left: -90px;
+			transform: skewX(-45deg) translateX(0px);
+		}
+		&:hover::before {
+			transform: skewX(-45deg) translateX(500px);
+			transition: all 1.8s;
+		}
 
-.footer{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0);
-    height: 60px;
-    width: 100%;
-    bottom: 8px;
+		div > img {
+			margin: 0 40px 0 40px;
+			height: 40px;
+			width: auto;
+		}
 
-    .social-media{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 300px;
-      background-color: rgba(255, 255, 255, 0.623);
-      border-style: solid;
-      border-color: #5e2f10b7;
-      border-radius: 5px;
-      box-shadow: 3px;
-      position: relative;
-      overflow: hidden;
-      transition: 0.6s;
-      &:hover{
-        color: #ffffff;
-        background-color: #5e2f10d7;
-        font-size: 22px;
-        font-weight: bolder;
-        transition: 0.9s;
-      }
-      &::before {
-        content: "";
-        width: 50px;
-        height: 100%;
-        display: block;
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.5);
-        top:0;
-        left: -90px;
-        transform: skewX(-45deg) translateX(0px);
-      }
-      &:hover::before {
-        transform: skewX(-45deg) translateX(500px);
-        transition: all 1.8s;
-      }
-
-      div > img{
-        margin: 0 40px 0 40px;
-        height: 40px;
-        width: auto;
-      }
-
-      div > img:hover{
-        opacity: 80%;
-      }
-
-    }
-
+		div > img:hover {
+			opacity: 80%;
+		}
+	}
 }
