@@ -5,9 +5,11 @@ function RPSscoreScreen(props) {
 	const scoreScreen = (
 		<div className="scoreShape">
 			<div className="score">
-				Dodaj swojego score'a!
-				<input type="text" className="write" id="put-in" />
-				<input type="text" className="write" id="put-in" />
+				Players Scoreboard
+				<div className="userScore">
+					<label className="lName">Your Nickname</label>
+					<input type="text" className="write" id="put-in" />
+				</div>
 			</div>
 		</div>
 	);
