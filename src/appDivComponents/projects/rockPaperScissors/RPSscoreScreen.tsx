@@ -10,6 +10,7 @@ function RPSscoreScreen(props) {
 					<label className="lName">Your Nickname</label>
 					<input type="text" className="write" id="put-in" />
 				</div>
+				<input type="submit" value="Send Score" id="send" />
 			</div>
 		</div>
 	);

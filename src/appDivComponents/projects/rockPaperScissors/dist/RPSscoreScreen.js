@@ -8,7 +8,8 @@ function RPSscoreScreen(props) {
             "Players Scoreboard",
             react_1["default"].createElement("div", { className: "userScore" },
                 react_1["default"].createElement("label", { className: "lName" }, "Your Nickname"),
-                react_1["default"].createElement("input", { type: "text", className: "write", id: "put-in" })))));
+                react_1["default"].createElement("input", { type: "text", className: "write", id: "put-in" })),
+            react_1["default"].createElement("input", { type: "submit", value: "Send Score", id: "send" }))));
     return react_1["default"].createElement("div", null, scoreScreen);
 }
 exports["default"] = RPSscoreScreen;
