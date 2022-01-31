@@ -64,17 +64,16 @@ function RPSscore(props) {
 	};
 	const showGameplayResults = () => {
 		if (userScore === 3) {
-			test({ player: `${userScore}` });
-
+			setTimeout(() => {
+				props.passPostScoreInterface("scoreScreen");
+				props.passingScore(`${userScore}:${cpuScore}`);
+			}, 1500);
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
 			return <div>You lost the Game!</div>;
 		} else {
 			return (
 				<div>
-					<button onClick={() => props.passPostScoreInterface("scoreScreen")}>
-						ohohoh
-					</button>
 					{userScore}:{cpuScore}
 				</div>
 			);

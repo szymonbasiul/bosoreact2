@@ -102,6 +102,7 @@ const RPScore: FC = (props) => {
 						cpuResult={rpsCpuChoice}
 						userResult={rPS}
 						passPostScoreInterface={props.postScoreInterface}
+						passingScore={props.passingScore}
 						//childState={setChildScore}
 					/>
 				</div>

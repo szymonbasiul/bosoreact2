@@ -6,6 +6,7 @@ function RPSscoreScreen(props) {
 		<div className="scoreShape">
 			<div className="score">
 				Players Scoreboard
+				<div className="passedScore">{props.score}</div>
 				<div className="userScore">
 					<label className="lName">Your Nickname</label>
 					<input type="text" className="write" id="put-in" />
