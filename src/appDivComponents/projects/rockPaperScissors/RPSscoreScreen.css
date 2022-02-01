@@ -41,7 +41,15 @@
       flex-wrap: wrap;
   font-family: "Montserrat", sans-serif;
   text-shadow: 2px 2px rgba(99, 90, 90, 0.69);
-  font-size: 28px;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.scoreShape .score .passedScore {
+  color: rgba(94, 47, 16, 0.718);
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px rgba(24, 22, 22, 0.356);
+  font-size: 4rem;
   text-transform: uppercase;
 }
 

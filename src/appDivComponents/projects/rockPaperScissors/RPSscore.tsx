@@ -67,9 +67,13 @@ function RPSscore(props) {
 			setTimeout(() => {
 				props.passPostScoreInterface("scoreScreen");
 				props.passingScore(`${userScore}:${cpuScore}`);
-			}, 1500);
+			}, 1000);
 			return <div>Player Won!</div>;
 		} else if (cpuScore === 3) {
+			setTimeout(() => {
+				props.passPostScoreInterface("scoreScreen");
+				props.passingScore(`${userScore}:${cpuScore}`);
+			}, 1000);
 			return <div>You lost the Game!</div>;
 		} else {
 			return (
