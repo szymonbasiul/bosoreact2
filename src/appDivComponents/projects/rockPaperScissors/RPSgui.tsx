@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, FC } from "react";
 import RPScore from "./RPScore";
 import "./RPSgui.css";
-import sendScoreToDatabase from "./fetch";
 import RPSscoreScreen from "./RPSscoreScreen";
 
-export const RPSgui = () => {
-	const [stageState, setStageState] = useState<String>("Welkomen");
-	const [passingScoreState, setPassingScoreState] = useState(null);
-	const introScreen = (
+export const RPSgui: FC = () => {
+	const [stageState, setStageState] = useState<string>("Welkomen");
+	const [passingScoreState, setPassingScoreState] = useState<string>("");
+	const introScreen: JSX.Element = (
 		<div className="introShape">
 			<div className="intro">Witaj w Naszej grze!</div>
 			<div
@@ -20,10 +19,6 @@ export const RPSgui = () => {
 			</div>
 		</div>
 	);
-
-	const test1 = (text: string) => {
-		console.log(text);
-	};
 
 	const changeTheStage = () => {
 		if (stageState === "Welkomen") {
