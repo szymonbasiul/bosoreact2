@@ -5,10 +5,10 @@ import Blackscreen from "./projects/default/Blackscreen";
 import RPS from "./projects/rockPaperScissors/RPS";
 import {
 	BrowserRouter as Router,
-	Redirect,
+	Navigate,
 	Link,
 	Route,
-	Switch,
+	Routes,
 } from "react-router-dom";
 
 const ProjectContainer: FC = () => {
@@ -28,12 +28,7 @@ const ProjectContainer: FC = () => {
 	];
 
 	const throwRoutesFromTheList = routeList.map((x) => (
-		<Route
-			exact
-			path={x.pathName}
-			component={x.componentName}
-			key={x.pathName}
-		/>
+		<Route path={x.pathName} element={<x.componentName />} key={x.pathName} />
 	));
 
 	return (
@@ -51,12 +46,11 @@ const ProjectContainer: FC = () => {
 					</div>
 				</div>
 				<div className="projectContainer">
-					<Switch>
-						<Route exact path="/">
-							<Redirect to="/home" />
-						</Route>
+					<Routes>
+						<Route path="/" element={<Navigate to="/home" />} />
 						{throwRoutesFromTheList}
-					</Switch>
+						{/* <Route path="/calculator" element={<Calculator />} /> */}
+					</Routes>
 				</div>
 			</Router>
 		</div>
