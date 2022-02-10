@@ -1,8 +1,9 @@
 import { FC } from "react";
 import Calculator from "./projects/calculatorProject/Calculator";
-import "./ProjectContainer.css";
 import Blackscreen from "./projects/default/Blackscreen";
 import RPS from "./projects/rockPaperScissors/RPS";
+import Stickman from "./projects/stickmanGuy/Stickman";
+import "./ProjectContainer.css";
 import {
 	BrowserRouter as Router,
 	Navigate,
@@ -25,6 +26,10 @@ const ProjectContainer: FC = () => {
 			pathName: "/rps",
 			componentName: RPS,
 		},
+		{
+			pathName: "/stickman",
+			componentName: Stickman,
+		},
 	];
 
 	const throwRoutesFromTheList = routeList.map((x) => (
@@ -40,6 +45,9 @@ const ProjectContainer: FC = () => {
 					</div>
 					<div className="projectButton">
 						<Link to="/rps">RPS</Link>
+					</div>
+					<div className="projectButton">
+						<Link to="/stickman">Stickman</Link>
 					</div>
 					<div className="projectButton">
 						<Link to="/home">Turn Off</Link>
