@@ -2,8 +2,8 @@ import { FC } from "react";
 import Calculator from "./projects/calculatorProject/Calculator";
 import Blackscreen from "./projects/default/Blackscreen";
 import RPS from "./projects/rockPaperScissors/RPS";
-import Stickman from "./projects/stickmanGuy/Stickman";
 import "./ProjectContainer.css";
+import Stickman from "./projects/stickmanGuy/Stickman";
 import {
 	BrowserRouter as Router,
 	Navigate,

@@ -1,0 +1,123 @@
+@mixin eye {
+	width: 6px;
+	height: 6px;
+	background: black;
+	border: 2px solid;
+	border-radius: 50%;
+}
+
+.animationContainer {
+	display: flex;
+	width: 500px;
+	height: 400px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.623);
+	border-style: solid;
+	border-color: rgba(94, 47, 16, 0.718);
+	border-radius: 5px;
+	box-shadow: 3px;
+	.stickmanContainer {
+		display: flex;
+		flex-direction: column;
+		background: green;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+
+		.textCloud {
+			width: auto;
+			padding: 1rem;
+			background: white;
+			border: solid 2px black;
+			border-radius: 10%;
+		}
+
+		.stickmanBody {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 20px;
+			background: gray;
+			width: fit-content;
+
+			// HEAD
+			.stickHead {
+				display: flex;
+				flex-direction: column;
+				width: 80px;
+				height: 80px;
+				border: solid 1px;
+				border-radius: 50%;
+				.eyeAxis {
+					margin-top: 20px;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					.lEye {
+						@include eye;
+					}
+					.rEye {
+						@include eye;
+					}
+				}
+				.smile {
+					display: flex;
+					align-self: center;
+					margin-top: 20px;
+					width: 30px;
+					height: 20px;
+					background-color: black;
+					border-bottom-right-radius: 30px;
+					border-bottom-left-radius: 30px;
+				}
+			}
+			// HEAD
+			// TORSO
+			.torsoContainer {
+				display: flex;
+				flex-direction: row;
+				.lArm {
+					display: flex;
+					width: 20px;
+					height: 80px;
+					border: solid 1px;
+				}
+				.torso {
+					display: flex;
+					flex-direction: column;
+					width: 80px;
+					height: 80px;
+					border: solid 1px;
+				}
+				.rArm {
+					display: flex;
+					width: 20px;
+					height: 80px;
+					border: solid 1px;
+				}
+			}
+			// TORSO
+			// LEGS
+			.legContainer {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+
+				.lLeg {
+					display: flex;
+					width: 20px;
+					height: 80px;
+					border: solid 1px;
+				}
+				.rLeg {
+					display: flex;
+					width: 20px;
+					height: 80px;
+					border: solid 1px;
+				}
+			}
+
+			// LEGS
+		}
+	}
+}

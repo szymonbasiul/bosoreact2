@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=Stickman.css.map */
+.stickmanContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=Stickman.css.map */
