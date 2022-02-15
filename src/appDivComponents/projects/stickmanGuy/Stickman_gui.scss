@@ -1,9 +1,60 @@
+$redHead: red;
+$bodyComplex: gray;
+
 @mixin eye {
-	width: 6px;
-	height: 6px;
+	width: 10px;
+	height: 10px;
 	background: black;
-	border: 2px solid;
 	border-radius: 50%;
+}
+
+// GŁOWA ANIMACJE
+@keyframes wink {
+	from {
+		@include eye;
+	}
+	to {
+		margin-top: 5px;
+		height: 0;
+	}
+}
+@keyframes oh {
+	from {
+		height: 20px;
+	}
+	to {
+		height: 0;
+	}
+}
+// RĘCE ANIMACJA
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(160deg);
+	}
+	40% {
+		transform: rotate(120deg);
+	}
+	60% {
+		transform: rotate(160deg);
+	}
+	80% {
+		transform: rotate(120deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+// NOGI ANIMACJA
+@keyframes step {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(45deg);
+	}
 }
 
 .animationContainer {
@@ -19,17 +70,20 @@
 	.stickmanContainer {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		background: green;
 		width: 100%;
 		height: 100%;
 		margin: 0;
 
 		.textCloud {
-			width: auto;
+			align-self: center;
+			width: fit-content;
 			padding: 1rem;
 			background: white;
 			border: solid 2px black;
-			border-radius: 10%;
+			border-radius: 30px 30px 30px 0;
 		}
 
 		.stickmanBody {
@@ -37,27 +91,40 @@
 			flex-direction: column;
 			align-items: center;
 			margin: 20px;
-			background: gray;
+			// background: gray;
 			width: fit-content;
+			&:hover {
+				cursor: pointer;
+			}
 
 			// HEAD
 			.stickHead {
 				display: flex;
 				flex-direction: column;
+				background: $bodyComplex;
 				width: 80px;
 				height: 80px;
 				border: solid 1px;
 				border-radius: 50%;
+				&:hover {
+					background-color: $redHead;
+				}
 				.eyeAxis {
 					margin-top: 20px;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-evenly;
+					height: 10px;
+
 					.lEye {
 						@include eye;
+						animation-name: wink;
+						animation-duration: 1s;
 					}
 					.rEye {
 						@include eye;
+						animation-name: wink;
+						animation-duration: 1s;
 					}
 				}
 				.smile {
@@ -69,6 +136,8 @@
 					background-color: black;
 					border-bottom-right-radius: 30px;
 					border-bottom-left-radius: 30px;
+					animation-name: oh;
+					animation-duration: 1s;
 				}
 			}
 			// HEAD
@@ -76,14 +145,21 @@
 			.torsoContainer {
 				display: flex;
 				flex-direction: row;
+
 				.lArm {
 					display: flex;
+					background: $bodyComplex;
 					width: 20px;
 					height: 80px;
 					border: solid 1px;
+					transform-origin: top right;
+					animation-name: wave;
+					animation-duration: 3s;
 				}
+
 				.torso {
 					display: flex;
+					background: $bodyComplex;
 					flex-direction: column;
 					width: 80px;
 					height: 80px;
@@ -91,6 +167,7 @@
 				}
 				.rArm {
 					display: flex;
+					background: $bodyComplex;
 					width: 20px;
 					height: 80px;
 					border: solid 1px;
@@ -105,12 +182,17 @@
 
 				.lLeg {
 					display: flex;
+					background: $bodyComplex;
 					width: 20px;
 					height: 80px;
 					border: solid 1px;
+					transform-origin: top right;
+					animation-name: step;
+					animation-duration: 1.5s;
 				}
 				.rLeg {
 					display: flex;
+					background: $bodyComplex;
 					width: 20px;
 					height: 80px;
 					border: solid 1px;

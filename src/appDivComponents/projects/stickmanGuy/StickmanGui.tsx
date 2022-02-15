@@ -4,7 +4,7 @@ const Stickman_gui = () => {
 	const animationFrame = (
 		<div className="animationContainer">
 			<div className="stickmanContainer">
-				<div className="textCloud">Lorem ipsum dolor sit amet.</div>
+				<div className="textCloud">Hello user!</div>
 				<div className="stickmanBody">
 					{/* HEAD */}
 					<div className="stickHead">

@@ -1,3 +1,123 @@
+@-webkit-keyframes wink {
+  from {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+  }
+  to {
+    margin-top: 5px;
+    height: 0;
+  }
+}
+
+@keyframes wink {
+  from {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+  }
+  to {
+    margin-top: 5px;
+    height: 0;
+  }
+}
+
+@-webkit-keyframes oh {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes oh {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  40% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  60% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  80% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  40% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  60% {
+    -webkit-transform: rotate(160deg);
+            transform: rotate(160deg);
+  }
+  80% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes step {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes step {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
 .animationContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,6 +141,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: green;
   width: 100%;
   height: 100%;
@@ -28,11 +154,16 @@
 }
 
 .animationContainer .stickmanContainer .textCloud {
-  width: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 1rem;
   background: white;
   border: solid 2px black;
-  border-radius: 10%;
+  border-radius: 30px 30px 30px 0;
 }
 
 .animationContainer .stickmanContainer .stickmanBody {
@@ -47,10 +178,13 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 20px;
-  background: gray;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.animationContainer .stickmanContainer .stickmanBody:hover {
+  cursor: pointer;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .stickHead {
@@ -61,10 +195,15 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: gray;
   width: 80px;
   height: 80px;
   border: solid 1px;
   border-radius: 50%;
+}
+
+.animationContainer .stickmanContainer .stickmanBody .stickHead:hover {
+  background-color: red;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .stickHead .eyeAxis {
@@ -79,22 +218,29 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 10px;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .stickHead .eyeAxis .lEye {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   background: black;
-  border: 2px solid;
   border-radius: 50%;
+  -webkit-animation-name: wink;
+          animation-name: wink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .stickHead .eyeAxis .rEye {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   background: black;
-  border: 2px solid;
   border-radius: 50%;
+  -webkit-animation-name: wink;
+          animation-name: wink;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .stickHead .smile {
@@ -109,6 +255,10 @@
   background-color: black;
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
+  -webkit-animation-name: oh;
+          animation-name: oh;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .torsoContainer {
@@ -125,15 +275,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: gray;
   width: 20px;
   height: 80px;
   border: solid 1px;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .torsoContainer .torso {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: gray;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -147,6 +305,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: gray;
   width: 20px;
   height: 80px;
   border: solid 1px;
@@ -168,15 +327,23 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: gray;
   width: 20px;
   height: 80px;
   border: solid 1px;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-animation-name: step;
+          animation-name: step;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 .animationContainer .stickmanContainer .stickmanBody .legContainer .rLeg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: gray;
   width: 20px;
   height: 80px;
   border: solid 1px;
