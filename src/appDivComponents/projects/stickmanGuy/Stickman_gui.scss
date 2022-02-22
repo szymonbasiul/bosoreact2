@@ -1,11 +1,31 @@
 $redHead: red;
 $bodyComplex: gray;
+// animation theme
+$sand: rgb(241, 203, 98);
 
 @mixin eye {
 	width: 10px;
 	height: 10px;
 	background: black;
 	border-radius: 50%;
+}
+// ORBITA ANIMACJE
+@keyframes orbit {
+	0% {
+		transform: rotate(0deg);
+	}
+	// 25% {
+	// 	transform: rotate(90deg);
+	// }
+	// 50% {
+	// 	transform: rotate(180deg);
+	// }
+	// 75% {
+	// 	transform: rotate(270deg);
+	// }
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 // GŁOWA ANIMACJE
@@ -67,12 +87,65 @@ $bodyComplex: gray;
 	border-color: rgba(94, 47, 16, 0.718);
 	border-radius: 5px;
 	box-shadow: 3px;
+	.animatedBackground {
+		display: flex;
+		flex-direction: column;
+		z-index: 0;
+		background: blue;
+		width: 500px;
+		height: 400px;
+		position: absolute;
+		.sky {
+			width: 100%;
+			height: 50%;
+			background: cyan;
+			.dayAndNight {
+				position: absolute;
+				bottom: 50px;
+				right: -50px;
+				width: 500px;
+				height: 200px;
+				// border: solid black;
+				border-radius: 50%;
+				animation: orbit 6s linear infinite;
+
+				.sun {
+					position: absolute;
+					top: 0;
+					width: 40px;
+					height: 40px;
+					background: yellow;
+					border: solid 2px red;
+					border-radius: 50%;
+				}
+
+				.moon {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					width: 40px;
+					height: 40px;
+					background: grey;
+					border: solid 2px black;
+					border-radius: 50%;
+				}
+			}
+		}
+		.beach {
+			width: 100%;
+			height: 50%;
+			border-radius: 90% 0 0;
+			background: $sand;
+		}
+	}
 	.stickmanContainer {
+		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background: green;
+		// background style
+		//
 		width: 100%;
 		height: 100%;
 		margin: 0;
@@ -94,7 +167,6 @@ $bodyComplex: gray;
 			// background: gray;
 			width: fit-content;
 			&:hover {
-				cursor: pointer;
 			}
 
 			// HEAD
@@ -108,7 +180,9 @@ $bodyComplex: gray;
 				border-radius: 50%;
 				&:hover {
 					background-color: $redHead;
+					cursor: pointer;
 				}
+
 				.eyeAxis {
 					margin-top: 20px;
 					display: flex;
@@ -126,6 +200,15 @@ $bodyComplex: gray;
 						animation-name: wink;
 						animation-duration: 1s;
 					}
+				}
+				.smileOh {
+					display: flex;
+					align-self: center;
+					margin-top: 20px;
+					width: 30px;
+					height: 20px;
+					background-color: black;
+					border: 50% 50%;
 				}
 				.smile {
 					display: flex;

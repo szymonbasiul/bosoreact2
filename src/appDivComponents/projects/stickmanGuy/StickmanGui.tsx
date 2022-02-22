@@ -1,18 +1,40 @@
+import { useState } from "react";
 import "./Stickman_gui.css";
 
 const Stickman_gui = () => {
+	const [textThatChanged, setTextThatChanged] = useState("Hello user!");
+	const [smileOhStyle, setSmileOhStyle] = useState("smile");
 	const animationFrame = (
 		<div className="animationContainer">
+			<div className="animatedBackground">
+				<div className="sky">
+					<div className="dayAndNight">
+						<div className="sun"></div>
+						<div className="moon"></div>
+					</div>
+				</div>
+				<div className="beach"></div>
+			</div>
 			<div className="stickmanContainer">
-				<div className="textCloud">Hello user!</div>
+				<div className="textCloud">{textThatChanged}</div>
 				<div className="stickmanBody">
 					{/* HEAD */}
-					<div className="stickHead">
+					<div
+						className="stickHead"
+						onMouseEnter={() => {
+							setTextThatChanged("Co jest?!");
+							setSmileOhStyle("smileOh");
+						}}
+						onMouseLeave={() => {
+							setTextThatChanged("Hello user!");
+							setSmileOhStyle("smile");
+						}}
+					>
 						<div className="eyeAxis">
 							<div className="lEye"></div>
 							<div className="rEye"></div>
 						</div>
-						<div className="smile"></div>
+						<div className={smileOhStyle}></div>
 					</div>
 					{/* HEAD */}
 					{/* TORSO */}
