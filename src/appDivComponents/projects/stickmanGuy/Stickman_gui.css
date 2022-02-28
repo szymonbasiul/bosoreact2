@@ -156,6 +156,7 @@
 }
 
 .animationContainer .animatedBackground {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,28 +164,28 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 0;
-  background: blue;
   width: 500px;
   height: 400px;
-  position: absolute;
 }
 
 .animationContainer .animatedBackground .sky {
   width: 100%;
   height: 50%;
   background: cyan;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .animationContainer .animatedBackground .sky .dayAndNight {
-  position: absolute;
+  position: relative;
   bottom: 50px;
-  right: -50px;
+  right: -100px;
   width: 500px;
   height: 200px;
   border-radius: 50%;
-  -webkit-animation: orbit 6s linear infinite;
-          animation: orbit 6s linear infinite;
+  -webkit-animation: orbit 18s linear infinite;
+          animation: orbit 18s linear infinite;
+  z-index: 0;
 }
 
 .animationContainer .animatedBackground .sky .dayAndNight .sun {
@@ -195,6 +196,7 @@
   background: yellow;
   border: solid 2px red;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .animationContainer .animatedBackground .sky .dayAndNight .moon {
@@ -208,15 +210,28 @@
   border-radius: 50%;
 }
 
-.animationContainer .animatedBackground .beach {
+.animationContainer .animatedBackground .ocean {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 50%;
-  border-radius: 90% 0 0;
+  background: blue;
+  z-index: 1;
+}
+
+.animationContainer .animatedBackground .ocean .beach {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
   background: #f1cb62;
+  border-radius: 90% 0 0;
 }
 
 .animationContainer .stickmanContainer {
-  z-index: 1;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

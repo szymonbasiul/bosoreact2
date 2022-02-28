@@ -13,7 +13,10 @@ const Stickman_gui = () => {
 						<div className="moon"></div>
 					</div>
 				</div>
-				<div className="beach"></div>
+
+				<div className="ocean">
+					<div className="beach"></div>
+				</div>
 			</div>
 			<div className="stickmanContainer">
 				<div className="textCloud">{textThatChanged}</div>
