@@ -20,6 +20,76 @@
   }
 }
 
+@-webkit-keyframes timeOfDay {
+  0% {
+    background-image: url(/src/img/day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(/src/img/dawn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background-image: url(/src/img/night.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background-image: url(/src/img/latenight.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url(/src/img/day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@keyframes timeOfDay {
+  0% {
+    background-image: url(/src/img/day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  25% {
+    background-image: url(/src/img/dawn.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  50% {
+    background-image: url(/src/img/night.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background-image: url(/src/img/latenight.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  100% {
+    background-image: url(/src/img/day.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@-webkit-keyframes sunshine {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+@keyframes sunshine {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
 @-webkit-keyframes wink {
   from {
     width: 10px;
@@ -171,21 +241,25 @@
 .animationContainer .animatedBackground .sky {
   width: 100%;
   height: 50%;
-  background: cyan;
   z-index: 1;
   overflow: hidden;
+  -webkit-animation: timeOfDay 40s linear infinite;
+          animation: timeOfDay 40s linear infinite;
 }
 
 .animationContainer .animatedBackground .sky .dayAndNight {
   position: relative;
   bottom: 50px;
+  top: 50px;
   right: -100px;
   width: 500px;
   height: 200px;
   border-radius: 50%;
-  -webkit-animation: orbit 18s linear infinite;
-          animation: orbit 18s linear infinite;
-  z-index: 0;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  -webkit-animation: orbit 40s linear infinite;
+          animation: orbit 40s linear infinite;
+  z-index: 3;
 }
 
 .animationContainer .animatedBackground .sky .dayAndNight .sun {
@@ -194,17 +268,20 @@
   width: 40px;
   height: 40px;
   background: yellow;
-  border: solid 2px red;
   border-radius: 50%;
-  overflow: hidden;
+  -webkit-box-shadow: 0 0 0 10px rgba(184, 184, 21, 0.671), 0 0 5px 15px rgba(165, 165, 22, 0.507), 0 0 10px 20px rgba(184, 184, 21, 0.473);
+          box-shadow: 0 0 0 10px rgba(184, 184, 21, 0.671), 0 0 5px 15px rgba(165, 165, 22, 0.507), 0 0 10px 20px rgba(184, 184, 21, 0.473);
+  z-index: 2;
+  -webkit-animation: sunshine 3s linear infinite;
+          animation: sunshine 3s linear infinite;
 }
 
 .animationContainer .animatedBackground .sky .dayAndNight .moon {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: grey;
   border: solid 2px black;
   border-radius: 50%;
