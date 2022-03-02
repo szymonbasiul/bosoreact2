@@ -76,6 +76,34 @@
   }
 }
 
+@-webkit-keyframes oceanWave {
+  0%,
+  100% {
+    background: #0a2291;
+    -webkit-clip-path: polygon(0% 41%, 13% 51%, 27% 56%, 44% 52%, 56% 45%, 69% 43%, 88% 41%, 100% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 41%, 13% 51%, 27% 56%, 44% 52%, 56% 45%, 69% 43%, 88% 41%, 100% 50%, 100% 100%, 0 100%);
+  }
+  50% {
+    background: #1f3bb6;
+    -webkit-clip-path: polygon(0% 41%, 20% 37%, 36% 40%, 46% 43%, 59% 57%, 72% 58%, 84% 55%, 100% 51%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 41%, 20% 37%, 36% 40%, 46% 43%, 59% 57%, 72% 58%, 84% 55%, 100% 51%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes oceanWave {
+  0%,
+  100% {
+    background: #0a2291;
+    -webkit-clip-path: polygon(0% 41%, 13% 51%, 27% 56%, 44% 52%, 56% 45%, 69% 43%, 88% 41%, 100% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 41%, 13% 51%, 27% 56%, 44% 52%, 56% 45%, 69% 43%, 88% 41%, 100% 50%, 100% 100%, 0 100%);
+  }
+  50% {
+    background: #1f3bb6;
+    -webkit-clip-path: polygon(0% 41%, 20% 37%, 36% 40%, 46% 43%, 59% 57%, 72% 58%, 84% 55%, 100% 51%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 41%, 20% 37%, 36% 40%, 46% 43%, 59% 57%, 72% 58%, 84% 55%, 100% 51%, 100% 100%, 0 100%);
+  }
+}
+
 @-webkit-keyframes sunshine {
   0% {
     -webkit-box-shadow: none;
@@ -293,18 +321,57 @@
   display: flex;
   width: 100%;
   height: 50%;
-  background: blue;
+  background: #1939ca;
   z-index: 1;
+}
+
+.animationContainer .animatedBackground .ocean .wave1 {
+  position: relative;
+  -webkit-transform: translate(0px, -80px);
+          transform: translate(0px, -80px);
+  height: 200px;
+  width: 100%;
+  -webkit-animation: oceanWave 8s linear infinite;
+          animation: oceanWave 8s linear infinite;
+}
+
+.animationContainer .animatedBackground .ocean .wave1 .wave2 {
+  position: relative;
+  -webkit-transform: translate(0px, -70px);
+          transform: translate(0px, -70px);
+  height: 100%;
+  width: 100%;
+  -webkit-animation: oceanWave 12s linear infinite;
+          animation: oceanWave 12s linear infinite;
+}
+
+.animationContainer .animatedBackground .ocean .wave1 .wave2 .wave3 {
+  position: relative;
+  -webkit-transform: translate(0px, -60px);
+          transform: translate(0px, -60px);
+  height: 200px;
+  width: 100%;
+  -webkit-animation: oceanWave 16s linear infinite;
+          animation: oceanWave 16s linear infinite;
 }
 
 .animationContainer .animatedBackground .ocean .beach {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  border-radius: 90% 0 0;
+  background: #e4af3e;
+}
+
+.animationContainer .animatedBackground .ocean .beach .sand {
   width: 100%;
   height: 100%;
-  background: #f1cb62;
+  background: url(/src/img/sand.jpg);
   border-radius: 90% 0 0;
+  opacity: 0.2;
 }
 
 .animationContainer .stickmanContainer {

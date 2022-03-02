@@ -15,7 +15,15 @@ const Stickman_gui = () => {
 				</div>
 
 				<div className="ocean">
-					<div className="beach"></div>
+					<div className="wave1">
+						<div className="wave2">
+							<div className="wave3"></div>
+						</div>
+					</div>
+
+					<div className="beach">
+						<div className="sand"></div>
+					</div>
 				</div>
 			</div>
 			<div className="stickmanContainer">

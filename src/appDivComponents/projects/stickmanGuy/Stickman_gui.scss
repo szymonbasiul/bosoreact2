@@ -1,7 +1,7 @@
 $redHead: red;
 $bodyComplex: gray;
 // animation theme
-$sand: rgb(241, 203, 98);
+$sand: url(/src/img/sand.jpg);
 
 @mixin eye {
 	width: 10px;
@@ -55,7 +55,40 @@ $sand: rgb(241, 203, 98);
 		background-repeat: no-repeat;
 	}
 }
-
+// FALA
+@keyframes oceanWave {
+	0%,
+	100% {
+		background: rgb(10, 34, 145);
+		clip-path: polygon(
+			0% 41%,
+			13% 51%,
+			27% 56%,
+			44% 52%,
+			56% 45%,
+			69% 43%,
+			88% 41%,
+			100% 50%,
+			100% 100%,
+			0 100%
+		);
+	}
+	50% {
+		background: rgb(31, 59, 182);
+		clip-path: polygon(
+			0% 41%,
+			20% 37%,
+			36% 40%,
+			46% 43%,
+			59% 57%,
+			72% 58%,
+			84% 55%,
+			100% 51%,
+			100% 100%,
+			0 100%
+		);
+	}
+}
 // SUNSHINE
 @keyframes sunshine {
 	0% {
@@ -179,15 +212,48 @@ $sand: rgb(241, 203, 98);
 			display: flex;
 			width: 100%;
 			height: 50%;
-			background: blue;
+			background: rgb(25, 57, 202);
 			z-index: 1;
+
+			.wave1 {
+				position: relative;
+				transform: translate(0px, -80px);
+				height: 200px;
+				width: 100%;
+				// box-shadow: 1px 1px 0 0 rgb(255, 255, 255);
+				animation: oceanWave 8s linear infinite;
+				.wave2 {
+					position: relative;
+					transform: translate(0px, -70px);
+					height: 100%;
+					width: 100%;
+					// box-shadow: 1px 1px 0 0 rgb(255, 255, 255);
+					animation: oceanWave 12s linear infinite;
+					.wave3 {
+						position: relative;
+						transform: translate(0px, -60px);
+						height: 200px;
+						width: 100%;
+						// box-shadow: 1px 1px 0 0 rgb(255, 255, 255);
+						animation: oceanWave 16s linear infinite;
+					}
+				}
+			}
+
 			.beach {
 				display: flex;
+				position: absolute;
 				width: 100%;
-				height: 100%;
-				background: $sand;
-
+				height: 50%;
 				border-radius: 90% 0 0;
+				background: rgb(228, 175, 62);
+				.sand {
+					width: 100%;
+					height: 100%;
+					background: $sand;
+					border-radius: 90% 0 0;
+					opacity: 0.2;
+				}
 			}
 		}
 	}
