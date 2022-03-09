@@ -1,0 +1,10 @@
+ @import '../rockPaperScissors/RPS.scss';
+
+
+.gameContainerCurrent{
+    @include gameContainer;
+    //position: sticky;
+    //background-color: white ;
+
+}
+

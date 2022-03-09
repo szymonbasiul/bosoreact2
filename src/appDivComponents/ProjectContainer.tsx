@@ -11,6 +11,7 @@ import {
 	Route,
 	Routes,
 } from "react-router-dom";
+import MemoryParent from "./projects/memory_game/MemoryParent";
 
 const ProjectContainer: FC = () => {
 	const routeList = [
@@ -29,6 +30,10 @@ const ProjectContainer: FC = () => {
 		{
 			pathName: "/stickman",
 			componentName: Stickman,
+		},
+		{
+			pathName: "/memory",
+			componentName: MemoryParent,
 		},
 	];
 
@@ -51,6 +56,9 @@ const ProjectContainer: FC = () => {
 					</div>
 					<div className="projectButton">
 						<Link to="/home">Turn Off</Link>
+					</div>
+					<div className="projectButton">
+						<Link to="/memory">Memory Game</Link>
 					</div>
 				</div>
 				<div className="projectContainer">

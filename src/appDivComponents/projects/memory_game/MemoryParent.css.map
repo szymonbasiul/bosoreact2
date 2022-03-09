@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACYA,AAAA,aAAa,CAAC;EACb,OAAO,EAAE,IAAI;CACb;;ADXD,AAAA,qBAAqB,CAAA;ECFpB,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAE,0BAA0B;EAC5C,YAAY,EAAE,KAAK;EACnB,YAAY,EAAE,uBAAuB;EACrC,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,GAAG;CDDf",
+    "sources": [
+        "MemoryParent.scss",
+        "../rockPaperScissors/RPS.scss"
+    ],
+    "names": [],
+    "file": "MemoryParent.css"
+}

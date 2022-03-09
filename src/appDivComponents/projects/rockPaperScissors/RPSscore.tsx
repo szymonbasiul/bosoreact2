@@ -40,28 +40,11 @@ function RPSscore(props) {
 		else if (cpuRPS.rock) setCpuScore(cpuScore + 1);
 		else if (cpuRPS.paper) setUserScore(userScore + 1);
 	};
-	//UseFetch({player: `${userScore}`})-*+
-
+	
 	useEffect(() => {
 		crossCheckResult();
 	}, [cpuRPS]);
-	const test = async (data: object) => {
-		console.log("sending");
-		await fetch("http://localhost:8000/rpsplayer", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		})
-			.then((x) => x.json())
-			.then((y) => {
-				console.log("Success:", y);
-			})
-			.catch((error) => {
-				console.error("Error:", error);
-			});
-	};
+	
 	const showGameplayResults = () => {
 		if (userScore === 3) {
 			setTimeout(() => {
