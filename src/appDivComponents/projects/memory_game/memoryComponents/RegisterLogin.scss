@@ -1,0 +1,34 @@
+@mixin register-login-form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 20px;
+	flex-direction: column;
+	.typing-box {
+		display: flex;
+		margin: 5px;
+		padding: 10px;
+		border: 2px solid;
+		border-color: rgba(94, 47, 16, 0.718);
+		border-radius: 5px;
+		box-shadow: 3px;
+	}
+	.register-login-button {
+		display: flex;
+		width: 160px;
+		justify-content: center;
+		margin: 5px;
+		padding: 10px;
+		border: solid 2px rgba(94, 47, 16, 0.718);
+		border-radius: 5px;
+	}
+}
+
+.log-in-form {
+	@include register-login-form();
+}
+
+.sign-in-form {
+	@include register-login-form();
+}

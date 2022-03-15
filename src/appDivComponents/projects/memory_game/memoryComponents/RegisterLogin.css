@@ -1,0 +1,92 @@
+.log-in-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.log-in-form .typing-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid;
+  border-color: rgba(94, 47, 16, 0.718);
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
+}
+
+.log-in-form .register-login-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+  padding: 10px;
+  border: solid 2px rgba(94, 47, 16, 0.718);
+  border-radius: 5px;
+}
+
+.sign-in-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign-in-form .typing-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+  padding: 10px;
+  border: 2px solid;
+  border-color: rgba(94, 47, 16, 0.718);
+  border-radius: 5px;
+  -webkit-box-shadow: 3px;
+          box-shadow: 3px;
+}
+
+.sign-in-form .register-login-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+  padding: 10px;
+  border: solid 2px rgba(94, 47, 16, 0.718);
+  border-radius: 5px;
+}
+/*# sourceMappingURL=RegisterLogin.css.map */
