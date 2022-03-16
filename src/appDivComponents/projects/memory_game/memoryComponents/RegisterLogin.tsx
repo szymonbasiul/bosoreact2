@@ -22,18 +22,17 @@ export default function RegisterLogin() {
 		});
 	};
 
-	const registerOnServer = () => {
-		fetch("http://localhost:8000/register", {
+	const registerOnServer = async () => {
+		await fetch("http://localhost:8000/memory/register", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify({
-				registerLogin: registerLogin,
-				registerPassword: registerPassword,
-				registerPasswordConfirmation: registerPasswordConfirmation,
+				registerNewUserName: registerLogin,
+				registerNewPassword: registerPassword,
 			}),
 		})
-			.then((res) => res.json())
-			.then((data) => console.log(data))
+			.then((response) => console.log(response.status))
+			.then((data) => console.log(data, "Should be status here"))
 			.catch((error) => console.error(error));
 	};
 
