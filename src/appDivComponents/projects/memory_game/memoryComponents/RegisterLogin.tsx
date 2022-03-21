@@ -31,9 +31,12 @@ export default function RegisterLogin() {
 				registerNewPassword: registerPassword,
 			}),
 		})
-			.then((response) => console.log(response.status))
-			.then((data) => console.log(data, "Should be status here"))
-			.catch((error) => console.error(error));
+			.then((response) => response.json())
+			.then((response) => console.log(response, "Should be status here"))
+			.catch((error, response) => {
+				response.json();
+				console.log(error, response);
+			});
 	};
 
 	const LoginForm = (
