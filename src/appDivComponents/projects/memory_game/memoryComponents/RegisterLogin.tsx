@@ -9,6 +9,7 @@ export default function RegisterLogin() {
 	const [registerPasswordConfirmation, setRegisterPasswordConfirmation] =
 		useState("");
 	const [showLogin, setShowLogin] = useState(true);
+	const [borderOnCompare, setBorderOnCompare] = useState("");
 
 	const toggleShowLogin = () => {
 		setShowLogin(!showLogin);
@@ -22,6 +23,26 @@ export default function RegisterLogin() {
 		});
 	};
 
+	const comparePasswordInputValues = () => {
+		//setRegisterPassword(e.target.value);
+
+		if (registerPassword === registerPasswordConfirmation) {
+			console.log("Equal!", registerPassword, registerPasswordConfirmation);
+			return true;
+		} else {
+			console.log("No equal!");
+			return false;
+		}
+	};
+
+	const changeBorderOnEqualPasswordInputs = () => {
+		if (comparePasswordInputValues() === true) {
+			setBorderOnCompare("typing-box-green");
+		} else {
+			setBorderOnCompare("typing-box-red");
+		}
+	};
+
 	const registerOnServer = async () => {
 		await fetch("http://localhost:8000/memory/register", {
 			method: "POST",
@@ -33,9 +54,8 @@ export default function RegisterLogin() {
 		})
 			.then((response) => response.json())
 			.then((response) => console.log(response, "Should be status here"))
-			.catch((error, response) => {
-				response.json();
-				console.log(error, response);
+			.catch((error) => {
+				console.log(error);
 			});
 	};
 
@@ -94,20 +114,30 @@ export default function RegisterLogin() {
 				/>
 				<input
 					type="text"
-					className="typing-box"
+					className={`${borderOnCompare} typing-box`}
 					name="RegisterPassword"
 					placeholder="Password"
 					onChange={(e) => {
 						setRegisterPassword(e.target.value);
+						//comparePasswordInputValues(event);
+					}}
+					onKeyUp={() => {
+						comparePasswordInputValues();
+						changeBorderOnEqualPasswordInputs();
 					}}
 				/>
 				<input
 					type="text"
-					className="typing-box"
+					className={`${borderOnCompare} typing-box`}
 					name="RegisterPasswordConfirmation"
 					placeholder="Confirm password"
 					onChange={(e) => {
 						setRegisterPasswordConfirmation(e.target.value);
+						//comparePasswordInputValues();
+					}}
+					onKeyUp={() => {
+						comparePasswordInputValues();
+						changeBorderOnEqualPasswordInputs();
 					}}
 				/>
 				<button
