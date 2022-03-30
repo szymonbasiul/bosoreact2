@@ -1,0 +1,54 @@
+CREATE TABLE users (
+userId INT NOT NULL,
+userName VARCHAR(45) NOT NULL,
+userPassword VARCHAR(45) NOT NULL,
+PRIMARY KEY (userName) 
+);
+
+CREATE TABLE usersScore (
+userName VARCHAR(45) NOT NULL,
+userScore INT NOT NULL,
+FOREIGN KEY (userName) REFERENCES users (userName) );
+
+INSERT INTO userScore (userName, userScore)
+VALUES ("DjBobo", 2);
+
+INSERT INTO users (userName, userPassword) 
+VALUES ("Alan", "Wake13");
+
+DELIMITER //
+CREATE PROCEDURE addUserScores (
+IN newUserName VARCHAR(45), 
+IN newUserScore INT
+)
+BEGIN
+INSERT INTO usersScore (userName, userScore)
+VALUES (newUserName, newUserScore);
+END //
+DELIMITER ;
+CALL addUserScores("DjBobo",7 );
+
+SELECT * FROM userScore;
+
+DELIMITER //
+CREATE PROCEDURE addNewUser (
+IN newUserName VARCHAR(45),
+IN newPassword VARCHAR(45),
+IN newEmail VARCHAR(45),
+IN newImg_url VARCHAR(255),
+IN newActiveFrom TIMESTAMP
+)
+BEGIN
+INSERT INTO users (userName, userPassword, email, img_url, activeFrom)
+VALUES (newUserName, newPassword, newEmail, newImg_url, newActiveFrom);
+END //
+DELIMITER ;
+
+CALL addNewUser("Andrzej22","Walaszek1","a.wal@gmail.com","https://i.ibb.co/S0dsYFN/Scan-20211217-3.png");
+
+SELECT * FROM users; 
+
+ALTER TABLE users 
+ADD email VARCHAR(45),
+ADD img_url VARCHAR(255),
+ADD activeFrom TIMESTAMP;

@@ -13,10 +13,11 @@ export default function RegisterLogin() {
 	const [conditionalInputBorderStyle, setConditionalInputBorderStyle] =
 		useState("");
 
+	//Idea of refactoring: inverting boolena as reusable function
 	const toggleShowLogin = () => {
 		setShowLogin(!showLogin);
 	};
-
+	//Idea of refactoring: move fetch funcitons to separate component for example reusable functions component
 	const loginOnServer = () => {
 		fetch("http://localhost:8000/login", {
 			method: "POST",
@@ -24,7 +25,7 @@ export default function RegisterLogin() {
 			body: JSON.stringify({ login: login, password: loginPassword }),
 		});
 	};
-
+	//Idea of refactoring: reusable function to compare two variables
 	const comparePasswordInputValues = () => {
 		if (registerPassword === registerPasswordConfirmation) {
 			return true;
@@ -32,12 +33,13 @@ export default function RegisterLogin() {
 			return false;
 		}
 	};
-
+	//Idea of refactoring: reusable function that checks  if value is empty
 	const checkIfStringIsEmpty = (value: string) => {
 		if (value === "") return true;
 		else return false;
 	};
-	//function executing 2 condition true or false with 3 atributes( func(true/fale, 1st condition, 2nd condition))
+
+	//Idea of refactoring: function executing 2 condition true or false with 3 atributes( func(true/fale, 1st condition, 2nd condition))
 	const changeBorderStyleDependingOnEqualPasswordInputs = () => {
 		if (comparePasswordInputValues()) {
 			setConditionalInputBorderStyle("typing-box-green");
@@ -55,7 +57,7 @@ export default function RegisterLogin() {
 		changeBorderStyleDependingOnEqualPasswordInputs();
 	};
 
-	//fetch funciton with optional GET/POST, returned variable
+	//Idea of refactoring: fetch funciton with optional GET/POST, returned variable
 	const AddNewUserToDB = async () => {
 		console.log("fetch start");
 		//condition before fetch start
