@@ -17,14 +17,19 @@ export default function RegisterLogin() {
 	const toggleShowLogin = () => {
 		setShowLogin(!showLogin);
 	};
+
 	//Idea of refactoring: move fetch funcitons to separate component for example reusable functions component
 	const loginOnServer = () => {
-		fetch("http://localhost:8000/login", {
+		fetch("http://localhost:8000/memory/login", {
 			method: "POST",
 			headers: { "content-type": "application/json" },
 			body: JSON.stringify({ login: login, password: loginPassword }),
-		});
+		})
+			.then((response) => response.json())
+			.then((data) => console.log(data, "Verified"))
+			.catch((error) => console.log(error));
 	};
+
 	//Idea of refactoring: reusable function to compare two variables
 	const comparePasswordInputValues = () => {
 		if (registerPassword === registerPasswordConfirmation) {
