@@ -8,14 +8,14 @@ export const RPSgui: FC = () => {
 	const [passingScoreState, setPassingScoreState] = useState<string>("");
 	const introScreen: JSX.Element = (
 		<div className="introShape">
-			<div className="intro">Witaj w Naszej grze!</div>
+			<div className="intro">Welcome in our game!</div>
 			<div
 				className="gameStarterButton"
 				onClick={() => {
 					setStageState("RPS");
 				}}
 			>
-				<button id="enter">Przejdź do rozgrywki</button>
+				<button id="enter">Proceed</button>
 			</div>
 		</div>
 	);
